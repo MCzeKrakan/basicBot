@@ -868,7 +868,7 @@
                     var plays = basicBot.room.historyList[i].length - 1;
                     var lastPlayed = basicBot.room.historyList[i][plays];
                     var lastPlayedTime = (Date.now() - lastPlayed);
-                    var repeatLimit = (basicBot.settings.historyLimit * 60 * 1000);
+                    var repeatLimit = (basicBot.settings.historyLimitTime * 60 * 1000);
                     if (basicBot.settings.historySkip && (lastPlayedTime < repeatLimit) && (lastPlayedTime > 6000)) {
                     API.sendChat(subChat(basicBot.chat.songknown, {name: obj.dj.username, lasttime: basicBot.roomUtilities.msToStr(Date.now() - lastPlayed)}));
                     API.moderateForceSkip();
@@ -2658,7 +2658,7 @@
                         msg += '. ';
 
                         msg += basicBot.chat.historySkip + ': ';
-                        if (basicBot.settings.historyLimit) msg += 'ON';
+                        if (basicBot.settings.historySkip ) msg += 'ON';
                         else msg += 'OFF';
                         msg += '. ';
                         msg += basicBot.chat.historyLimit + ': ' + basicBot.settings.historyLimitTime + '. ';

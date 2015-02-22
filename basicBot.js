@@ -210,7 +210,7 @@
             voteSkip: false,
             voteSkipLimit: 7,
             timeGuard: true,
-            historySkip: false,
+            historySkip: true,
             historyLimitTime: 180,
             maximumSongLength: 7,
             autodisable: false,

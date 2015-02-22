@@ -72,6 +72,8 @@
     "welcomemsg": "uvítací zpráva",
     "songstats": "statistiky písně",
     "etarestriction": "eta omezení",
+    "historySkip": "Skip historie",
+    "historyLimit": "Limit historie",
     "voteskip": "voteskip",
     "voteskiplimit": "/me [@%%NAME%%] Voteskip limit je momentálně %%LIMIT%% meh.",
     "voteskipexceededlimit": "/me @%%NAME%%, tvůj song překročil voteskip limit (%%LIMIT%% mehs).",

@@ -11,7 +11,7 @@
     "welcome": "/me Vítej %%NAME%% :) ",
     "welcomeback": "/me Vítej zpět, %%NAME%%",
     "songknown": "/me :repeat: @%%NAME%% Tato píseň již hrála před %%LASTTIME%%. :repeat:",
-    "timelimit": "/me @%%NAME%%, tvá píseň je delší než %%MAXLENGTH%% minut, ke hraní delších songů potřebuješ povolení.",
+    "timelimit": "/me @%%NAME%%, je zakázáno hrát songy delší než %%MAXLENGTH%% minut.",
     "permissionownsong": "/me :up: @%%NAME%% má povoleno hrát vlastní tvorbu!",
     "isblacklisted": "/me Tato píseň je na %%BLACKLIST%% blacklistu! Přeskakuji...",
 

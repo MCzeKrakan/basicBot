@@ -210,6 +210,8 @@
             voteSkip: false,
             voteSkipLimit: 10,
             timeGuard: true,
+            historySkip: true,
+            historyLimitTime: 180,
             maximumSongLength: 10,
             autodisable: true,
             commandCooldown: 30,
@@ -867,8 +869,15 @@
                     var firstPlayed = basicBot.room.historyList[i][1];
                     var plays = basicBot.room.historyList[i].length - 1;
                     var lastPlayed = basicBot.room.historyList[i][plays];
-                    API.sendChat(subChat(basicBot.chat.songknown, {plays: plays, timetotal: basicBot.roomUtilities.msToStr(Date.now() - firstPlayed), lasttime: basicBot.roomUtilities.msToStr(Date.now() - lastPlayed)}));
+                    var lastPlayedTime = (Date.now() - lastPlayed);
+                    var repeatLimit = (basicBot.settings.historyLimit * 60 * 1000);
+                    if (basicBot.settings.historySkip && (lastPlayedTime < repeatLimit) && (lastPlayedTime > 6000)) {
+                    API.sendChat(subChat(basicBot.chat.songknown, {name: obj.dj.username, lasttime: basicBot.roomUtilities.msToStr(Date.now() - lastPlayed)}));
+                    API.moderateForceSkip();
+                    }
+                    else {
                     basicBot.room.historyList[i].push(+new Date());
+                    }
                     alreadyPlayed = true;
                 }
             }
@@ -2647,6 +2656,12 @@
                         if (basicBot.settings.filterChat) msg += 'ON';
                         else msg += 'OFF';
                         msg += '. ';
+
+                        msg += basicBot.chat.historySkip + ': ';
+                        if (basicBot.settings.historyLimit) msg += 'ON';
+                        else msg += 'OFF';
+                        msg += '. ';
+                        msg += basicBot.chat.historyLimit + ': ' + basicBot.settings.historyLimitTime + '. ';
 
                         msg += basicBot.chat.voteskip + ': ';
                         if (basicBot.settings.voteskip) msg += 'ON';

@@ -2326,7 +2326,7 @@
                         if (typeof user === 'boolean') return API.sendChat(subChat(basicBot.chat.invaliduserspecified, {name: chat.un}));
                         var permFrom = basicBot.userUtilities.getPermission(chat.uid);
                         var permUser = basicBot.userUtilities.getPermission(user.id);
-                        if (permUser > 0) {
+                        if (permUser === 0) {
                             /*
                              basicBot.room.mutedUsers.push(user.id);
                              if (time === null) API.sendChat(subChat(basicBot.chat.mutednotime, {name: chat.un, username: name}));

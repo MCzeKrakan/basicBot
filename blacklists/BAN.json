@@ -1,0 +1,13 @@
+{
+    "1":{
+        "mid": "1:BANsongID1"
+    },
+    "2":{
+        "title": "This is a BAN song",
+        "author": "The BAN band",
+        "mid": "1:BANsongID2"
+    },
+    "3":{
+        "mid": "1:BANsongID3"
+    }
+  }

@@ -116,7 +116,7 @@
     "mutednotime": "/me [@%%NAME%%] Umlčel @%%USERNAME%%.",
     "mutedtime": "/me [@%%NAME%%] Dej si pauzu @%%USERNAME%%.",
     "unmuted": "/me [@%%NAME%%] Opět umožnil @%%USERNAME%%  chatovat.",
-    "muterank": "/me [@%%NAME%%] Nemůžeš umlčet nikoho se stejnou nebo vyšší hodnotí, než jakou máš ty.",
+    "muterank": "/me [@%%NAME%%] Nemůžeš umlčet nikoho ze zaměstnanců komunity.",
     "oplist": "/me OP list: %%LINK%%",
     "pong": "/me Pong!",
     "reload": "/me Restartuji",

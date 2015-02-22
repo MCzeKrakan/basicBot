@@ -2619,13 +2619,15 @@
                     else {
                         var from = chat.un;
                         var msg = '/me [@' + from + '] ';
-
+                        
+			/*
                         msg += basicBot.chat.afkremoval + ': ';
                         if (basicBot.settings.afkRemoval) msg += 'ON';
                         else msg += 'OFF';
                         msg += '. ';
                         msg += basicBot.chat.afksremoved + ": " + basicBot.room.afkList.length + '. ';
                         msg += basicBot.chat.afklimit + ': ' + basicBot.settings.maximumAfk + '. ';
+                        */
 
                         msg += 'Bouncer+: ';
                         if (basicBot.settings.bouncerPlus) msg += 'ON';

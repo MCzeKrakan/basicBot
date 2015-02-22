@@ -244,7 +244,7 @@
             songstats: false,
             commandLiteral: "!",
             blacklists: {
-            	BAN: "https://rawgit.com/MCzeKrakan/basicBot-customization/master/blacklists/BL.json",
+            	BAN: "https://rawgit.com/MCzeKrakan/basicBot-customization/master/blacklists/BAN.json",
                 OP: "https://rawgit.com/MCzeKrakan/basicBot-customization/master/blacklists/OP.json"
             }
         },

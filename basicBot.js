@@ -2352,31 +2352,31 @@
                              }
                              */
                             if (time > 45) {
-                                API.sendChat(subChat(basicBot.chat.mutedmaxtime, {name: chat.un, time: "45"}));
+                                API.sendChat(subChat(basicBot.chat.mutedtime, {name: chat.un, username: name}));
                                 API.moderateMuteUser(user.id, 1, API.MUTE.LONG);
                             }
                             else if (time === 45) {
                                 API.moderateMuteUser(user.id, 1, API.MUTE.LONG);
-                                API.sendChat(subChat(basicBot.chat.mutedtime, {name: chat.un, username: name, time: time}));
+                                API.sendChat(subChat(basicBot.chat.mutedtime, {name: chat.un, username: name}));
 
                             }
                             else if (time > 30) {
                                 API.moderateMuteUser(user.id, 1, API.MUTE.LONG);
-                                API.sendChat(subChat(basicBot.chat.mutedtime, {name: chat.un, username: name, time: time}));
+                                API.sendChat(subChat(basicBot.chat.mutedtime, {name: chat.un, username: name}));
                                 setTimeout(function (id) {
                                     API.moderateUnmuteUser(id);
                                 }, time * 60 * 1000, user.id);
                             }
                             else if (time > 15) {
                                 API.moderateMuteUser(user.id, 1, API.MUTE.MEDIUM);
-                                API.sendChat(subChat(basicBot.chat.mutedtime, {name: chat.un, username: name, time: time}));
+                                API.sendChat(subChat(basicBot.chat.mutedtime, {name: chat.un, username: name}));
                                 setTimeout(function (id) {
                                     API.moderateUnmuteUser(id);
                                 }, time * 60 * 1000, user.id);
                             }
                             else {
                                 API.moderateMuteUser(user.id, 1, API.MUTE.SHORT);
-                                API.sendChat(subChat(basicBot.chat.mutedtime, {name: chat.un, username: name, time: time}));
+                                API.sendChat(subChat(basicBot.chat.mutedtime, {name: chat.un, username: name}));
                                 setTimeout(function (id) {
                                     API.moderateUnmuteUser(id);
                                 }, time * 60 * 1000, user.id);

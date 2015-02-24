@@ -211,7 +211,7 @@
             voteSkipLimit: 7,
             timeGuard: true,
             historySkip: true,
-            historyLimitNumber: 49,
+            historyLimitNumber: 49, // 1-49
             // historyLimitTime: 200,
             maximumSongLength: 7,
             autodisable: false,
@@ -863,7 +863,7 @@
             }
 	    
 	    songSkipped = false;
-            for (var j = 0; j < historyLimitNumber; j++) {
+            for (var j = 0; j < basicBot.settings.historyLimitNumber; j++) {
             	if ((API.getHistory()[j].media.cid === API.getMedia().cid) && basicBot.settings.historySkip) {
             	    API.sendChat(subChat(basicBot.chat.songplayed, {name: obj.dj.username, nubmer: j}));
             	    API.moderateForceSkip();

@@ -865,7 +865,8 @@
 	    songSkipped = false;
             for (var j = 0; j < basicBot.settings.historyLimitNumber; j++) {
             	if ((API.getHistory()[j].media.cid === API.getMedia().cid) && basicBot.settings.historySkip) {
-            	    API.sendChat(subChat(basicBot.chat.songplayed, {name: obj.dj.username, nubmer: j}));
+            	    var songNumber = j
+            	    API.sendChat(subChat(basicBot.chat.songplayed, {name: obj.dj.username, nubmer: songNumber}));
             	    API.moderateForceSkip();
             	    songSkipped = true;
             	}

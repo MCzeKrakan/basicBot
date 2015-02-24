@@ -211,7 +211,7 @@
             voteSkipLimit: 7,
             timeGuard: true,
             historySkip: true,
-            historyLimitTime: 180,
+            historyLimitTime: 200,
             maximumSongLength: 7,
             autodisable: false,
             commandCooldown: 30,
@@ -862,22 +862,26 @@
             }
 
             var alreadyPlayed = false;
-            for (var i = 0; i < basicBot.room.historyList.length; i++) {
-                if (basicBot.room.historyList[i][0] === obj.media.cid) {
-                    var firstPlayed = basicBot.room.historyList[i][1];
-                    var plays = basicBot.room.historyList[i].length - 1;
-                    var lastPlayed = basicBot.room.historyList[i][plays];
-                    var lastPlayedTime = (Date.now() - lastPlayed);
-                    var repeatLimit = (basicBot.settings.historyLimitTime * 60 * 1000);
-                    if (basicBot.settings.historySkip && (lastPlayedTime < repeatLimit) && (lastPlayedTime > 6000)) {
-                    API.sendChat(subChat(basicBot.chat.songknown, {name: obj.dj.username, lasttime: basicBot.roomUtilities.msToStr(Date.now() - lastPlayed)}));
-                    API.moderateForceSkip();
-                    }
-                    else {
-                    basicBot.room.historyList[i].push(+new Date());
-                    }
-                    alreadyPlayed = true;
-                }
+            for (var j = 0; j < 49; j++) {
+            	if (API.getHistory()[j].media.cid === API.getMedia().cid) {
+            	    for (var i = 0; i < basicBot.room.historyList.length; i++) {
+                        if (basicBot.room.historyList[i][0] === obj.media.cid) {
+                            var firstPlayed = basicBot.room.historyList[i][1];
+                            var plays = basicBot.room.historyList[i].length - 1;
+                            var lastPlayed = basicBot.room.historyList[i][plays];
+                            var lastPlayedTime = (Date.now() - lastPlayed);
+                            var repeatLimit = (basicBot.settings.historyLimitTime * 60 * 1000);
+                            if (basicBot.settings.historySkip && (lastPlayedTime < repeatLimit) && (lastPlayedTime > 6000)) {
+                               API.sendChat(subChat(basicBot.chat.songknown, {name: obj.dj.username, lasttime: basicBot.roomUtilities.msToStr(Date.now() - lastPlayed)}));
+                               API.moderateForceSkip();
+                            }
+                            else {
+                    	    basicBot.room.historyList[i].push(+new Date());
+                    	    }
+                    	    alreadyPlayed = true;
+                	}
+            	    }
+            	}
             }
             if (!alreadyPlayed) {
                 basicBot.room.historyList.push([obj.media.cid, +new Date()]);

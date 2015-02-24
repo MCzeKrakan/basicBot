@@ -911,7 +911,7 @@
             }
             storeToStorage();
 
-        },
+        }
         eventWaitlistupdate: function (users) {
             if (users.length < 50) {
                 if (basicBot.room.queue.id.length > 0 && basicBot.room.queueable) {

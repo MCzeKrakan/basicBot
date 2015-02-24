@@ -128,7 +128,7 @@
     "sessionstats": "/me [@%%NAME%%] Woots: %%WOOTS%%, Mehs: %%MEHS%%, Grabs: %%GRABS%%.",
     "skip": "/me [%%NAME%% použil přeskočení.]",
     "madeby": "/me Tento bot byl vytvořen %%NAME%%.",
-    "activefor": "Byl jsem aktivní po dobu %%TIME%%.",
+    "activefor": "Už jedu %%TIME%%.",
     "swapinvalid": "/me [@%%NAME%%] Neplatný uživatel. (Jména bez mezer!)",
     "swapwlonly": "/me [@%%NAME%%] Prosím prohazuj jen uživatele ve frontě!",
     "swapping": "/me Prohazuji %%NAME1%% s %%NAME2%%.",

@@ -869,12 +869,19 @@
                                 var firstPlayed = basicBot.room.historyList[i][1];
                                 var plays = basicBot.room.historyList[i].length - 1;
                                 var lastPlayed = basicBot.room.historyList[i][plays];
-                                var lastPlayedTime = (Date.now() - lastPlayed);
-                                var repeatLimit = (basicBot.settings.historyLimitTime * 60 * 1000);
-                                if ((lastPlayedTime < repeatLimit) && (lastPlayedTime > 6000)) {
+                                
+                                // var lastPlayedTime = (Date.now() - lastPlayed);
+                                // var repeatLimit = (basicBot.settings.historyLimitTime * 60 * 1000);
+                                // if ((lastPlayedTime < repeatLimit) && (lastPlayedTime > 6000)) {
+                                
                                 API.sendChat(subChat(basicBot.chat.songknown, {name: obj.dj.username, lasttime: basicBot.roomUtilities.msToStr(Date.now() - lastPlayed)}));
-                                }
+                               
+                                // }
+                               
                                 basicBot.room.historyList[i].push(+new Date());
+                            }
+                	    else {
+                	    	API.sendChat(subChat(basicBot.chat.songplayed, {name: obj.dj.username}));
                 	    }
             	      	}
             	    	alreadyPlayed = true;

@@ -211,7 +211,7 @@
             voteSkipLimit: 7,
             timeGuard: true,
             historySkip: true,
-            historyLimitNumber: 49, // 1-49
+            historyLimitNumber: 50, // 1-50
             // historyLimitTime: 200,
             maximumSongLength: 7,
             autodisable: false,
@@ -2636,53 +2636,52 @@
                         msg += basicBot.chat.afkremoval + ': ';
                         if (basicBot.settings.afkRemoval) msg += 'ON';
                         else msg += 'OFF';
-                        msg += '. ';
-                        msg += basicBot.chat.afksremoved + ": " + basicBot.room.afkList.length + '. ';
-                        msg += basicBot.chat.afklimit + ': ' + basicBot.settings.maximumAfk + '. ';
+                        msg += ' | ';
+                        msg += basicBot.chat.afksremoved + ": " + basicBot.room.afkList.length + ' | ';
+                        msg += basicBot.chat.afklimit + ': ' + basicBot.settings.maximumAfk + ' | ';
                         */
 
                         msg += 'Bouncer+: ';
                         if (basicBot.settings.bouncerPlus) msg += 'ON';
                         else msg += 'OFF';
-                        msg += '. ';
+                        msg += ' | ';
 												
                         msg += basicBot.chat.blacklist + ': ';
                         if (basicBot.settings.blacklistEnabled) msg += 'ON';
                         else msg += 'OFF';
-                        msg += '. ';
-
+                        msg += ' | ';
+/*
                         msg += basicBot.chat.lockguard + ': ';
                         if (basicBot.settings.lockGuard) msg += 'ON';
                         else msg += 'OFF';
-                        msg += '. ';
+                        msg += ' | ';
 
                         msg += basicBot.chat.cycleguard + ': ';
                         if (basicBot.settings.cycleGuard) msg += 'ON';
                         else msg += 'OFF';
-                        msg += '. ';
-
+                        msg += ' | ';
+*/
                         msg += basicBot.chat.timeguard + ': ';
                         if (basicBot.settings.timeGuard) msg += 'ON';
                         else msg += 'OFF';
-                        msg += '. ';
+                        msg += ' | ';
 
                         msg += basicBot.chat.chatfilter + ': ';
                         if (basicBot.settings.filterChat) msg += 'ON';
                         else msg += 'OFF';
-                        msg += '. ';
+                        msg += ' | ';
 
                         msg += basicBot.chat.historySkip + ': ';
                         if (basicBot.settings.historySkip ) msg += 'ON';
                         else msg += 'OFF';
-                        msg += '. ';
-                        msg += basicBot.chat.historyNumber + ': ' + basicBot.settings.historyLimitNumber + '. ';
+                        msg += ' (' + basicBot.settings.historyLimitNumber + ') | ';
                         // alterative history time skip
-                        //msg += basicBot.chat.historyLimit + ': ' + basicBot.settings.historyLimitTime + '. ';
+                        //msg += basicBot.chat.historyLimit + ': ' + basicBot.settings.historyLimitTime + ' |  ';
 
                         msg += basicBot.chat.voteskip + ': ';
                         if (basicBot.settings.voteskip) msg += 'ON';
                         else msg += 'OFF';
-                        msg += '. ';
+                        msg += ' | ';
 
                         var launchT = basicBot.room.roomstats.launchTime;
                         var durationOnline = Date.now() - launchT;

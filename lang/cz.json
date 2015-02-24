@@ -10,8 +10,8 @@
 
     "welcome": "/me Vítej %%NAME%% :) ",
     "welcomeback": "/me Vítej zpět %%NAME%%",
-    "songknown": "/me :repeat: Tato píseň už hrála %%PLAYS%% krát v posledních %%TIMETOTAL%%, naposledy před %%LASTTIME%% . :repeat:",
-    "songplayed": "/me :repeat: @%%NAME%% Tato píseň je již v historii (%%NUMBER%%). :repeat:",
+    "songknown": "/me :repeat: Tato píseň už hrála %%PLAYS%% krát v posledních %%TIMETOTAL%%, naposledy před %%LASTTIME%%. :repeat:",
+    "songplayed": "/me :repeat: @%%NAME%% Tato píseň je již v historii (%%NUMBER%%/50). :repeat:",
     "timelimit": "/me @%%NAME%% je zakázáno hrát songy delší než %%MAXLENGTH%% minut.",
     "permissionownsong": "/me :up: @%%NAME%% má povoleno hrát vlastní tvorbu!",
     "isblacklisted": "/me Tato píseň je na %%BLACKLIST%% blacklistu! Přeskakuji...",

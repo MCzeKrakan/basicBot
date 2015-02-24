@@ -119,7 +119,7 @@
                 basicBot.room.newBlacklisted = room.newBlacklisted;
                 API.chatLog(basicBot.chat.datarestored);
             }
-        }
+        };
         /*var json_sett = null;
         var roominfo = document.getElementById("room-info");
         info = roominfo.textContent;
@@ -868,8 +868,11 @@
             	    API.sendChat(subChat(basicBot.chat.songplayed, {name: obj.dj.username, nubmer: j}));
             	    API.moderateForceSkip();
             	    songSkipped = true;
+            	}
+            }
 
-        /*  alternative history time skip
+        /*  
+            alternative history time skip
             var alreadyPlayed = false;
             for (var i = 0; i < basicBot.room.historyList.length; i++) {
                 if (basicBot.room.historyList[i][0] === obj.media.cid) {
@@ -888,8 +891,10 @@
                 }
             }
             if (!alreadyPlayed) {
-                basicBot.room.historyList.push([obj.media.cid, +new Date()]); */
+                basicBot.room.historyList.push([obj.media.cid, +new Date()]); 
             }
+        */
+            
             var newMedia = obj.media;
             if (basicBot.settings.timeGuard && newMedia.duration > basicBot.settings.maximumSongLength * 60 && !basicBot.room.roomevent && !songSkipped) {
                 var name = obj.dj.username;
@@ -911,7 +916,7 @@
             }
             storeToStorage();
 
-        }
+        },
         eventWaitlistupdate: function (users) {
             if (users.length < 50) {
                 if (basicBot.room.queue.id.length > 0 && basicBot.room.queueable) {

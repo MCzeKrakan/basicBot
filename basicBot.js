@@ -866,9 +866,10 @@
             for (var j = 0; j < basicBot.settings.historyLimitNumber; j++) {
             	if ((API.getHistory()[j].media.cid === API.getMedia().cid) && basicBot.settings.historySkip) {
             	    var songNumber = j
-            	    API.sendChat(subChat(basicBot.chat.songplayed, {name: obj.dj.username, nubmer: songNumber}));
+            	    API.sendChat(subChat(basicBot.chat.songplayed, {name: obj.dj.username, number: songNumber}));
             	    API.moderateForceSkip();
             	    songSkipped = true;
+            	    break;
             	}
             }
 

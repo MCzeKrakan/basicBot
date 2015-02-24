@@ -196,7 +196,7 @@
             chatLink: "https://rawgit.com/MCzeKrakan/basicBot/master/lang/cz.json",
             startupCap: 1, // 1-200
             startupVolume: 0, // 0-100
-            startupEmoji: false, // true or false
+            startupEmoji: true, // true or false
             maximumAfk: 120,
             afkRemoval: false,
             maximumDc: 60,
@@ -862,30 +862,32 @@
             }
 
             var alreadyPlayed = false;
+            var foundSong = false
             for (var j = 0; j < 49; j++) {
             	if ((API.getHistory()[j].media.cid === API.getMedia().cid) && basicBot.settings.historySkip) {
-            		for (var i = 0; i < basicBot.room.historyList.length; i++) {
-                            if (basicBot.room.historyList[i][0] === obj.media.cid) {
-                                var firstPlayed = basicBot.room.historyList[i][1];
-                                var plays = basicBot.room.historyList[i].length - 1;
-                                var lastPlayed = basicBot.room.historyList[i][plays];
+            	    for (var i = 0; i < basicBot.room.historyList.length; i++) {
+                        if (basicBot.room.historyList[i][0] === obj.media.cid) {
+                            var firstPlayed = basicBot.room.historyList[i][1];
+                            var plays = basicBot.room.historyList[i].length - 1;
+                            var lastPlayed = basicBot.room.historyList[i][plays];
                                 
-                                // var lastPlayedTime = (Date.now() - lastPlayed);
-                                // var repeatLimit = (basicBot.settings.historyLimitTime * 60 * 1000);
-                                // if ((lastPlayedTime < repeatLimit) && (lastPlayedTime > 6000)) {
+                            // var lastPlayedTime = (Date.now() - lastPlayed);
+                            // var repeatLimit = (basicBot.settings.historyLimitTime * 60 * 1000);
+                            // if ((lastPlayedTime < repeatLimit) && (lastPlayedTime > 6000)) {
                                 
-                                API.sendChat(subChat(basicBot.chat.songknown, {name: obj.dj.username, lasttime: basicBot.roomUtilities.msToStr(Date.now() - lastPlayed)}));
+                            API.sendChat(subChat(basicBot.chat.songknown, {name: obj.dj.username, lasttime: basicBot.roomUtilities.msToStr(Date.now() - lastPlayed)}));
+                            foundSong = true;
+                               	
+                            // }
                                
-                                // }
-                               
-                                basicBot.room.historyList[i].push(+new Date());
-                            }
-                	    else {
-                	    	API.sendChat(subChat(basicBot.chat.songplayed, {name: obj.dj.username}));
-                	    }
-            	      	}
-            	    	alreadyPlayed = true;
-            	    	API.moderateForceSkip();
+                            basicBot.room.historyList[i].push(+new Date());
+                	}
+            	    }
+            	    if (!foundSong) {
+            	    	API.sendChat(subChat(basicBot.chat.songplayed, {name: obj.dj.username}));
+            	    }
+            	    alreadyPlayed = true;
+            	    API.moderateForceSkip();
             	}
             }
             if (!alreadyPlayed) {

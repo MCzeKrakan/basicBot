@@ -232,7 +232,7 @@
             motd: "Temporary Message of the Day",
             filterChat: true,
             etaRestriction: false,
-            welcome: true,
+            welcome: false,
             opLink: null,
             rulesLink: "http://goo.gl/tZQSrD",
             themeLink: null,
@@ -863,24 +863,22 @@
 
             var alreadyPlayed = false;
             for (var j = 0; j < 49; j++) {
-            	if (API.getHistory()[j].media.cid === API.getMedia().cid) {
-            	    for (var i = 0; i < basicBot.room.historyList.length; i++) {
-                        if (basicBot.room.historyList[i][0] === obj.media.cid) {
-                            var firstPlayed = basicBot.room.historyList[i][1];
-                            var plays = basicBot.room.historyList[i].length - 1;
-                            var lastPlayed = basicBot.room.historyList[i][plays];
-                            var lastPlayedTime = (Date.now() - lastPlayed);
-                            var repeatLimit = (basicBot.settings.historyLimitTime * 60 * 1000);
-                            if (basicBot.settings.historySkip && (lastPlayedTime < repeatLimit) && (lastPlayedTime > 6000)) {
-                               API.sendChat(subChat(basicBot.chat.songknown, {name: obj.dj.username, lasttime: basicBot.roomUtilities.msToStr(Date.now() - lastPlayed)}));
-                               API.moderateForceSkip();
-                            }
-                            else {
-                    	    basicBot.room.historyList[i].push(+new Date());
-                    	    }
-                    	    alreadyPlayed = true;
-                	}
-            	    }
+            	if ((API.getHistory()[j].media.cid === API.getMedia().cid) && basicBot.settings.historySkip) {
+            		for (var i = 0; i < basicBot.room.historyList.length; i++) {
+                            if (basicBot.room.historyList[i][0] === obj.media.cid) {
+                                var firstPlayed = basicBot.room.historyList[i][1];
+                                var plays = basicBot.room.historyList[i].length - 1;
+                                var lastPlayed = basicBot.room.historyList[i][plays];
+                                var lastPlayedTime = (Date.now() - lastPlayed);
+                                var repeatLimit = (basicBot.settings.historyLimitTime * 60 * 1000);
+                                if ((lastPlayedTime < repeatLimit) && (lastPlayedTime > 6000)) {
+                                API.sendChat(subChat(basicBot.chat.songknown, {name: obj.dj.username, lasttime: basicBot.roomUtilities.msToStr(Date.now() - lastPlayed)}));
+                                }
+                                basicBot.room.historyList[i].push(+new Date());
+                	    }
+            	      	}
+            	    	alreadyPlayed = true;
+            	    	API.moderateForceSkip();
             	}
             }
             if (!alreadyPlayed) {

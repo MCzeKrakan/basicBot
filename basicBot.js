@@ -217,7 +217,7 @@
             autodisable: false,
             commandCooldown: 30,
             usercommandsEnabled: true,
-            lockskipPosition: 2,
+            lockskipPosition: 1,
             lockskipReasons: [
             	["theme", "Song nevyhovuje aktuálnímu žánru této místnosti. "],
         	["op", "Song je na seznamu příliš často hraných. "],

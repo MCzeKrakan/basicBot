@@ -213,7 +213,7 @@
             historySkip: true,
             historyLimitNumber: 50, // 1-50
             // historyLimitTime: 200,
-            maximumSongLength: 7,
+            maximumSongLength: 435,
             autodisable: false,
             commandCooldown: 30,
             usercommandsEnabled: true,
@@ -897,7 +897,7 @@
         */
             
             var newMedia = obj.media;
-            if (basicBot.settings.timeGuard && newMedia.duration > basicBot.settings.maximumSongLength * 60 && !basicBot.room.roomevent && !songSkipped) {
+            if (basicBot.settings.timeGuard && newMedia.duration > basicBot.settings.maximumSongLength && !basicBot.room.roomevent && !songSkipped) {
                 var name = obj.dj.username;
                 API.sendChat(subChat(basicBot.chat.timelimit, {name: name, maxlength: basicBot.settings.maximumSongLength}));
                 API.moderateForceSkip();

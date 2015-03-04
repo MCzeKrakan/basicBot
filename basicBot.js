@@ -40,9 +40,9 @@
 
     var subChat = function (chat, obj) {
         if (typeof chat === "undefined") {
-            API.chatLog("There is a chat text missing.");
-            console.log("There is a chat text missing.");
-            return "[Error] No text message found.";
+            API.chatLog("Chybí text chatu.");
+            console.log("Chybí text chatu.");
+            return "[Chyba] Textová zpráva nebyla nalezena.";
         }
         var lit = '%%';
         for (var prop in obj) {
@@ -238,7 +238,9 @@
             rulesLink: "http://goo.gl/tZQSrD",
             themeLink: null,
             fbLink: "https://facebook.com/MazArmyDJ",
-            youtubeLink: null,
+            czYoutubeLink: "https://youtube.com/MazariniCZ",
+            enYoutubeLink: "https://youtube.com/Mazarin1k",
+            streamLink: "http://twitch.tv/mazarin1k"
             website: "http://mazarmy.com",
             intervalMessages: [],
             messageInterval: 5,
@@ -872,8 +874,8 @@
             	}
             }
 
-        /*  
-            alternative history time skip
+        /*              alternative history time skip
+            
             var alreadyPlayed = false;
             for (var i = 0; i < basicBot.room.historyList.length; i++) {
                 if (basicBot.room.historyList[i][0] === obj.media.cid) {
@@ -897,7 +899,7 @@
         */
             
             var newMedia = obj.media;
-            if (basicBot.settings.timeGuard && newMedia.duration > (basicBot.settings.maximumSongLength + 15) && !basicBot.room.roomevent && !songSkipped) {
+            if (basicBot.settings.timeGuard && (newMedia.duration > (basicBot.settings.maximumSongLength + 15)) && !basicBot.room.roomevent && !songSkipped) {
                 var name = obj.dj.username;
                 API.sendChat(subChat(basicBot.chat.timelimit, {name: name, maxlength: basicBot.settings.maximumSongLength / 60}));
                 API.moderateForceSkip();

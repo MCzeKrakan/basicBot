@@ -42,7 +42,7 @@
         if (typeof chat === "undefined") {
             API.chatLog("Chybí text chatu.");
             console.log("Chybí text chatu.");
-            return "[Chyba] Textová zpráva nebyla nalezena.";
+            return "[Error] Textová zpráva nebyla nalezena.";
         }
         var lit = '%%';
         for (var prop in obj) {
@@ -899,7 +899,7 @@
         */
             
             var newMedia = obj.media;
-            if (basicBot.settings.timeGuard && (newMedia.duration > (basicBot.settings.maximumSongLength + 15)) && !basicBot.room.roomevent && !songSkipped) {
+            if (basicBot.settings.timeGuard && newMedia.duration > (basicBot.settings.maximumSongLength + 15) && !basicBot.room.roomevent && !songSkipped) {
                 var name = obj.dj.username;
                 API.sendChat(subChat(basicBot.chat.timelimit, {name: name, maxlength: basicBot.settings.maximumSongLength / 60}));
                 API.moderateForceSkip();

@@ -85,15 +85,22 @@
     "afkstatusreset": "/me [@%%NAME%%] AFK status @%%USERNAME%% vynulován.",
     "inactivefor": "/me [@%%NAME%%] @%%USERNAME%% je neaktivní po dobu %%TIME%%.",
     "autowoot": "/me Doporučujeme script RSC: https://radiant.dj/rcs",
-    "brandambassador": "/me Brand Ambassador je hlasem plug.dj komunity. Ohlašuje eventy, navštěvuje komunity a šíří slávu plug.dj po světě. Více informací zde: https://plug.dj/ba",
+    "brandambassador": "/me Brand Ambassador je hlasem plug.dj komunity. Ohlašuje eventy, navštěvuje komunity a šíří slávu plug.dj po světě. Další info zde: https://plug.dj/ba",
     "bouncerplusrank": "/me [@%%NAME%%] Pouze Manager a výš může zapnout mod Vyhazovači+.",
     "chatcleared": "/me [@%%NAME%%] Chat vymazán.",
     "deletechat": "/me [@%%NAME%%] Zprávy uživatele %%USERNAME%% vymazány.",
     "commandslink": "/me %%BOTNAME%% Příkazy: %%LINK%%",
+
+    "takegift": "/me Přijímám všechny dárky bez adresáta :) .",
+    "nousergift": "/em Nevidím %%NAME%% v místosti, tak děkuji za dárek :) .",
+    "selfgift": "/me @%%NAME%% dávat dárky sám sobě je trochu smutné ne?",
+    "gift": "/me @%%NAMETO%%, @%%NAMEFROM%% %%GIFT%%",
+
     "eatcookie": "/me Dej si cookie.",
     "nousercookie": "/em Nevidím %%NAME%% v místosti, tak cookie sním sám.",
     "selfcookie": "/me @%%NAME%% tak trochu chamtivec ne, jíst cookie sám. Rozděl se taky s ostatními!",
     "cookie": "/me @%%NAMETO%%, @%%NAMEFROM%% %%COOKIE%%",
+
     "cycleguardtime": "/me [@%%NAME%%] Ochrana cyklu nastavena na %%TIME%% minut.",
     "dclookuprank": "/me [@%%NAME%%] Pouze vyhazovači a výš mohou vyhledat dc pro ostatní.",
     "emojilist": "/me Emotikony: %%LINK%%",

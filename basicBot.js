@@ -3014,7 +3014,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                        if (typeof basicBot.settings.czYoutubeLink === "string" %% typeof basicBot.settings.enYoutubeLink === "string")
+                        if (typeof basicBot.settings.czYoutubeLink === "string" && typeof basicBot.settings.enYoutubeLink === "string")
                             API.sendChat(subChat(basicBot.chat.youtube, {name: chat.un, linkcz: basicBot.settings.czYoutubeLink, linken: basicBot.settings.enYoutubeLink}));
                     }
                 }

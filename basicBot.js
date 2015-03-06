@@ -971,7 +971,7 @@
                 ch = msg.charAt(i);
                 if (ch >= 'A' && ch <= 'Z') capitals++;
             }
-            if (capitals >= 40) {
+            if (capitals >= 20) {
                 API.sendChat(subChat(basicBot.chat.caps, {name: chat.un}));
                 return true;
             }
@@ -1120,13 +1120,14 @@
                 basicBot.room.roomstats.chatmessages++;
             },
             spam: [
+            	'kurva', 'píča', 'čůrák', 'negr', 'motherfucker', 'fuckadmins', 'puta', 'kretén', 'fuck you'
                 //'hueh', 'hu3', 'brbr', 'heu', 'brbr', 'kkkk', 'spoder', 'mafia', 'zuera', 'zueira',
                 //'zueria', 'aehoo', 'aheu', 'alguem', 'algum', 'brazil', 'zoeira', 'fuckadmins', 'affff', 'vaisefoder', 'huenaarea',
                 //'hitler', 'ashua', 'ahsu', 'ashau', 'lulz', 'huehue', 'hue', 'huehuehue', 'merda', 'pqp', 'puta', 'mulher', 'pula', 'retarda', 'caralho', 'filha', 'ppk',
                 //'gringo', 'fuder', 'foder', 'hua', 'ahue', 'modafuka', 'modafoka', 'mudafuka', 'mudafoka', 'ooooooooooooooo', 'foda'
             ],
             curses: [
-                //'nigger', 'faggot', 'nigga', 'niqqa', 'motherfucker', 'modafocka'
+                //'kurva', 'píča', 'čůrák', 'negr', 'motherfucker'
             ]
         },
         connectAPI: function () {

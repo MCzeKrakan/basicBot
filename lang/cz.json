@@ -141,6 +141,7 @@
     "commandscd": "/me [@%%NAME%%] Cooldown příkazů pro běžné uživatele nastaven na %%TIME%% sekund.",
     "voteratio": "/me [@%%NAME%%] @%%USERNAME%% ~ Woots: %%WOOT%%, Mehs: %%MEHS%%, Ratio (W/M): %%RATIO%%.",
     "website": "/me Navštivte náš web: %%LINK%%",
-    "youtube": "/me [%%NAME%%] Odebírejte náš youtube: %%LINK%%",
+    "youtube": "/me [%%NAME%%] Koukněte na Maziho videa: česká - %%LINKCZ%% a anglická - %%LINKEN%%",
+    "stream": "/me [%%NAME%%] Sledujte Maziho stream: %%LINK%%",
     "songstatistics": "/me %%ARTIST%% - %%TITLE%%: %%WOOTS%%W/%%GRABS%%G/%%MEHS%%M."
 }

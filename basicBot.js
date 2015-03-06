@@ -209,6 +209,7 @@
             maximumCycletime: 10,
             voteSkip: false,
             voteSkipLimit: 7,
+            rouletteTime: 3,
             timeGuard: true,
             historySkip: true,
             historyLimitNumber: 50, // 1-50
@@ -306,7 +307,7 @@
                     basicBot.room.roulette.rouletteStatus = true;
                     basicBot.room.roulette.countdown = setTimeout(function () {
                         basicBot.room.roulette.endRoulette();
-                    }, 60 * 1000);
+                    }, basicBot.settings.rouletteTime * 60 * 1000);
                     API.sendChat(basicBot.chat.isopen);
                 },
                 endRoulette: function () {

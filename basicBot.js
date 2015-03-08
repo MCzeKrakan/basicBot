@@ -212,7 +212,7 @@
             rouletteTime: 3,
             timeGuard: true,
             historySkip: true,
-            historyLimitNumber: 50, // 1-50
+            historySkipLimit: 50, // 1-50
             // historyLimitTime: 200,
             maximumSongLength: 420,
             autodisable: false,
@@ -866,8 +866,8 @@
             }
 	    
 	    songSkipped = false;
-            for (var j = 0; j < basicBot.settings.historyLimitNumber; j++) {
-            	if ((API.getHistory()[j].media.cid === API.getMedia().cid) && basicBot.settings.historySkip) {
+            for (var j = 0; j < basicBot.settings.historySkipLimit; j++) {
+            	if (basicBot.settings.historySkip && (API.getHistory()[j].media.cid === API.getMedia().cid)) {
             	    API.sendChat(subChat(basicBot.chat.songplayed, {name: obj.dj.username, number: j++}));
             	    API.moderateForceSkip();
             	    songSkipped = true;
@@ -1843,7 +1843,7 @@
                             API.sendChat(subChat(basicBot.chat.toggleoff, {name: chat.un, 'function': basicBot.chat.voteskip}));
                         }
                         else {
-                            basicBot.settings.motdEnabled = !basicBot.settings.motdEnabled;
+                            basicBot.settings.voteSkip = !basicBot.settings.voteSkip;
                             API.sendChat(subChat(basicBot.chat.toggleon, {name: chat.un, 'function': basicBot.chat.voteskip}));
                         }
                     }
@@ -2726,9 +2726,9 @@
                         msg += basicBot.chat.historySkip + ': ';
                         if (basicBot.settings.historySkip ) msg += 'ON';
                         else msg += 'OFF';
-                        msg += ' (' + basicBot.settings.historyLimitNumber + ') | ';
+                        msg += ' (' + basicBot.settings.historySkipLimit + ') | ';
                         // alterative history time skip
-                        //msg += basicBot.chat.historyLimit + ': ' + basicBot.settings.historyLimitTime + ' |  ';
+                        //msg += basicBot.chat.historylimit + ': ' + basicBot.settings.historyLimitTime + ' |  ';
 
                         msg += basicBot.chat.voteskip + ': ';
                         if (basicBot.settings.voteskip) msg += 'ON';
@@ -2793,6 +2793,50 @@
                     else {
                         if (typeof basicBot.settings.themeLink === "string")
                             API.sendChat(subChat(basicBot.chat.genres, {link: basicBot.settings.themeLink}));
+                    }
+                }
+            },
+
+	    historyskiplimitCommand: {
+                command: 'historyskiplimit',
+                rank: 'manager',
+                type: 'startsWith',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        var msg = chat.message;
+                        if (msg.length <= cmd.length + 1) return API.sendChat(subChat(basicBot.chat.historyskiplimit, {name: chat.un, limit: basicBot.settings.historySkipLimit}));
+                        var argument = msg.substring(cmd.length + 1);
+                        if (!basicBot.settings.voteSkip) basicBot.settings.historySkip = !basicBot.settings.historySkip;
+                        if (isNaN(argument) && 1 > argument > 50) {
+                            API.sendChat(subChat(basicBot.chat.historyskipinvalidlimit, {name: chat.un}));
+                        }
+                        else {
+                            basicBot.settings.historySkipLimit = argument;
+                            API.sendChat(subChat(basicBot.chat.historyskipsetlimit, {name: chat.un, limit: basicBot.settings.historySkipLimit}));
+                        }
+                    }
+                }
+            },
+
+            historyskipCommand: {
+                command: 'historyskip',
+                rank: 'manager',
+                type: 'exact',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        if (basicBot.settings.historySkip) {
+                            basicBot.settings.historySkip = !basicBot.settings.historySkip;
+                            return API.sendChat(subChat(basicBot.chat.toggleoff, {name: chat.un, 'function': basicBot.chat.historyskip}));
+                        }
+                        else {
+                            basicBot.settings.historySkip = !basicBot.settings.historySkip;
+                            return API.sendChat(subChat(basicBot.chat.toggleon, {name: chat.un, 'function': basicBot.chat.historyskip}));
+                        }
+
                     }
                 }
             },

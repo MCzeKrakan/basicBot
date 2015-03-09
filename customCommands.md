@@ -11,6 +11,8 @@ Manažer
 |Příkaz | Argumenty | Popis |
 |:------:|:---------:|:--------------------------------------:|
 |!afklimit | X | nastaví max afk limit |
+|!historyskiplimit | X | nastaví max limit pro přeskočení písní v historii (X=1-50) |
+|!historyskip | | ON/OFF přeskočení písniček v hostorii |
 |!clearchat | | smaže chat |
 |!cycle | | ON/OFF DJ cyklus |
 |!cycletimer | X | nastaví max čas, po který bude DJ cyklus zapnutý |
@@ -25,7 +27,7 @@ Vyhazovač+
 
 |Příkaz | Argumenty | Popis |
 |:------:|:---------:|:--------------------------------------:|
-|!add | @user | pridá uživatele do fronty |
+|!add | @user | přidá uživatele do fronty |
 |!afkremoval | | ON/OFF AFK hlídač pro frontu |
 |!autoskip | | automaticky přeskakuje songy po dohrání (když je buglý cyklus) |
 |!bouncer+ | | ON/OFF vyhazovač+ |
@@ -64,7 +66,7 @@ Vyhazovač
 |!lockskip | (důvod) | přeskočí píseň a posune dj zpět na první místo, důvody: <ul><li>theme - Song nevyhovuje aktuálnímu žánru této místnosti</li><li>op - Song je na seznamu příliš často hraných</li><li>history - Song je již v historii</li><li>sound - Song má velmi špatnou kvalitu zvuku, nebo žádný zvuk</li><li>nsfw - Song obsahuje nevhodný obsah (obrazový nebo zvukový)</li><li>un - Song nebyl dostupný pro všechny uživatele</li></ul> |
 |!lockskippos | X | funguje jako lockskip, jen X nastaví pozici pro přesunutí |
 |!motd | (X)/(zpráva) | bez argumentu vypíše momentální zprávu dne, když je zadáno X, vypíše zprávu každých X songů, když je zadána zpráva, nastaví novou zprávu dne. |
-|!mute | @user (X) | ztlumí uživatele na 15 min (X=0-29), 30 min (X=30-44), 45 min (X=45-∞, nebo bez argumentu) |
+|!mute | @user (X) | ztlumí uživatele na 15 min (X=0-15), 30 min (X=16-30), 45 min (X=31-∞, nebo bez argumentu) |
 |!reload | | restartuje Bota |
 |!restricteta | | ON/OFF omezení příkazu eta pro šedé uživatele na jedenkrát za hodinu |
 |!sessionstats | | zobrazí vaše statistiky od posledního připojení |
@@ -111,3 +113,4 @@ Uživatel
 |!theme | | odkaz na temá, zaměření místnosti (pokud je nastaven) |
 |!website | | odkaz na stránky (pokud je nastaven) |
 |!youtube | | odkaz na youtube kanál (pokud je nastaven) |
+|!stream | | odkaz na twitch stream (pokud je nastaven) |

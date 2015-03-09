@@ -1654,7 +1654,7 @@
                 type: 'startsWith',
                 gifts: ['ti daroval kytici růží :rose: !',
                     'ti daroval tabulku čokolády :chocolate_bar: !',
-                    'ti věnoval svou sbírku motýlů!',
+                    'ti posílá sweet :kiss: !',
                     'ti daroval své srdce :gift_heart: !',
                     'tě pozval na pivo :beers: !',
                     'ti poslal tajnou zprávu :love_letter: !',

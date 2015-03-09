@@ -176,7 +176,7 @@
 
     var botCreator = "Matthew (Yemasthui)";
     var botMaintainer = "Benzi (Quoona)"
-    var botCreatorIDs = ["3851534", "3934992", "4105209"];
+    var botCreatorIDs = ["3851534", "4105209"];
 
     var basicBot = {
         version: "2.2.1",
@@ -1843,7 +1843,7 @@
                             API.sendChat(subChat(basicBot.chat.toggleoff, {name: chat.un, 'function': basicBot.chat.voteskip}));
                         }
                         else {
-                            basicBot.settings.voteSkip = !basicBot.settings.voteSkip;
+                            basicBot.settings.voteskip = !basicBot.settings.voteskip;
                             API.sendChat(subChat(basicBot.chat.toggleon, {name: chat.un, 'function': basicBot.chat.voteskip}));
                         }
                     }

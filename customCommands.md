@@ -31,7 +31,7 @@ Vyhazovač+
 |!afkremoval | | ON/OFF AFK hlídač pro frontu |
 |!autoskip | | automaticky přeskakuje songy po dohrání (když je buglý cyklus) |
 |!bouncer+ | | ON/OFF vyhazovač+ |
-*|!deletechat | @user | odstraní veškeré zrávy kokrétního uživatele (momentálně nefunkční, čeká na opravu) |*
+|!deletechat | @user | odstraní veškeré zrávy kokrétního uživatele ( *momentálně nefunkční, čeká na opravu* ) |
 |!lock | | uzamkne frontu |
 |!lockdown | | uzamčení místnosti: pouze zaměstnanci mohou chatovat |
 |!maxlength | X | max povolená délka songu (v sekundách) |

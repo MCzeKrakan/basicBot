@@ -31,7 +31,7 @@ Vyhazovač+
 |!afkremoval | | ON/OFF AFK hlídač pro frontu |
 |!autoskip | | automaticky přeskakuje songy po dohrání (když je buglý cyklus) |
 |!bouncer+ | | ON/OFF vyhazovač+ |
-|!deletechat | @user | odstraní veškeré zrávy kokrétního uživatele (**momentálně nefunkční, čeká na opravu**) |
+|!deletechat | @user | odstraní veškeré zrávy kokrétního uživatele (**NEFUNKČNÍ, ČEKÁ NA OPRAVU**) |
 |!lock | | uzamkne frontu |
 |!lockdown | | uzamčení místnosti: pouze zaměstnanci mohou chatovat |
 |!maxlength | X | max povolená délka songu (v sekundách) |
@@ -56,11 +56,11 @@ Vyhazovač
 |!blinfo | | informace potřebné pro zadaní songu do blacklistu |
 |!cycleguard | | ON/OFF časová ochrana zapnutého cyklu |
 |!dclookup / !dc | (@user) | vyhledá poslední pozici odpojeného uživatele |
-|!english | @user | požádá uživatele anglicky aby mluvil jazykem roomky CZ,SK,EN (v botovi není, časem dodělám) |
+|!english | @user | požádá uživatele anglicky aby mluvil jazykem roomky CZ,SK,EN (**V BOTOVI NENÍ, ČASEM DODĚLÁM**) |
 |!eta | (@user) | ukáže, kdy se přibližně uživatel dostane k pultu |
 |!filter | | ON/OFF filtr chatu |
 |!jointime | @user | ukáže, jak dlouho už je uživatel v roomce |
-|!kick | (X) | kicks user for X minutes, default is 0.25 minutes (15 seconds) (nevyzkoušeno, pravděpodobně nefunkční) |
+|!kick | (X) | kicks user for X minutes, default is 0.25 minutes (15 seconds) (**NEVYZKOUŠENO, NEFUNKČNÍ**) |
 |!kill | | vypne Bota |
 |!lockguard | | ON/OFF časová ochrana zamčené fronty |
 |!lockskip | (důvod) | přeskočí píseň a posune dj zpět na první místo, důvody: <ul><li>theme - Song nevyhovuje aktuálnímu žánru této místnosti</li><li>op - Song je na seznamu příliš často hraných</li><li>history - Song je již v historii</li><li>sound - Song má velmi špatnou kvalitu zvuku, nebo žádný zvuk</li><li>nsfw - Song obsahuje nevhodný obsah (obrazový nebo zvukový)</li><li>un - Song nebyl dostupný pro všechny uživatele</li></ul> |
@@ -98,7 +98,7 @@ Uživatel
 |!ba | | vysvětlení Brand Ambassador hodnosti |
 |!commands | | odkaz na tento seznam příazů |
 |!gift | (@user) | pošle dárek uživateli |
-|!cookie | (@user) | give a cookie to user (nefunkční, vypnuto) |
+|!cookie | (@user) | give a cookie to user (**NEFUNKČNÍ, VYPNUTO**) |
 |!dclookup / !dc | | vyhlednání svojí poslední pozice a připojení do fronty  |
 |!emoji | | odkaz na seznam emotikonů |
 |!eta | | ukáže, za jak dlouho se dostaneš k pultu |

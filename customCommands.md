@@ -61,7 +61,7 @@ Vyhazovač
 |!kick | (X) | kicks user for X minutes, default is 0.25 minutes (15 seconds) (nevyzkoušeno, pravděpodobně nefunkční) |
 |!kill | | vypne Bota |
 |!lockguard | | ON/OFF časová ochrana zamčené fronty |
-|!lockskip | (důvod) | <ul><li>přeskočí píseň a posune dj zpět na první místo (důvody:</li><li>theme - Song nevyhovuje aktuálnímu žánru této místnosti.</li><li>op - Song je na seznamu příliš často hraných.</li><li>history - Song je již v historii.</li><li>sound - Song má velmi špatnou kvalitu zvuku, nebo žádný zvuk.</li><li>nsfw - Song obsahuje nevhodný obsah (obrazový nebo zvukový).</li><li>un - Song nebyl dostupný pro všechny uživatele.)</li></ul> |
+|!lockskip | (důvod) | přeskočí píseň a posune dj zpět na první místo důvody: <ul><li>theme - Song nevyhovuje aktuálnímu žánru této místnosti</li><li>op - Song je na seznamu příliš často hraných</li><li>history - Song je již v historii</li><li>sound - Song má velmi špatnou kvalitu zvuku, nebo žádný zvuk</li><li>nsfw - Song obsahuje nevhodný obsah (obrazový nebo zvukový)</li><li>un - Song nebyl dostupný pro všechny uživatele</li></ul> |
 |!lockskippos | X | funguje jako lockskip, jen X nastaví pozici pro přesunutí |
 |!motd | (X)/(zpráva) | bez argumentu vypíše momentální zprávu dne, když je zadáno X, vypíše zprávu každých X songů, když je zadána zpráva, nastaví novou zprávu dne. |
 |!mute | @user (X) | ztlumí uživatele na 15 min (X=0-29), 30 min (X=30-44), 45 min (X=45-∞, nebo bez argumentu) |

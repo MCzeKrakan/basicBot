@@ -74,7 +74,7 @@
     "etarestriction": "Eta omezení",
     "historynumber": "Limit historie",
     "historyskip": "Přeskočení historie",
-    "historyskiplimit": "/me [@%%NAME%%] Limit přeskočení historie je momentálně %%LIMIT%% písní."",
+    "historyskiplimit": "/me [@%%NAME%%] Limit přeskočení historie je momentálně %%LIMIT%% písní.",
     "historyskipinvalidlimit": "/me [@%%NAME%%] Neplatný limit historie, zadejte číslo od 1 do 50.",
     "historyskipsetlimit": "/me [@%%NAME%%] Limit přeskočení historie nastaven na %%LIMIT%%.",
     "historylimit": "Limit historie",

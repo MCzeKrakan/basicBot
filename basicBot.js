@@ -1657,7 +1657,8 @@
                     'ti posílá sweet :kiss: !',
                     'ti daroval své srdce :gift_heart: !',
                     'tě pozval na pivo :beers: !',
-                    'ti poslal tajnou zprávu :love_letter: !',
+                    'ti hodil k nohám bombu :bomb: !',
+                    'ti poslal prázdný balík :package: :trollface: !',
                     'ti daroval tajemný balíček :gift: !',
                 ],
                 getGift: function () {

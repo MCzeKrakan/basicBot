@@ -22,7 +22,7 @@ Manažer
 |!usercommands | | ON/OFF příkazy pro uživatele |
 |!voteskip | (X) | bez argumentu vypíše momentální limit meh, s argumentem nastaví nový limit meh |
 |!lockskippos | X | nastaví X jako pozici pro přesunutí při lockskip |
-|!togglelockskip | X | ON/OFF uzamykání fronty při lockskip (nutno zapnout jen při naplněné frontě - 50 lidí) |
+|!togglelockskip | | ON/OFF uzamykání fronty při lockskip (nutno zapnout jen při naplněné frontě - 50 lidí) |
 
 Vyhazovač+
 --------

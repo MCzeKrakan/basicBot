@@ -20,7 +20,9 @@ Manažer
 |!refresh | | aktualizuje okno prohlížeče, na kterém běží Bot |
 |!usercmdcd | X | nastaví cooldown pro příkazy šedých uživatelů |
 |!usercommands | | ON/OFF příkazy pro uživatele |
-|!voteskip | (X) | bez argumentu vypíše momentální limit meh, s argumentem nastaví nový limit meh. |
+|!voteskip | (X) | bez argumentu vypíše momentální limit meh, s argumentem nastaví nový limit meh |
+|!lockskippos | X | nastaví X jako pozici pro přesunutí při lockskip |
+|!togglelockskip | X | ON/OFF uzamykání fronty při lockskip (nutno zapnout jen při naplněné frontě - 50 lidí) |
 
 Vyhazovač+
 --------
@@ -28,7 +30,7 @@ Vyhazovač+
 |Příkaz | Argumenty | Popis |
 |:------:|:---------:|:--------------------------------------:|
 |!add | @user | přidá uživatele do fronty |
-|!afkremoval | | ON/OFF AFK hlídač pro frontu |
+|!afkremoval | | ON/OFF anti AFK ochrana pro fronty |
 |!autoskip | | automaticky přeskakuje songy po dohrání (když je buglý cyklus) |
 |!bouncer+ | | ON/OFF vyhazovač+ |
 |!deletechat | @user | odstraní veškeré zrávy kokrétního uživatele (**NEFUNKČNÍ, ČEKÁ NA OPRAVU**) |
@@ -64,7 +66,6 @@ Vyhazovač
 |!kill | | vypne Bota |
 |!lockguard | | ON/OFF časová ochrana zamčené fronty |
 |!lockskip | (důvod) | přeskočí píseň a posune dj zpět na první místo, důvody: <ul><li>theme - Song nevyhovuje aktuálnímu žánru této místnosti</li><li>op - Song je na seznamu příliš často hraných</li><li>history - Song je již v historii</li><li>sound - Song má velmi špatnou kvalitu zvuku, nebo žádný zvuk</li><li>nsfw - Song obsahuje nevhodný obsah (obrazový nebo zvukový)</li><li>un - Song nebyl dostupný pro všechny uživatele</li></ul> |
-|!lockskippos | X | nastaví X jako pozici pro přesunutí při lockskip |
 |!motd | (X)/(zpráva) | bez argumentu vypíše momentální zprávu dne, když je zadáno X, vypíše zprávu každých X songů, když je zadána zpráva, nastaví novou zprávu dne. |
 |!mute | @user (X) | ztlumí uživatele na 15 min (X=0-15), 30 min (X=16-30), 45 min (X=31-∞, nebo bez argumentu) |
 |!reload | | restartuje Bota |

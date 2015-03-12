@@ -1,7 +1,7 @@
 Commands:
 =========
 
-X specifies a number 
+X specifies a number  
 Arguments between ( ) are optional
 
 

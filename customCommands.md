@@ -1,7 +1,7 @@
 Příkazy:
 =========
 
-X označuje číslo  
+X označuje číslo    
 Argument mezi ( ) je volitelný
 
 

@@ -1,8 +1,8 @@
 Příkazy:
 =========
 
-X označuje číslo, 
-argument mezi ( ) je volitelný
+X označuje číslo  
+Argument mezi ( ) je volitelný
 
 
 Manažer

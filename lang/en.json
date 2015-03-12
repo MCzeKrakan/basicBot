@@ -67,6 +67,7 @@
     "chatfilter": "chatfilter",
     "lockdown": "lockdown",
     "lockguard": "lockguard",
+    "lockskip": "lockskip",
     "usercommands": "usercommands",
     "motd": "MotD",
     "welcomemsg": "welcome message",

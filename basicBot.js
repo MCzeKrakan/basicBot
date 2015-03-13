@@ -2780,7 +2780,7 @@
                         if (basicBot.settings.lockGuard) msg += 'ON';
                         else msg += 'OFF';
                         msg += ' | ';
-
+/*
                         msg += basicBot.chat.cycleguard + ': ';
                         if (basicBot.settings.cycleGuard) msg += 'ON';
                         else msg += 'OFF';
@@ -2790,7 +2790,7 @@
                         if (basicBot.settings.timeGuard) msg += 'ON';
                         else msg += 'OFF';
                         msg += ' | ';
-
+*/
                         msg += basicBot.chat.chatfilter + ': ';
                         if (basicBot.settings.filterChat) msg += 'ON';
                         else msg += 'OFF';

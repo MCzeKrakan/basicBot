@@ -2757,14 +2757,14 @@
                         var from = chat.un;
                         var msg = '/me [@' + from + '] ';
                         
-			/*
+			
                         msg += basicBot.chat.afkremoval + ': ';
                         if (basicBot.settings.afkRemoval) msg += 'ON';
                         else msg += 'OFF';
                         msg += ' | ';
                         msg += basicBot.chat.afksremoved + ": " + basicBot.room.afkList.length + ' | ';
                         msg += basicBot.chat.afklimit + ': ' + basicBot.settings.maximumAfk + ' | ';
-                        */
+                        
 
                         msg += 'Bouncer+: ';
                         if (basicBot.settings.bouncerPlus) msg += 'ON';
@@ -2775,7 +2775,7 @@
                         if (basicBot.settings.blacklistEnabled) msg += 'ON';
                         else msg += 'OFF';
                         msg += ' | ';
-/*
+                        
                         msg += basicBot.chat.lockguard + ': ';
                         if (basicBot.settings.lockGuard) msg += 'ON';
                         else msg += 'OFF';
@@ -2785,7 +2785,7 @@
                         if (basicBot.settings.cycleGuard) msg += 'ON';
                         else msg += 'OFF';
                         msg += ' | ';
-*/
+                        
                         msg += basicBot.chat.timeguard + ': ';
                         if (basicBot.settings.timeGuard) msg += 'ON';
                         else msg += 'OFF';
@@ -2793,6 +2793,11 @@
 
                         msg += basicBot.chat.chatfilter + ': ';
                         if (basicBot.settings.filterChat) msg += 'ON';
+                        else msg += 'OFF';
+                        msg += ' | ';
+                        
+                        msg += basicBot.chat.lockskip + ': ';
+                        if (basicBot.settings.lockskip) msg += 'ON';
                         else msg += 'OFF';
                         msg += ' | ';
 

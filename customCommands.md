@@ -58,7 +58,7 @@ Vyhazovač
 |!blinfo | | informace potřebné pro zadaní songu do blacklistu |
 |!cycleguard | | ON/OFF časová ochrana zapnutého cyklu |
 |!dclookup / !dc | (@user) | vyhledá poslední pozici odpojeného uživatele |
-|!english | @user | požádá uživatele anglicky aby mluvil jazykem roomky CZ,SK,EN (**V BOTOVI NENÍ, ČASEM DODĚLÁM**) |
+|!english | @user | požádá uživatele jeho jazykem, aby mluvil anglicky |
 |!eta | (@user) | ukáže, kdy se přibližně uživatel dostane k pultu |
 |!filter | | ON/OFF filtr chatu |
 |!jointime | @user | ukáže, jak dlouho už je uživatel v roomce |

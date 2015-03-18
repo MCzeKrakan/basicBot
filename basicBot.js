@@ -316,7 +316,9 @@
                     var ind = Math.floor(Math.random() * basicBot.room.roulette.participants.length);
                     var winner = basicBot.room.roulette.participants[ind];
                     basicBot.room.roulette.participants = [];
-                    var pos = Math.floor((Math.random() * API.getWaitList().length) + 1);
+                    // random position
+                    // var pos = Math.floor((Math.random() * API.getWaitList().length) + 1);
+                    var pos = 1;
                     var user = basicBot.userUtilities.lookupUser(winner);
                     var name = user.username;
                     API.sendChat(subChat(basicBot.chat.winnerpicked, {name: name, position: pos}));
@@ -1046,7 +1048,7 @@
                 if ((msg.indexOf(joinedroulette) > -1 || msg.indexOf(leftroulette) > -1) && chat.uid === basicBot.loggedInID) {
                     setTimeout(function (id) {
                         API.moderateDeleteChat(id);
-                    }, 2 * 1000, chat.cid);
+                    }, 5 * 1000, chat.cid);
                     return true;
                 }
                 return false;

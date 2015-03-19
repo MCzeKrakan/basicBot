@@ -38,6 +38,7 @@ Vyhazovač+
 |!lockdown | | uzamčení místnosti: pouze zaměstnanci mohou chatovat |
 |!maxlength | X | max povolená délka songu (v sekundách) |
 |!move | @user (X) | posune uživatele na pozici X, výchozí je 1 místo |
+|!swap | @user1 @user2 | prohodí uživatele ve frontě |
 |!remove | @user | odstraní uživatele z fronty |
 |!roulette | | spustí ruletu |
 |!songstats | | ON/OFF statistiky písniček |

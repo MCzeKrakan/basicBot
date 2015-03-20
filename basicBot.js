@@ -967,7 +967,6 @@
             for (var i = 0; i < users.length; i++) {
                 var user = basicBot.userUtilities.lookupUser(users[i].id);
                 basicBot.userUtilities.updatePosition(user, API.getWaitListPosition(users[i].id) + 1);
-                basicBot.userUtilities.checkWasPlaying(basicBot.room.users[ind]);
             }
         },
         chatcleaner: function (chat) {
@@ -1246,7 +1245,6 @@
                 }
                 var wlIndex = API.getWaitListPosition(basicBot.room.users[ind].id) + 1;
                 basicBot.userUtilities.updatePosition(basicBot.room.users[ind], wlIndex);
-                basicBot.userUtilities.checkWasPlaying(basicBot.room.users[ind]);
             }
             basicBot.room.afkInterval = setInterval(function () {
                 basicBot.roomUtilities.afkCheck()

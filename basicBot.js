@@ -346,7 +346,8 @@
             this.lastDC = {
                 time: null,
                 position: null,
-                songCount: 0
+                songCount: 0,
+                wasDj: false
             };
             this.lastKnownPosition = null;
             this.wasPlaying = false;
@@ -365,6 +366,7 @@
                 user.lastDC.time = Date.now();
            	user.lastDC.position = user.lastKnownPosition;	
                 user.lastDC.songCount = basicBot.room.roomstats.songCount;
+                user.lastDC.wasDj = user.wasPlaying;
             },
             checkWasPlaying: function (user) {
             	if (basicBot.room.currentDJID === user.id) {
@@ -477,7 +479,7 @@
                 var dc = user.lastDC.time;
                 var pos = user.lastDC.position;
                 if (pos === null) return subChat(basicBot.chat.noposition, {name: name});
-                var check = user.wasPlaying;
+                var check = user.lastDC.wasDj;
                 if (check) return subChat(basicBot.chat.wasplaying, {name: name});
                 var timeDc = Date.now() - dc;
                 var validDC = false;
@@ -964,6 +966,7 @@
             for (var i = 0; i < users.length; i++) {
                 var user = basicBot.userUtilities.lookupUser(users[i].id);
                 basicBot.userUtilities.updatePosition(user, API.getWaitListPosition(users[i].id) + 1);
+                basicBot.userUtilities.checkWasPlaying(basicBot.room.users[ind]);
             }
         },
         chatcleaner: function (chat) {
@@ -1242,6 +1245,7 @@
                 }
                 var wlIndex = API.getWaitListPosition(basicBot.room.users[ind].id) + 1;
                 basicBot.userUtilities.updatePosition(basicBot.room.users[ind], wlIndex);
+                basicBot.userUtilities.checkWasPlaying(basicBot.room.users[ind]);
             }
             basicBot.room.afkInterval = setInterval(function () {
                 basicBot.roomUtilities.afkCheck()

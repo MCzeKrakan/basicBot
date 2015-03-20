@@ -357,9 +357,9 @@
             getUser: function (user) {
                 return API.getUser(user.id);
             },
-            updatePosition: function (user, newPos) {
+            updatePosition: function (user, id, newPos) {
             //	for (var j = 0; j < basicBot.room.users.length; j++) {
-           	    if (API.getDJ().id = user.id) {
+           	    if (API.getDJ().id === id) {
            	    	user.lastKnownPosition = null;
            	    }
            	    else {

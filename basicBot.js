@@ -359,7 +359,7 @@
             },
             updatePosition: function (user, newPos) {
            //	for (var j = 0; j < basicBot.room.users.length; j++) {
-           	    if (API.getDJ().id === API.getUser(user.id) {
+           	    if (API.getDJ().id === API.getUser(user.id)) {
            	    	user.lastKnownPosition = null;
            	    }
            	    else {

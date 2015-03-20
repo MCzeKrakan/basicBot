@@ -361,10 +361,11 @@
             	for (var j = 0; j < basicBot.room.users.length; i++) {
            	    if (API.getDJ().id = user.id) {
            	    	user.lastKnownPosition = null;
-           	    	break
            	    }
-            	}    
-                user.lastKnownPosition = newPos;
+           	    else {
+           	    	user.lastKnownPosition = newPos;	
+           	    }
+            	}
             },
             updateDC: function (user) {
                 user.lastDC.time = Date.now();

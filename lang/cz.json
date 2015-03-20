@@ -142,7 +142,7 @@
     "activefor": "Už jedu %%TIME%% v kuse.",
     "swapinvalid": "/me [@%%NAME%%] Neplatný uživatel. (Jména bez mezer!)",
     "swapwlonly": "/me [@%%NAME%%] Prosím prohazuj jen uživatele ve frontě!",
-    "swapping": "/me Prohazuji %%NAME1%% s %%NAME2%%.",
+    "swapping": "/me [@%%NAME%%] Prohazuji %%NAME1%% s %%NAME2%%.",
     "genres": "/me Prosím zjistětě si přípustné žánry zde: %%LINK%%",
     "notbanned": "/me [@%%NAME%%] Uživatel nebyl zabanován.",
     "unmutedeveryone": "/me [@%%NAME%%] Všichni mohou nyní chatovat.",

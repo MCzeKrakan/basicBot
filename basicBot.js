@@ -349,6 +349,7 @@
                 songCount: 0
             };
             this.lastKnownPosition = null;
+            this.wasPlaying = false;
         },
         userUtilities: {
             getJointime: function (user) {
@@ -358,24 +359,20 @@
                 return API.getUser(user.id);
             },
             updatePosition: function (user, newPos) {
-           //	for (var j = 0; j < basicBot.room.users.length; j++) {
-           //	    if (API.getDJ().id === API.getUser(user.id)) {
-           //	    	user.lastKnownPosition = null;
-           //	    }
-           //	    else {
-           	    	user.lastKnownPosition = newPos;	
-           //	    }
-        	//}
+         	user.lastKnownPosition = newPos;	
             },
             updateDC: function (user) {
                 user.lastDC.time = Date.now();
-                if (API.getDJ().id === user.id) {
-         	    user.lastDC.position = null;
-          	}
-                else {
-           	    user.lastDC.position = user.lastKnownPosition;	
-           	}
+           	user.lastDC.position = user.lastKnownPosition;	
                 user.lastDC.songCount = basicBot.room.roomstats.songCount;
+            },
+            checkWasPlaying: function (user) {
+            	if (basicBot.room.currentDJID === user.id) {
+            	    user.wasPlaying = true;	
+            	}
+            	else {
+            	    user.wasPlaying = false;
+            	}
             },
             setLastActivity: function (user) {
                 user.lastActivity = Date.now();
@@ -480,6 +477,8 @@
                 var dc = user.lastDC.time;
                 var pos = user.lastDC.position;
                 if (pos === null) return subChat(basicBot.chat.noposition, {name: name});
+                var check = user.wasPlaying;
+                if (wasPlaying) return subChat(basicBot.chat.wasplaying, {name: name});
                 var timeDc = Date.now() - dc;
                 var validDC = false;
                 if (basicBot.settings.maximumDc * 60 * 1000 > timeDc) {

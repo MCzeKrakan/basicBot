@@ -357,7 +357,13 @@
             getUser: function (user) {
                 return API.getUser(user.id);
             },
-            updatePosition: function (user, newPos) {
+            updatePosition: function (user, newPos,) {
+            	for (var j = 0; j < basicBot.room.users.length; i++) {
+           	    if (API.getDJ().id = user.id) {
+           	    	user.lastKnownPosition = null;
+           	    	break
+           	    }
+            	}    
                 user.lastKnownPosition = newPos;
             },
             updateDC: function (user) {
@@ -468,7 +474,6 @@
                 var dc = user.lastDC.time;
                 var pos = user.lastDC.position;
                 if (pos === null) return subChat(basicBot.chat.noposition, {name: name});
-                if (pos === -1) return subChat(basicBot.chat.wasplaying, {name: name});
                 var timeDc = Date.now() - dc;
                 var validDC = false;
                 if (basicBot.settings.maximumDc * 60 * 1000 > timeDc) {

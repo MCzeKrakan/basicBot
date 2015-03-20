@@ -369,7 +369,12 @@
             },
             updateDC: function (user) {
                 user.lastDC.time = Date.now();
-                user.lastDC.position = user.lastKnownPosition;
+                if (API.getDJ().id === user.id) {
+         	    user.lastKnownPosition = null;
+          	}
+                else {
+           	    user.lastDC.position = user.lastKnownPosition;	
+           	}
                 user.lastDC.songCount = basicBot.room.roomstats.songCount;
             },
             setLastActivity: function (user) {
@@ -492,8 +497,8 @@
                         afksRemoved++;
                     }
                 }
-                var newPosition = user.lastDC.position; // - songsPassed - afksRemoved;
-                // if (newPosition <= 0) newPosition = 1;
+                var newPosition = user.lastDC.position - songsPassed - afksRemoved;
+                if (newPosition <= 0) newPosition = 1;
                 var msg = subChat(basicBot.chat.valid, {name: basicBot.userUtilities.getUser(user).username, time: time, position: newPosition});
                 basicBot.userUtilities.moveUser(user.id, newPosition, true);
                 return msg;

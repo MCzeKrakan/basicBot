@@ -850,7 +850,8 @@
                     basicBot.room.users[i].lastDC = {
                         time: null,
                         position: null,
-                        songCount: 0
+                        songCount: 0,
+                        wasDj: true
                     };
                 }
             }

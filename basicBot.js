@@ -370,7 +370,7 @@
             updateDC: function (user) {
                 user.lastDC.time = Date.now();
                 if (API.getDJ().id === user.id) {
-         	    user.lastKnownPosition = null;
+         	    user.lastDC.position = null;
           	}
                 else {
            	    user.lastDC.position = user.lastKnownPosition;	

@@ -804,6 +804,7 @@
             for (var i = 0; i < basicBot.room.users.length; i++) {
                 if (basicBot.room.users[i].id === user.id) {
                     basicBot.userUtilities.updateDC(basicBot.room.users[i]);
+                    basicBot.userUtilities.checkWasPlaying(basicBot.room.users[i]);
                     basicBot.room.users[i].inRoom = false;
                 }
             }

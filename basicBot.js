@@ -478,7 +478,7 @@
                 var pos = user.lastDC.position;
                 if (pos === null) return subChat(basicBot.chat.noposition, {name: name});
                 var check = user.wasPlaying;
-                if (wasPlaying) return subChat(basicBot.chat.wasplaying, {name: name});
+                if (check) return subChat(basicBot.chat.wasplaying, {name: name});
                 var timeDc = Date.now() - dc;
                 var validDC = false;
                 if (basicBot.settings.maximumDc * 60 * 1000 > timeDc) {

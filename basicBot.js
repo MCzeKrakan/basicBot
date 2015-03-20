@@ -347,10 +347,8 @@
                 time: null,
                 position: null,
                 songCount: 0,
-                wasDj: false
             };
             this.lastKnownPosition = null;
-            this.wasPlaying = false;
         },
         userUtilities: {
             getJointime: function (user) {
@@ -366,15 +364,6 @@
                 user.lastDC.time = Date.now();
            	user.lastDC.position = user.lastKnownPosition;	
                 user.lastDC.songCount = basicBot.room.roomstats.songCount;
-                user.lastDC.wasDj = user.wasPlaying;
-            },
-            checkWasPlaying: function (user) {
-            	if (basicBot.room.currentDJID === user.id) {
-            	    user.wasPlaying = true;	
-            	}
-            	else {
-            	    user.wasPlaying = false;
-            	}
             },
             setLastActivity: function (user) {
                 user.lastActivity = Date.now();
@@ -479,8 +468,6 @@
                 var dc = user.lastDC.time;
                 var pos = user.lastDC.position;
                 if (pos === null) return subChat(basicBot.chat.noposition, {name: name});
-                var check = user.lastDC.wasDj;
-                if (check) return subChat(basicBot.chat.wasplaying, {name: name});
                 var timeDc = Date.now() - dc;
                 var validDC = false;
                 if (basicBot.settings.maximumDc * 60 * 1000 > timeDc) {
@@ -806,7 +793,6 @@
             for (var i = 0; i < basicBot.room.users.length; i++) {
                 if (basicBot.room.users[i].id === user.id) {
                     basicBot.userUtilities.updateDC(basicBot.room.users[i]);
-                    basicBot.userUtilities.checkWasPlaying(basicBot.room.users[i]);
                     basicBot.room.users[i].inRoom = false;
                 }
             }
@@ -851,8 +837,8 @@
                         time: null,
                         position: null,
                         songCount: 0,
-                        wasDj: true
                     };
+                    basicBot.room.users[i].lastKnownPosition = null;
                 }
             }
 

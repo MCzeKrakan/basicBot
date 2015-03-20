@@ -358,14 +358,14 @@
                 return API.getUser(user.id);
             },
             updatePosition: function (user, newPos) {
-            	for (var j = 0; j < basicBot.room.users.length; j++) {
+            //	for (var j = 0; j < basicBot.room.users.length; j++) {
            	    if (API.getDJ().id = user.id) {
            	    	user.lastKnownPosition = null;
            	    }
            	    else {
            	    	user.lastKnownPosition = newPos;	
            	    }
-            	}
+         //   	}
             },
             updateDC: function (user) {
                 user.lastDC.time = Date.now();

@@ -174,8 +174,9 @@
         return m;
     };
 
-    var botCreator = "Matthew (Yemasthui)";
-    var botMaintainer = "Benzi (Quoona)"
+    var basicBotCreator = "Matthew (Yemasthui)";
+    var basicBotMaintainer = "Benzi (Quoona)";
+    var mazaBotMaintainer = "Tom (MCzeKrakan)";
     var botCreatorIDs = ["3851534", "4105209"];
 
     var basicBot = {
@@ -2775,7 +2776,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                        API.sendChat('/me This bot was created by ' + botCreator + ', but is now maintained by ' + botMaintainer + ".");
+                        API.sendChat('/me Tvůrcem basicBota je ' + basicBotCreator + ' a současným správcem ' + basicBotMaintainer + "." ' Správcem MazaBota je ' + mazaBotMaintainer + ".");
                     }
                 }
             },

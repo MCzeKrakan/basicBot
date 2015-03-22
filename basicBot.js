@@ -209,7 +209,7 @@
             maximumCycletime: 10,
             voteSkip: false,
             voteSkipLimit: 7,
-            rouletteTime: 3,
+            rouletteTime: 5,
             timeGuard: true,
             historySkip: true,
             historySkipLimit: 50, // 1-50

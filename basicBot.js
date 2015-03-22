@@ -346,7 +346,7 @@
             this.lastDC = {
                 time: null,
                 position: null,
-                songCount: 0,
+                songCount: 0
             };
             this.lastKnownPosition = null;
         },
@@ -1656,14 +1656,12 @@
                 command: 'gift',
                 rank: 'user',
                 type: 'startsWith',
-                gifts: ['ti daroval kytici růží :rose: !',
+                gifts: ['ti daroval růži :rose: !',
                     'ti daroval tabulku čokolády :chocolate_bar: !',
-                    'ti posílá sweet :kiss: !',
+                    'ti daroval vychlazené pivo :beer: !',
+                    'ti daroval balík :package: s bombou :bomb: ! :trollface: ',
                     'ti daroval své srdce :gift_heart: !',
-                    'tě pozval na pivo :beers: !',
-                    'ti hodil k nohám bombu :bomb: !',
-                    'ti poslal prázdný balík :package: :trollface: !',
-                    'ti daroval tajemný balíček :gift: !',
+                    'ti daroval euro :euro: !',
                 ],
                 getGift: function () {
                     var c = Math.floor(Math.random() * this.gifts.length);

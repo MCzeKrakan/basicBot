@@ -97,6 +97,7 @@ Uživatel
 |Příkaz | Argumenty | Popis |
 |:------:|:---------:|:--------------------------------------:|
 |!autowoot | | odkaz na RCS, doporučený script/doplněk nejen pro autowoot |
+|!source | | Autoři scriptu |
 |!ba | | vysvětlení Brand Ambassador hodnosti |
 |!commands | | odkaz na tento seznam příazů |
 |!gift | (@user) | pošle dárek uživateli |

@@ -176,7 +176,7 @@
 
     var basicBotCreator = "Matthew (Yemasthui)";
     var basicBotMaintainer = "Benzi (Quoona)";
-    var mazaBotMaintainer = "Tom (MCzeKrakan)";
+    var mazaBotMaintainer = "Tomas (MCzeKrakan)";
     var botCreatorIDs = ["3851534", "4105209"];
 
     var basicBot = {

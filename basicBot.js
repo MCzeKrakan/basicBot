@@ -196,7 +196,7 @@
             chatLink: "https://rawgit.com/MCzeKrakan/basicBot/master/lang/cz.json",
             startupCap: 1, // 1-200
             startupVolume: 0, // 0-100
-            startupEmoji: true, // true or false
+            startupEmoji: false, // true or false
             maximumAfk: 120,
             afkRemoval: false,
             maximumDc: 60,

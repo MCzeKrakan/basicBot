@@ -1244,19 +1244,19 @@
             API.sendChat('/cap ' + basicBot.settings.startupCap);
             API.setVolume(basicBot.settings.startupVolume);
             $("#woot").click();
-            if (basicBot.settings.startupEmoji) {
-                var emojibuttonoff = $(".icon-emoji-off");
-                if (emojibuttonoff.length === 1) {
-                    emojibuttonoff.click();
-                }
-                API.chatLog(':smile: Emotikony povoleny.');
-            }
-            else {
+            if (!basicBot.settings.startupEmoji) {
                 var emojibuttonon = $(".icon-emoji-on");
                 if (emojibuttonon.length === 1) {
                     emojibuttonon.click();
                 }
                 API.chatLog('Emotikony zakázány.');
+            }
+            else {
+            	var emojibuttonoff = $(".icon-emoji-off");
+                if (emojibuttonoff.length === 1) {
+                    emojibuttonoff.click();
+                }
+                API.chatLog(':smile: Emotikony povoleny.');
             }
             API.chatLog('Počet avatarů ' + basicBot.settings.startupCap);
             API.chatLog('Hlasitost je ' + basicBot.settings.startupVolume);

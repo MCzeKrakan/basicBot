@@ -39,7 +39,8 @@
     
     "caps": "/me @%%NAME%% vypni si capslock prosím.",
     "askskip": "/me @%%NAME%% nežádej o přeskočení.",
-    "spam": "/me @%%NAME%% slušně a beze spamu prosím.",
+    "spam": "/me @%%NAME%% nespamuj prosím.",
+    "curse": "/me @%%NAME%% slušně prosím.",
     "roomadvertising": "/me @%%NAME%% neposílej odkazy na jiné místnosti prosím.",
     "adfly": "/me @%%NAME%% prosím popřemýšlej nad změnou scriptu(autowootu). Doporučujeme RSC: https://radiant.dj/rcs",
 

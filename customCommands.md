@@ -101,7 +101,6 @@ Uživatel
 |!ba | | vysvětlení Brand Ambassador hodnosti |
 |!commands | | odkaz na tento seznam příazů |
 |!gift | (@user) | pošle dárek uživateli |
-|!cookie | (@user) | pošle uživateli sušenku (**VYPNUTO**) |
 |!dclookup / !dc | | vyhlednání svojí poslední pozice a připojení do fronty  |
 |!emoji | | odkaz na seznam emotikonů |
 |!eta | | ukáže, za jak dlouho se dostaneš k pultu |

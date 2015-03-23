@@ -1133,7 +1133,7 @@
             spam: [
                 'kkkk', 'affff', 'ffffff', 'aaaaaa',
             ],
-            curse: [
+            curses: [
                 'kurva', 'kurvy', 'kurvo', 'do prdele', 'drž hubu', 'chcípněte', 'zkurvenej', 'zmrd', 'zmrde', 'zmrdi', 
                 'píča', 'píčo', 'píči', 'sráč', 'sráči', 'kunda', 'kundy', 'kundo', 'krypl', 'kryple', 'mrdat', 'mrdej', 
                 'čůrák', 'čůráci', 'čůráku', 'kretén', 'kreténi', 'kreténe', 'negr', 'negři', 'negře', 'motherfucker', 

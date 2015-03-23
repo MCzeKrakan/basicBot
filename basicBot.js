@@ -981,9 +981,11 @@
                 return true;
             }
             msg = msg.toLowerCase();
-            if (msg === ('skip' || 'preskocte to' || 'přeskočte to' || 'skipnete to' || 'skipněte to')) {
+            for (var l = 0; l < basicBot.chatUtilities.spam.length; l++) {
+                if (msg === basicBot.chatUtilities.askskip[l]) {
                 API.sendChat(subChat(basicBot.chat.askskip, {name: chat.un}));
                 return true;
+                }
             }
             for (var j = 0; j < basicBot.chatUtilities.spam.length; j++) {
                 if (msg === basicBot.chatUtilities.spam[j]) {
@@ -1130,8 +1132,11 @@
                 }
                 basicBot.room.roomstats.chatmessages++;
             },
+            skip: [
+            	'skip', 'preskocte to', 'přeskočte to', 'skipnete to', 'skipněte to'
+            	],
             spam: [
-                'kkkk', 'affff', 'ffffff', 'aaaaaa',
+                'kkkk', 'affff', 'ffffff', 'aaaaaa'
             ],
             curses: [
                 'kurva', 'kurvy', 'kurvo', 'do prdele', 'drž hubu', 'chcípněte', 'zkurvenej', 'zmrd', 'zmrde', 'zmrdi', 

@@ -1246,15 +1246,15 @@
             $("#woot").click();
             if (basicBot.settings.startupEmoji) {
                 var emojibuttonoff = $(".icon-emoji-off");
-                if (emojibuttonoff.length > 0) {
-                    emojibuttonoff[0].click();
+                if (emojibuttonoff.length === 1) {
+                    emojibuttonoff.click();
                 }
                 API.chatLog(':smile: Emotikony povoleny.');
             }
             else {
                 var emojibuttonon = $(".icon-emoji-on");
-                if (emojibuttonon.length > 0) {
-                    emojibuttonon[0].click();
+                if (emojibuttonon.length === 1) {
+                    emojibuttonon.click();
                 }
                 API.chatLog('Emotikony zakázány.');
             }

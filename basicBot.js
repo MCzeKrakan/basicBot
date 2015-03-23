@@ -981,7 +981,7 @@
                 return true;
             }
             msg = msg.toLowerCase();
-            for (var l = 0; l < basicBot.chatUtilities.spam.length; l++) {
+            for (var l = 0; l < basicBot.chatUtilities.askskip.length; l++) {
                 if (msg === basicBot.chatUtilities.askskip[l]) {
                 API.sendChat(subChat(basicBot.chat.askskip, {name: chat.un}));
                 return true;
@@ -1132,7 +1132,7 @@
                 }
                 basicBot.room.roomstats.chatmessages++;
             },
-            skip: [
+            askskip: [
             	'skip', 'preskocte to', 'přeskočte to', 'skipnete to', 'skipněte to'
             	],
             spam: [

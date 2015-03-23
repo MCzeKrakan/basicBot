@@ -981,13 +981,19 @@
                 return true;
             }
             msg = msg.toLowerCase();
-            if (msg === 'skip') {
+            if (msg === ('skip' || 'preskocte to' || 'přeskočte to' || 'skipnete to' || 'skipněte to')) {
                 API.sendChat(subChat(basicBot.chat.askskip, {name: chat.un}));
                 return true;
             }
             for (var j = 0; j < basicBot.chatUtilities.spam.length; j++) {
                 if (msg === basicBot.chatUtilities.spam[j]) {
                     API.sendChat(subChat(basicBot.chat.spam, {name: chat.un}));
+                    return true;
+                }
+            }
+            for (var k = 0; k < basicBot.chatUtilities.curses.length; k++) {
+                if (msg === basicBot.chatUtilities.curses[k]) {
+                    API.sendChat(subChat(basicBot.chat.curse, {name: chat.un}));
                     return true;
                 }
             }
@@ -1125,14 +1131,13 @@
                 basicBot.room.roomstats.chatmessages++;
             },
             spam: [
-            	'kurva', 'píča', 'čůrák', 'negr', 'motherfucker', 'fuckadmins', 'puta', 'kretén', 'fuck you'
-                //'hueh', 'hu3', 'brbr', 'heu', 'brbr', 'kkkk', 'spoder', 'mafia', 'zuera', 'zueira',
-                //'zueria', 'aehoo', 'aheu', 'alguem', 'algum', 'brazil', 'zoeira', 'fuckadmins', 'affff', 'vaisefoder', 'huenaarea',
-                //'hitler', 'ashua', 'ahsu', 'ashau', 'lulz', 'huehue', 'hue', 'huehuehue', 'merda', 'pqp', 'puta', 'mulher', 'pula', 'retarda', 'caralho', 'filha', 'ppk',
-                //'gringo', 'fuder', 'foder', 'hua', 'ahue', 'modafuka', 'modafoka', 'mudafuka', 'mudafoka', 'ooooooooooooooo', 'foda'
+                'kkkk', 'affff', 'ffffff', 'aaaaaa',
             ],
-            curses: [
-                //'kurva', 'píča', 'čůrák', 'negr', 'motherfucker'
+            curse: [
+                'kurva', 'kurvy', 'kurvo', 'do prdele', 'drž hubu', 'chcípněte', 'zkurvenej', 'zmrd', 'zmrde', 'zmrdi', 
+                'píča', 'píčo', 'píči', 'sráč', 'sráči', 'kunda', 'kundy', 'kundo', 'krypl', 'kryple', 'mrdat', 'mrdej', 
+                'čůrák', 'čůráci', 'čůráku', 'kretén', 'kreténi', 'kreténe', 'negr', 'negři', 'negře', 'motherfucker', 
+                'fuckadmins', 'fuck admins', 'puta', 'fuck you', 'cock', 'fuck'
             ]
         },
         connectAPI: function () {

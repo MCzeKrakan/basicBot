@@ -982,7 +982,7 @@
             }
             msg = msg.toLowerCase();
             for (var l = 0; l < basicBot.chatUtilities.askskip.length; l++) {
-                if (msg === basicBot.chatUtilities.askskip[l] || msg === 'preskocte to' || msg === 'přeskočte to') {
+                if (msg === basicBot.chatUtilities.askskip[l]) {
                 API.sendChat(subChat(basicBot.chat.askskip, {name: chat.un}));
                 return true;
                 }

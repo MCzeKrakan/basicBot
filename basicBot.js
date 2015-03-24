@@ -981,8 +981,8 @@
                 return true;
             }
             msg = msg.toLowerCase();
-            for (var l = 0; l < basicBot.chatUtilities.askskip.length; l++) {
-                if (msg === basicBot.chatUtilities.askskip[l]) {
+            for (var l = 0; l < basicBot.chatUtilities.askskip[0].length; l++) {
+                if (msg === basicBot.chatUtilities.askskip[0][l]) {
                 API.sendChat(subChat(basicBot.chat.askskip, {name: chat.un}));
                 return true;
                 }
@@ -993,8 +993,8 @@
                     return true;
                 }
             }
-            for (var k = 0; k < basicBot.chatUtilities.curses.length; k++) {
-                if (msg === basicBot.chatUtilities.curses[k]) {
+            for (var k = 0; k < basicBot.chatUtilities.curses[0].length; k++) {
+                if (msg === basicBot.chatUtilities.curses[0][k]) {
                     API.sendChat(subChat(basicBot.chat.curse, {name: chat.un}));
                     return true;
                 }
@@ -1133,7 +1133,7 @@
                 basicBot.room.roomstats.chatmessages++;
             },
             askskip: [
-            	"skip", "preskocte to", "přeskočte to", "skipnete to", "skipněte to"
+            	"skip", "preskocte to", "přeskočte to", "skipnete to", "skipněte to", "baf"
             	],
             spam: [
                 'kkkk', 'affff', 'ffffff', 'aaaaaa'

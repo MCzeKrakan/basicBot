@@ -1133,16 +1133,16 @@
                 basicBot.room.roomstats.chatmessages++;
             },
             askskip: [
-            	"skip", "preskocte to", "přeskočte to", "skipnete to", "skipněte to", "baf"
+            	'skip'
             	],
             spam: [
                 'kkkk', 'affff', 'ffffff', 'aaaaaa'
             ],
             curses: [
-                'kurva', 'kurvy', 'kurvo', 'do prdele', 'drž hubu', 'chcípněte', 'zkurvenej', 'zmrd', 'zmrde', 'zmrdi', 
+                'kurva', 'kurvy', 'kurvo', 'do prdele', 'hubu', 'chcípněte', 'zkurvenej', 'zmrd', 'zmrde', 'zmrdi', 
                 'píča', 'píčo', 'píči', 'sráč', 'sráči', 'kunda', 'kundy', 'kundo', 'krypl', 'kryple', 'mrdat', 'mrdej', 
                 'čůrák', 'čůráci', 'čůráku', 'kretén', 'kreténi', 'kreténe', 'negr', 'negři', 'negře', 'motherfucker', 
-                'fuckadmins', 'fuck admins', 'puta', 'fuck you', 'cock', 'fuck'
+                'fuckadmins', 'puta', 'fuckyou', 'cock', 'fuck'
             ]
         },
         connectAPI: function () {

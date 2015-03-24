@@ -1133,7 +1133,7 @@
                 basicBot.room.roomstats.chatmessages++;
             },
             askskip: [
-            	'skip', 'preskocte to', 'přeskočte to', 'skipnete to', 'skipněte to'
+            	"skip", "preskocte to", "přeskočte to", "skipnete to", "skipněte to"
             	],
             spam: [
                 'kkkk', 'affff', 'ffffff', 'aaaaaa'

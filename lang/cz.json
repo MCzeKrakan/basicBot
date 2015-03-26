@@ -28,7 +28,6 @@
     "usernotfound": "/me Uživatel nenalezen.",
     "notdisconnected": "/me @%%NAME%% se neodpojil během mé přítomnosti.",
     "noposition": "/me Neznám poslední pozici @%%NAME%%.",
-    "wasplaying": "/me @%%NAME%% se odpojil při hraní, takže musí na konec fronty.",
     "toolongago": "/me @%%NAME%% se odpojil před příliš dlouhou dobou: %%TIME%%.",
     "valid": "/me @%%NAME%% se odpojil před %%TIME%% a byl na pozici %%POSITION%%.",
 

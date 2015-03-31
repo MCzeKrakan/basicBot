@@ -120,8 +120,8 @@
                 API.chatLog(basicBot.chat.datarestored);
             }
         };
-        /*var json_sett = null;
-        var roominfo = document.getElementById("room-info");
+        var json_sett = null;
+        var roominfo = document.getElementById("room-settings");
         info = roominfo.textContent;
         var ref_bot = "@basicBot=";
         var ind_ref = info.indexOf(ref_bot);
@@ -139,7 +139,7 @@
                     }
                 }
             });
-        }*/
+        }
 
     };
 
@@ -831,6 +831,7 @@
         },
         eventDjadvance: function (obj) {
             $("#woot").click();
+            
             var user = basicBot.userUtilities.lookupUser(obj.dj.id)
             for(var i = 0; i < basicBot.room.users.length; i++){
                 if(basicBot.room.users[i].id === user.id){
@@ -1151,26 +1152,26 @@
                 eventUserskip: $.proxy(this.eventUserskip, this),
                 eventUserjoin: $.proxy(this.eventUserjoin, this),
                 eventUserleave: $.proxy(this.eventUserleave, this),
-                eventUserfan: $.proxy(this.eventUserfan, this),
-                eventFriendjoin: $.proxy(this.eventFriendjoin, this),
-                eventFanjoin: $.proxy(this.eventFanjoin, this),
+                //eventUserfan: $.proxy(this.eventUserfan, this),
+                //eventFriendjoin: $.proxy(this.eventFriendjoin, this),
+                //eventFanjoin: $.proxy(this.eventFanjoin, this),
                 eventVoteupdate: $.proxy(this.eventVoteupdate, this),
                 eventCurateupdate: $.proxy(this.eventCurateupdate, this),
                 eventRoomscoreupdate: $.proxy(this.eventRoomscoreupdate, this),
                 eventDjadvance: $.proxy(this.eventDjadvance, this),
-                eventDjupdate: $.proxy(this.eventDjupdate, this),
+                //eventDjupdate: $.proxy(this.eventDjupdate, this),
                 eventWaitlistupdate: $.proxy(this.eventWaitlistupdate, this),
                 eventVoteskip: $.proxy(this.eventVoteskip, this),
                 eventModskip: $.proxy(this.eventModskip, this),
                 eventChatcommand: $.proxy(this.eventChatcommand, this),
-                eventHistoryupdate: $.proxy(this.eventHistoryupdate, this)
+                eventHistoryupdate: $.proxy(this.eventHistoryupdate, this),
 
             };
             API.on(API.CHAT, this.proxy.eventChat);
             API.on(API.USER_SKIP, this.proxy.eventUserskip);
             API.on(API.USER_JOIN, this.proxy.eventUserjoin);
             API.on(API.USER_LEAVE, this.proxy.eventUserleave);
-            API.on(API.USER_FAN, this.proxy.eventUserfan);
+            //API.on(API.USER_FAN, this.proxy.eventUserfan);
             API.on(API.VOTE_UPDATE, this.proxy.eventVoteupdate);
             API.on(API.GRAB_UPDATE, this.proxy.eventCurateupdate);
             API.on(API.ROOM_SCORE_UPDATE, this.proxy.eventRoomscoreupdate);
@@ -1185,7 +1186,7 @@
             API.off(API.USER_SKIP, this.proxy.eventUserskip);
             API.off(API.USER_JOIN, this.proxy.eventUserjoin);
             API.off(API.USER_LEAVE, this.proxy.eventUserleave);
-            API.off(API.USER_FAN, this.proxy.eventUserfan);
+            //API.off(API.USER_FAN, this.proxy.eventUserfan);
             API.off(API.VOTE_UPDATE, this.proxy.eventVoteupdate);
             API.off(API.CURATE_UPDATE, this.proxy.eventCurateupdate);
             API.off(API.ROOM_SCORE_UPDATE, this.proxy.eventRoomscoreupdate);
@@ -1209,6 +1210,24 @@
                     type: "DELETE"
                 })
             };
+            
+            var roomURL = window.location.pathname;
+            var Check;
+
+            var detect = function(){
+                if(roomURL != window.location.pathname){
+                    clearInterval(Check)
+                    storeToStorage();
+                    API.chatLog("basicBot killed due to room change.");
+                    basicBot.disconnectAPI();
+                    setTimeout(function () {
+                        kill();
+                    }, 1000);
+                }
+            };
+
+            Check = setInterval(function(){ detect() }, 100);
+
             retrieveSettings();
             retrieveFromStorage();
             window.bot = basicBot;

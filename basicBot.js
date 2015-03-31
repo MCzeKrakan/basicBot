@@ -1217,8 +1217,8 @@
             var detect = function(){
                 if(roomURL != window.location.pathname){
                     clearInterval(Check)
+                    console.log("Killing bot after room change.");
                     storeToStorage();
-                    API.chatLog("basicBot killed due to room change.");
                     basicBot.disconnectAPI();
                     setTimeout(function () {
                         kill();

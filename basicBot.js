@@ -230,39 +230,39 @@
             	["un", "Song nebyl dostupný pro všechny uživatele. "]
             ],
             ball: [
-            "Signs point to yes.",
-            "Yes.",
-            "Reply hazy, try again.",
-            "Without a doubt.",
-            "My sources say no.",
-            "As I see it, yes.",
-            "You may rely on it.",
-            "Concentrate and ask again.",
-            "Outlook not so good.",
-            "It is decidedly so.",
-            "Better not tell you now.",
-            "Very doubtful.",
-            "Yes - definitely.",
-            "It is certain.",
-            "Cannot predict now.",
-            "Most likely.",
-            "Ask again later.",
-            "My reply is no.",
-            "Outlook good.",
-            "Don't count on it.",
-            "Yes, in due time.",
-            "My sources say no.",
-            "Definitely not.",
-            "You will have to wait.",
-            "I have my doubts.",
-            "Outlook so so.",
-            "Looks good to me!",
-            "Who knows?",
-            "Looking good!",
-            "Probably.",
-            "Are you kidding?",
-            "Don't bet on it.",
-            "Forget about it."
+            "Vše nasvědčuje tomu, že ano.",
+            "Ano.",
+            "Mlhavá odpověd, zkus to znovu.",
+            "Bez pochyby.",
+            "Podle mých zdrojů ano.",
+            "Jak to vydím, ano",
+            "Na to se můžeš spolehnout.",
+            "Soustřeď se a zeptej se znovu.",
+            "To nevypadá příznivě.",
+            "Je to rozhodně tak.",
+            "Je lepší ti to neříct.",
+            "Velmi pochybné.",
+            "Ano, rozhodně.",
+            "To je jisté.",
+            "To nemohu předpovědět.",
+            "Pravděpodobně.",
+            "Zeptej se později.",
+            "Moje odpověd je ne.",
+            "To vypadá příznivě.",
+            "Nespoléhej na to.",
+            "Ano, v pravý čas.",
+            "Podle mých zdrojů ne.",
+            "Rozhodně ne.",
+            "Musíš si počkat.",
+            "Mám o tom pochyby.",
+            "Je to na vahách osudu.",
+            "Zdá se mi to nadejné!",
+            "Kdo ví?",
+            "Vypadá to dobře!",
+            "Možná.",
+            "Děláš si srandu?",
+            "Nesázej na to.",
+            "Zapomeň na to."
             ],
             afkpositionCheck: 5,
             afkRankCheck: "ambassador",
@@ -3440,51 +3440,51 @@
                                 var joined = rawjoined.substr(0, 10);
                                 var rawlang = API.getUser(id).language;
                                 if (rawlang == "en"){
-                                    var language = "English";
+                                    var language = "Anglický";
                                 } else if (rawlang == "bg"){
-                                    var language = "Bulgarian";
+                                    var language = "Bulharský";
                                 } else if (rawlang == "cs"){
-                                    var language = "Czech";
+                                    var language = "Český";
                                 } else if (rawlang == "fi"){
-                                    var language = "Finnish"
+                                    var language = "Finský"
                                 } else if (rawlang == "fr"){
-                                    var language = "French"
+                                    var language = "Francouzský"
                                 } else if (rawlang == "pt"){
-                                    var language = "Portuguese"
+                                    var language = "Portugalský"
                                 } else if (rawlang == "zh"){
-                                    var language = "Chinese"
+                                    var language = "Čínský"
                                 } else if (rawlang == "sk"){
-                                    var language = "Slovak"
+                                    var language = "Slovenský"
                                 } else if (rawlang == "nl"){
-                                    var language = "Dutch"
+                                    var language = "Holandský"
                                 } else if (rawlang == "ms"){
-                                    var language = "Malay"
+                                    var language = "Malajský"
                                 }
                                 var rawstatus = API.getUser(id).status;
                                 if (rawstatus == "0"){
-                                    var status = "Available";
+                                    var status = "Přítomný";
                                 } else if (rawstatus == "1"){
-                                    var status = "Away";
+                                    var status = "Pryč";
                                 } else if (rawstatus == "2"){
-                                    var status = "Working";
+                                    var status = "Pracuje";
                                 } else if (rawstatus == "3"){
-                                    var status = "Gaming"
+                                    var status = "Hraje"
                                 }
                                 var rawrank = API.getUser(id).role;
                                 if (rawrank == "0"){
-                                    var rank = "User";
+                                    var rank = "Uživatel";
                                 } else if (rawrank == "1"){
-                                    var rank = "Resident DJ";
+                                    var rank = "Residentní DJ";
                                 } else if (rawrank == "2"){
-                                    var rank = "Bouncer";
+                                    var rank = "Vyhazovač";
                                 } else if (rawrank == "3"){
-                                    var rank = "Manager"
+                                    var rank = "Manažer"
                                 } else if (rawrank == "4"){
-                                    var rank = "Co-Host"
+                                    var rank = "Zastupce Hostitele"
                                 } else if (rawrank == "5"){
-                                    var rank = "Host"
+                                    var rank = "Hostitel"
                                 } else if (rawrank == "7"){
-                                    var rank = "Brand Ambassador"
+                                    var rank = "Velvyslanec komunity"
                                 } else if (rawrank == "10"){
                                     var rank = "Admin"
                                 }

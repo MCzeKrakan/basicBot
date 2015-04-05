@@ -19,11 +19,14 @@
 
     "isopen": "/me Ruleta je roztočena. Napiště !join pro připojení!",
     "winnerpicked": "/me Vítězem rulety se stává @%%NAME%% a získává %%POSITION%% pozici.",
+    
+    "ball": "/me %%NAME%% se ptal: \"%%QUESTION%%\" a %%BOTNAME%% odpovídá: \"%%RESPONSE%%\"",
 
+    "notghosting": "[%%NAME1%%] %%NAME2%% není duch.",
+    "ghosting": "[%%NAME1%%] %%NAME2%% je duch, nebo zde již není.",
 
     "alreadyadding": "/me Uživatel je již ve frontě! Změnil požadovanou pozici na %%POSITION%%.",
     "adding": "/me Přidal @%%NAME%% do fronty. Současná pozice: %%POSITION%%.",
-
 
     "usernotfound": "/me Uživatel nenalezen.",
     "notdisconnected": "/me @%%NAME%% se neodpojil během mé přítomnosti.",
@@ -42,7 +45,11 @@
     "curse": "/me @%%NAME%% slušně prosím.",
     "roomadvertising": "/me @%%NAME%% neposílej odkazy na jiné místnosti prosím.",
     "adfly": "/me @%%NAME%% prosím popřemýšlej nad změnou scriptu(autowootu). Doporučujeme RSC: https://radiant.dj/rcs",
-
+    
+    "validgiftags": "/me [@%%NAME%%] http://media.giphy.com/media/%%ID%%/giphy.gif [Tagy: %%TAGS%%]",
+    "invalidgiftags": "/me [@%%NAME%%] Neplatné tagy, zkus jiné. [Tagy: %%TAGS%%]",
+    "validgifrandom": "/me [@%%NAME%%] http://media.giphy.com/media/%%ID%%/giphy.gif [Náhodný GIF]",
+    "invalidgifrandom": "/me [@%%NAME%%] Neplatné zadání, zkus to znovu.",
 
     "invalidtime": "/me [@%%NAME%%] Chybný čas",
     "nouserspecified": "/me [@%%NAME%%] Nespecifikován uživatel.",
@@ -53,6 +60,7 @@
     "nolimitspecified": "/me [@%%NAME%%] Nespecifikován limit.",
     "invalidlimitspecified": "/me [@%%NAME%%] Neplatný limit.",
     "invalidpositionspecified": "/me [@%%NAME%%] Specifikována neplatná pozice.",
+     "whois": "/me [%%NAME1%%] Jméno: %%NAME2%%, ID: %%ID%%, Hodnost: %%RANK%%, Připojen: %%JOINED%%, Level: %%LEVEL%%, Jazyk: %%LANGUAGE%%, Avatar: %%AVATAR%%, Status: %%STATUS%%%%PROFILE%%",
     "toggleon": "/me [@%%NAME%%] %%FUNCTION%% zapnuto.",
     "toggleoff": "/me [@%%NAME%%] %%FUNCTION%% vypnuto.",
     "afkremoval": "AFK ochrana",
@@ -118,6 +126,7 @@
     "kickrank": "/me [@%%NAME%%] Nelze vyhodit nikoho se stejnou nebo vyšší hodnotí, než jakou máš ty!",
     "kick": "/me [@%%NAME%%] @%%USERNAME%% byl jsi vyhozen z komunity na %%TIME%% minut.",
     "kill": "/me MazaBot vypnut.",
+    "logout": "/me [@%%NAME%%] %%BOTNAME%% odhlášen",
     "rouletteleave": "/me @%%NAME%% se odpojil z rulety!",
     "songlink": "/me [@%%NAME%%] Link na současný song: %%LINK%%",
     "usedlockskip": "/me [%%NAME%% použil lockskip.]",
@@ -156,4 +165,6 @@
     "youtube": "/me [%%NAME%%] Koukněte na Maziho videa: česká - %%LINKCZ%% a anglická - %%LINKEN%%",
     "stream": "/me [%%NAME%%] Sledujte Maziho stream: %%LINK%%",
     "songstatistics": "/me %%ARTIST%% - %%TITLE%%: %%WOOTS%%W/%%GRABS%%G/%%MEHS%%M."
+    "songstatistics": "/me %%ARTIST%% - %%TITLE%%: %%WOOTS%%W/%%GRABS%%G/%%MEHS%%M.",
+    "purchase": "/me [@%%NAME%%] Noty můžete zakoupit zde: https://plug.dj/purchase"
 }

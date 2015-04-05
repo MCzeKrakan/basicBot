@@ -17,6 +17,7 @@ Manažer
 |!cycle | | ON/OFF DJ cyklus |
 |!cycletimer | X | nastaví max čas, po který bude DJ cyklus zapnutý |
 |!locktimer | X | nastaví max čas, po který bude DJ fronta zamčená |
+|!logout | | odhlásí uživatele, která hostí bota |
 |!refresh | | aktualizuje okno prohlížeče, na kterém běží Bot |
 |!usercmdcd | X | nastaví cooldown pro příkazy šedých uživatelů |
 |!usercommands | | ON/OFF příkazy pro uživatele |
@@ -81,6 +82,7 @@ Vyhazovač
 |!unban | @user | odbanovat uživatele |
 |!unmute | | zrušit umlčení uživatele |
 |!voteratio | @user | zobrazi statistiku hlasování pro uživatele |
+|!whois | @user | vypíše detailní informace o uživateli |
 
 Rezidentní DJ
 -----------
@@ -96,6 +98,7 @@ Uživatel
 
 |Příkaz | Argumenty | Popis |
 |:------:|:---------:|:--------------------------------------:|
+|!8ball | (otázka) | zeptejte se bota na otázku, odpoví vám ruznými způsoby ano, nebo ne. |
 |!autowoot | | odkaz na RCS, doporučený script/doplněk nejen pro autowoot |
 |!source | | autoři scriptu |
 |!ba | | vysvětlení Brand Ambassador hodnosti |
@@ -105,12 +108,15 @@ Uživatel
 |!emoji | | odkaz na seznam emotikonů |
 |!eta | | ukáže, za jak dlouho se dostaneš k pultu |
 |!fb | | odkaz na náš facebook |
+|!ghostbuster | (@user) | zkontroluje jestli uživatel není duch |
+|!gif | (tag) | vrátí gif podle zvoleného tagu, nebo náhodný gif pokud nebyl tag zvolen. |
 |!help | | odkaz na obrázek, který pomůže novým lidem se zorientovat na plugu |
 |!join | | připojit se k ruletě, pokud je puštěna |
 |!leave | | opustit ruletu, pokud jsi připojen |
 |!link | | když je uživatel DJ, zobrazí odkaz na na současnou píseň |
 |!op | | odkaz na OP list (pokud je nastaven) |
 |!ping | | pong! |
+|!purchase | | odkaz na nákup plug not |
 |!rules | | odkaz na pravidla (pokud je nastaven) |
 |!theme | | odkaz na temá, zaměření místnosti (pokud je nastaven) |
 |!website | | odkaz na stránky (pokud je nastaven) |

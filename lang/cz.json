@@ -60,7 +60,7 @@
     "nolimitspecified": "/me [@%%NAME%%] Nespecifikován limit.",
     "invalidlimitspecified": "/me [@%%NAME%%] Neplatný limit.",
     "invalidpositionspecified": "/me [@%%NAME%%] Specifikována neplatná pozice.",
-     "whois": "/me [%%NAME1%%] Jméno: %%NAME2%%, ID: %%ID%%, Hodnost: %%RANK%%, Připojen: %%JOINED%%, Level: %%LEVEL%%, Jazyk: %%LANGUAGE%%, Avatar: %%AVATAR%%, Status: %%STATUS%%%%PROFILE%%",
+    "whois": "/me [%%NAME1%%] Jméno: %%NAME2%%, ID: %%ID%%, Hodnost: %%RANK%%, Připojen: %%JOINED%%, Level: %%LEVEL%%, Jazyk: %%LANGUAGE%%, Avatar: %%AVATAR%%, Status: %%STATUS%%%%PROFILE%%",
     "toggleon": "/me [@%%NAME%%] %%FUNCTION%% zapnuto.",
     "toggleoff": "/me [@%%NAME%%] %%FUNCTION%% vypnuto.",
     "afkremoval": "AFK ochrana",
@@ -164,7 +164,6 @@
     "website": "/me Navštivte náš web: %%LINK%%",
     "youtube": "/me [%%NAME%%] Koukněte na Maziho videa: česká - %%LINKCZ%% a anglická - %%LINKEN%%",
     "stream": "/me [%%NAME%%] Sledujte Maziho stream: %%LINK%%",
-    "songstatistics": "/me %%ARTIST%% - %%TITLE%%: %%WOOTS%%W/%%GRABS%%G/%%MEHS%%M."
     "songstatistics": "/me %%ARTIST%% - %%TITLE%%: %%WOOTS%%W/%%GRABS%%G/%%MEHS%%M.",
     "purchase": "/me [@%%NAME%%] Noty můžete zakoupit zde: https://plug.dj/purchase"
 }

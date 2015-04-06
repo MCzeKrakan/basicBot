@@ -2402,11 +2402,11 @@
                                     	basicBot.room.skippable = false;
                                     	setTimeout(function () {
                                             basicBot.room.skippable = true
-                                    	}, 5 * 1000);
-                                    	setTimeout(function (id) {
-                                            basicBot.userUtilities.moveUser(id, basicBot.settings.lockskipPosition, false);
-                                            basicBot.room.queueable = true;
-                                            setTimeout(function () {
+                                    	    }, 5 * 1000);
+                                    	    setTimeout(function (id) {
+                                            	basicBot.userUtilities.moveUser(id, basicBot.settings.lockskipPosition, false);
+                                            	basicBot.room.queueable = true;
+                                            	setTimeout(function () {
                                             }, 1000);
                                     	}, 1500, id);
                                     }, 1000, id);
@@ -3040,9 +3040,11 @@
                         var durationOnline = Date.now() - launchT;
                         var since = basicBot.roomUtilities.msToStr(durationOnline);
                         msg2 += subChat(basicBot.chat.activefor, {time: since});
-
-                        return API.sendChat(msg), API.sendChat(msg2);
                         
+                        API.sendChat(msg)
+                        setTimeout(function () {
+                            API.sendChat(msg2);
+                        }, 1000);
                     }
                 }
             },

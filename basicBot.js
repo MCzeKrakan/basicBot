@@ -1740,8 +1740,8 @@
             },
             
             cmddeletionCommand: {
-                command: ['commanddeletion', 'cmddeletion', 'cmddel'],
-                rank: 'bouncer',
+                command: 'cmddel',
+                rank: 'mod',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);

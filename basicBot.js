@@ -2973,8 +2973,7 @@
                     else {
                         var from = chat.un;
                         var msg = '/me [@' + from + '] ';
-                        var msg2 = 'TTT';
-                        var msg3 = 'TTfdsT';
+                        var msg2 = '';
 			
                         msg += basicBot.chat.afkremoval + ': ';
                         if (basicBot.settings.afkRemoval) msg += 'ON';
@@ -3017,32 +3016,33 @@
                         msg += basicBot.chat.chatfilter + ': ';
                         if (basicBot.settings.filterChat) msg += 'ON';
                         else msg += 'OFF';
-                        msg += ' | ';
+                        msg += ' |';
                         
-                        msg += basicBot.chat.lockskip + ': ';
-                        if (basicBot.settings.lockskip) msg += 'ON';
-                        else msg += 'OFF';
-                        msg += ' | ';
+                        msg2 += basicBot.chat.lockskip + ': ';
+                        if (basicBot.settings.lockskip) msg2 += 'ON';
+                        else msg2 += 'OFF';
+                        msg2 += ' | ';
 
-                        msg += basicBot.chat.historyskip + ': ';
-                        if (basicBot.settings.historySkip ) msg += 'ON';
-                        else msg += 'OFF';
-                        msg += ' (' + basicBot.settings.historySkipLimit + ') | ';
+                        msg2 += basicBot.chat.historyskip + ': ';
+                        if (basicBot.settings.historySkip ) msg2 += 'ON';
+                        else msg2 += 'OFF';
+                        msg2 += ' (' + basicBot.settings.historySkipLimit + ') | ';
                         // alterative history time skip
-                        //msg += basicBot.chat.historylimit + ': ' + basicBot.settings.historyLimitTime + ' |  ';
+                        //msg2 += basicBot.chat.historylimit + ': ' + basicBot.settings.historyLimitTime + ' |  ';
 
-                        msg += basicBot.chat.voteskip + ': ';
-                        if (basicBot.settings.voteskip) msg += 'ON';
-                        else msg += 'OFF';
-                        msg += ' (' + basicBot.settings.voteSkipLimit + ')';
-                        msg += '. ';
+                        msg2 += basicBot.chat.voteskip + ': ';
+                        if (basicBot.settings.voteskip) msg2 += 'ON';
+                        else msg2 += 'OFF';
+                        msg2 += ' (' + basicBot.settings.voteSkipLimit + ')';
+                        msg2 += '. ';
                         
                         var launchT = basicBot.room.roomstats.launchTime;
                         var durationOnline = Date.now() - launchT;
                         var since = basicBot.roomUtilities.msToStr(durationOnline);
-                        msg += subChat(basicBot.chat.activefor, {time: since});
+                        msg2 += subChat(basicBot.chat.activefor, {time: since});
 
-                        return API.sendChat(msg2, msg3);
+                        return API.sendChat(msg), API.sendChat(msg2);
+                        
                     }
                 }
             },

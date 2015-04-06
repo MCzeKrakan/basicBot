@@ -3040,7 +3040,7 @@
                         var since = basicBot.roomUtilities.msToStr(durationOnline);
                         msg += subChat(basicBot.chat.activefor, {time: since});
 
-                        return API.sendChat(msg);
+                        return API.sendChat(msg.split("(?<=[|])\\s+"));
                     }
                 }
             },

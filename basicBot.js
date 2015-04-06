@@ -2973,7 +2973,7 @@
                     else {
                         var from = chat.un;
                         var msg = '/me [@' + from + '] ';
-                        var msg2 = '';
+                        var msg2 = 'TTT';
                         
 			
                         msg += basicBot.chat.afkremoval + ': ';
@@ -3042,7 +3042,7 @@
                         var since = basicBot.roomUtilities.msToStr(durationOnline);
                         msg += subChat(basicBot.chat.activefor, {time: since});
 
-                        return API.sendChat(msg);
+                        return API.sendChat(msg, msg2);
                     }
                 }
             },

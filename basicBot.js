@@ -2973,6 +2973,7 @@
                     else {
                         var from = chat.un;
                         var msg = '/me [@' + from + '] ';
+                        var msg2 = '';
                         
 			
                         msg += basicBot.chat.afkremoval + ': ';
@@ -2987,7 +2988,12 @@
                         if (basicBot.settings.bouncerPlus) msg += 'ON';
                         else msg += 'OFF';
                         msg += ' | ';
-												
+                        
+                        msg += basicBot.chat.cmddeletion + ': ';
+                        if (basicBot.settings.cmdDeletion) msg += 'ON';
+                        else msg += 'OFF';
+                        msg += ' | ';
+                        
                         msg += basicBot.chat.blacklist + ': ';
                         if (basicBot.settings.blacklistEnabled) msg += 'ON';
                         else msg += 'OFF';
@@ -2997,7 +3003,7 @@
                         if (basicBot.settings.lockGuard) msg += 'ON';
                         else msg += 'OFF';
                         msg += ' | ';
-/*
+
                         msg += basicBot.chat.cycleguard + ': ';
                         if (basicBot.settings.cycleGuard) msg += 'ON';
                         else msg += 'OFF';
@@ -3007,7 +3013,7 @@
                         if (basicBot.settings.timeGuard) msg += 'ON';
                         else msg += 'OFF';
                         msg += ' | ';
-*/
+
                         msg += basicBot.chat.chatfilter + ': ';
                         if (basicBot.settings.filterChat) msg += 'ON';
                         else msg += 'OFF';
@@ -3028,19 +3034,15 @@
                         msg += basicBot.chat.voteskip + ': ';
                         if (basicBot.settings.voteskip) msg += 'ON';
                         else msg += 'OFF';
-                        msg += ' | ';
-                        
-                        msg += basicBot.chat.cmddeletion + ': ';
-                        if (basicBot.settings.cmdDeletion) msg += 'ON';
-                        else msg += 'OFF';
+                        msg += ' (' + basicBot.settings.voteSkipLimit + ')';
                         msg += '. ';
-
+                        
                         var launchT = basicBot.room.roomstats.launchTime;
                         var durationOnline = Date.now() - launchT;
                         var since = basicBot.roomUtilities.msToStr(durationOnline);
                         msg += subChat(basicBot.chat.activefor, {time: since});
 
-                        return API.sendChat(msg.split("(?<=[|])\\s+"));
+                        return API.sendChat(msg);
                     }
                 }
             },

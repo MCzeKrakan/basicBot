@@ -2974,7 +2974,7 @@
                         var from = chat.un;
                         var msg = '/me [@' + from + '] ';
                         var msg2 = 'TTT';
-                        
+                        var msg3 = 'TTfdsT';
 			
                         msg += basicBot.chat.afkremoval + ': ';
                         if (basicBot.settings.afkRemoval) msg += 'ON';
@@ -3042,7 +3042,7 @@
                         var since = basicBot.roomUtilities.msToStr(durationOnline);
                         msg += subChat(basicBot.chat.activefor, {time: since});
 
-                        return API.sendChat(msg, msg2);
+                        return API.sendChat(msg2, msg3);
                     }
                 }
             },

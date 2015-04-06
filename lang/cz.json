@@ -63,6 +63,7 @@
     "whois": "/me [%%NAME1%%] Jméno: %%NAME2%%, ID: %%ID%%, Hodnost: %%RANK%%, Připojen: %%JOINED%%, Level: %%LEVEL%%, Jazyk: %%LANGUAGE%%, Avatar: %%AVATAR%%, Status: %%STATUS%%%%PROFILE%%",
     "toggleon": "/me [@%%NAME%%] %%FUNCTION%% zapnuto.",
     "toggleoff": "/me [@%%NAME%%] %%FUNCTION%% vypnuto.",
+    "cmddeletion": "Mazání příkazů",
     "afkremoval": "AFK ochrana",
     "afksremoved": "AFK vyřazení",
     "afklimit": "AFK limit",

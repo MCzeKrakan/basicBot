@@ -909,7 +909,7 @@
 	    
 	    songSkipped = false;
             setTimeout(function () {
-            	for (var j = 0; j < basicBot.settings.historySkipLimit; j++) {
+            	for (var j = 1; j < basicBot.settings.historySkipLimit; j++) {
             	    if (basicBot.settings.historySkip && (API.getHistory()[j].media.cid === API.getMedia().cid)) {
             	    	API.sendChat(subChat(basicBot.chat.songplayed, {name: obj.dj.username, number: j++}));
             	    	API.moderateForceSkip();

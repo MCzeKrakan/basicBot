@@ -915,8 +915,9 @@
             	    	API.moderateForceSkip();
             	    	songSkipped = true;
             	    	break;
-            	   }
-            	}, 3000);
+            	    }
+            	}
+            }, 3000);
 
         /*              alternative history time skip
             

@@ -1,0 +1,14 @@
+div#sps-menu {
+    z-index: 42;
+    position: absolute;
+    top: 54px;
+    left: -200px;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: rgb(10, 10, 10);
+    height: 54px;
+    width: 253px;
+    background: rgb(40, 44, 53);
+    cursor: pointer;
+    transition: all .1s ease-in;
+}

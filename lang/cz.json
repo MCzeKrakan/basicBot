@@ -14,7 +14,7 @@
     "songplayed": "/me @%%NAME%% Tato píseň je již v historii (%%NUMBER%%/50).",
     "timelimit": "/me @%%NAME%% je zakázáno hrát songy delší než %%MAXLENGTH%% minut.",
     "permissionownsong": "/me :up: @%%NAME%% má povoleno hrát vlastní tvorbu!",
-    "isblacklisted": "/me Tato píseň je na %%BLACKLIST%% blacklistu! Přeskakuji...",
+    "isblacklisted": "/me Tato píseň je na blacklistu! Přeskakuji...",
 
 
     "isopen": "/me Ruleta je roztočena. Napiště !join pro připojení!",
@@ -54,8 +54,6 @@
     "invalidtime": "/me [@%%NAME%%] Chybný čas",
     "nouserspecified": "/me [@%%NAME%%] Nespecifikován uživatel.",
     "invaliduserspecified": "/me [@%%NAME%%] Specifikován neznámý uživatel.",
-    "nolistspecified": "/me [@%%NAME%%] Nespecifikován sezman.",
-    "invalidlistspecified": "/me [@%%NAME%%] Specifikován neznámý sezman.",
     "novaliduserspecified": "/me [@%%NAME%%] Nespecifikován platný uživatel.",
     "nolimitspecified": "/me [@%%NAME%%] Nespecifikován limit.",
     "invalidlimitspecified": "/me [@%%NAME%%] Neplatný limit.",
@@ -69,7 +67,7 @@
     "afklimit": "AFK limit",
     "autodisable": "Automatické vypnutí",
     "autoskip": "Automatické přeskočení",
-    "newblacklisted": "/me [@%%NAME%%] Tato písnička je nyní v %%BLACKLIST%% blacklistu! [ %%AUTHOR%% - %%TITLE%% - %%MID%% ]",
+    "newblacklisted": "/me [@%%NAME%%] Tato písnička je nyní v blacklistu! [ %%AUTHOR%% - %%TITLE%% - %%MID%% ]",
     "blinfo": "[@%%NAME%%] Blacklist Info - autor: %%AUTHOR%%, název: %%TITLE%%, mid: %%SONGID%%",
     "blacklist": "Blacklist",
     "cycleguard": "Ochrana cyklu",

@@ -1649,7 +1649,7 @@
                         };
                         basicBot.room.newBlacklisted.push(track);
                         basicBot.room.blacklists[list].push(media.format + ':' + media.cid);
-                        API.sendChat(subChat(basicBot.chat.newblacklisted, {name: chat.un, blacklist: list, author: media.author, title: media.title, mid: media.format + ':' + media.cid}));
+                        API.sendChat(subChat(basicBot.chat.newblacklisted, {name: chat.un, author: media.author, title: media.title, mid: media.format + ':' + media.cid}));
                         API.moderateForceSkip();
                         if (typeof basicBot.room.newBlacklistedSongFunction === 'function') {
                             basicBot.room.newBlacklistedSongFunction(track);

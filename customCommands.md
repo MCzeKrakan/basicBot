@@ -57,7 +57,7 @@ Vyhazovač
 |!afktime | @user | ukáže, jak dlouho byl uživatel AFK |
 |!autodisable | | ON/OFF každou hodinu pošle bot !afkdisable a !joindisable, to vypne automatické připojování a AFK zprávy pro PlugCubed |
 |!ban | @user | zabanuje uživatele na 1 den |
-|!blacklist / !bl | | přidá písničku do uvedeného blacklistu (BAN, OP) |
+|!blacklist / !bl | | přidá písničku do blacklistu |
 |!blinfo | | informace potřebné pro zadaní songu do blacklistu |
 |!cycleguard | | ON/OFF časová ochrana zapnutého cyklu |
 |!dclookup / !dc | (@user) | vyhledá poslední pozici odpojeného uživatele |
@@ -65,7 +65,6 @@ Vyhazovač
 |!eta | (@user) | ukáže, kdy se přibližně uživatel dostane k pultu |
 |!filter | | ON/OFF filtr chatu |
 |!jointime | @user | ukáže, jak dlouho už je uživatel v roomce |
-|!kick | (X) | kicks user for X minutes, default is 0.25 minutes (15 seconds) (**NEVYZKOUŠENO, NEFUNKČNÍ**) |
 |!kill | | vypne Bota |
 |!lockguard | | ON/OFF časová ochrana zamčené fronty |
 |!lockskip | (důvod) | přeskočí píseň a posune dj zpět na první místo, důvody: <ul><li>theme - Song nevyhovuje aktuálnímu žánru této místnosti</li><li>op - Song je na seznamu příliš často hraných</li><li>history - Song je již v historii</li><li>sound - Song má velmi špatnou kvalitu zvuku, nebo žádný zvuk</li><li>nsfw - Song obsahuje nevhodný obsah (obrazový nebo zvukový)</li><li>un - Song nebyl dostupný pro všechny uživatele</li></ul> |

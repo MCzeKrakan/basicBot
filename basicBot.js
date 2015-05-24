@@ -1640,13 +1640,15 @@
                     else {
                         var msg = chat.message;
                         var media = API.getMedia();
+                        var list = "BAN";
                         var track = {
+                            list: list,
                             author: media.author,
                             title: media.title,
                             mid: media.format + ':' + media.cid
                         };
                         basicBot.room.newBlacklisted.push(track);
-                        basicBot.room.blacklists[0].push(media.format + ':' + media.cid);
+                        basicBot.room.blacklists[list].push(media.format + ':' + media.cid);
                         API.sendChat(subChat(basicBot.chat.newblacklisted, {name: chat.un, blacklist: basicBot.room.blacklists[0], author: media.author, title: media.title, mid: media.format + ':' + media.cid}));
                         API.moderateForceSkip();
                         if (typeof basicBot.room.newBlacklistedSongFunction === 'function') {

@@ -57,7 +57,7 @@ Vyhazovač
 |!afktime | @user | ukáže, jak dlouho byl uživatel AFK |
 |!autodisable | | ON/OFF každou hodinu pošle bot !afkdisable a !joindisable, to vypne automatické připojování a AFK zprávy pro PlugCubed |
 |!ban | @user | zabanuje uživatele na 1 den |
-|!blacklist / !bl | blacklist | přidá písničku do uvedeného blacklistu (BAN, OP) |
+|!blacklist / !bl | | přidá písničku do uvedeného blacklistu (BAN, OP) |
 |!blinfo | | informace potřebné pro zadaní songu do blacklistu |
 |!cycleguard | | ON/OFF časová ochrana zapnutého cyklu |
 |!dclookup / !dc | (@user) | vyhledá poslední pozici odpojeného uživatele |

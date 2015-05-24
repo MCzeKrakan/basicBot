@@ -1638,9 +1638,9 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
+			var list = "BAN";
                         var msg = chat.message;
                         var media = API.getMedia();
-                        var list = "BAN";
                         var track = {
                             list: list,
                             author: media.author,
@@ -1649,7 +1649,7 @@
                         };
                         basicBot.room.newBlacklisted.push(track);
                         basicBot.room.blacklists[list].push(media.format + ':' + media.cid);
-                        API.sendChat(subChat(basicBot.chat.newblacklisted, {name: chat.un, blacklist: basicBot.room.blacklists[0], author: media.author, title: media.title, mid: media.format + ':' + media.cid}));
+                        API.sendChat(subChat(basicBot.chat.newblacklisted, {name: chat.un, blacklist: list, author: media.author, title: media.title, mid: media.format + ':' + media.cid}));
                         API.moderateForceSkip();
                         if (typeof basicBot.room.newBlacklistedSongFunction === 'function') {
                             basicBot.room.newBlacklistedSongFunction(track);

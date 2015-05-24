@@ -67,7 +67,7 @@
     "afklimit": "AFK limit",
     "autodisable": "Automatické vypnutí",
     "autoskip": "Automatické přeskočení",
-    "newblacklisted": "/me [@%%NAME%%] Tato písnička je nyní v %%BLACKLIST%% blacklistu! [ %%AUTHOR%% - %%TITLE%% - %%MID%% ]",
+    "newblacklisted": "/me [@%%NAME%%] Tato písnička je nyní v blacklistu! [ %%AUTHOR%% - %%TITLE%% - %%MID%% ]",
     "blinfo": "[@%%NAME%%] Blacklist Info - autor: %%AUTHOR%%, název: %%TITLE%%, mid: %%SONGID%%",
     "blacklist": "Blacklist",
     "cycleguard": "Ochrana cyklu",

@@ -211,7 +211,7 @@
             maximumCycletime: 10,
             voteSkip: false,
             voteSkipLimit: 7,
-            rouletteTime: 5,
+            rouletteTime: 1,
             timeGuard: true,
             historySkip: true,
             historySkipLimit: 50, // 1-50

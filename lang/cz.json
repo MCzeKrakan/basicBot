@@ -17,8 +17,8 @@
     "isblacklisted": "/me Tato píseň je na blacklistu! Přeskakuji...",
 
 
-    "isopen": "/me Ruleta je roztočena. Napiště !join pro připojení!",
-    "winnerpicked": "/me Vítězem rulety se stává @%%NAME%% a získává %%POSITION%% pozici.",
+    "isopen": "/me Soutěž je odstartována. Napiště !soutěž pro připojení!",
+    "winnerpicked": "/me Vítězem soutěže se stává @%%NAME%% a získává 20 000 PP!",
     
     "ball": "/me %%NAME%% se ptal: \"%%QUESTION%%\" a %%BOTNAME%% odpovídá: \"%%RESPONSE%%\"",
 

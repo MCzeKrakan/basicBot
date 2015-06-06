@@ -120,7 +120,7 @@
     "eta": "/me @%%NAME%% dostaneš se k pultu přibližně za %%TIME%%.",
     "facebook": "/me Navštivte náš facebook: %%LINK%%",
     "starterhelp": "/me Tento návod vám pomůže začít na plugu: %%LINK%%",
-    "roulettejoin": "/me @%%NAME%% se připojil do soutěže.,
+    "roulettejoin": "/me @%%NAME%% se připojil do soutěže.",
     "jointime": "/me [@%%NAMEFROM%%] @%%USERNAME%% je už v místosti %%TIME%%.",
     "kickrank": "/me [@%%NAME%%] Nelze vyhodit nikoho se stejnou nebo vyšší hodnotí, než jakou máš ty!",
     "kick": "/me [@%%NAME%%] @%%USERNAME%% byl jsi vyhozen z komunity na %%TIME%% minut.",

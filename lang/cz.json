@@ -17,7 +17,7 @@
     "isblacklisted": "/me Tato píseň je na blacklistu! Přeskakuji...",
 
 
-    "isopen": "/me :warning: Soutěž :warning: Napiš [ !soutěž ] pro přihlášení do soutěže o 30 000 PP a Tričko Maz Army!",
+    "isopen": "/me :warning: Soutěž :warning: Napiš [ !soutez ] pro přihlášení do soutěže o 20 000 PP a Tričko Maz Army :exclamation:",
     "winnerpicked": "/me :boom: Vítězem soutěže se stává @%%NAME%% :boom:",
     
     "ball": "/me %%NAME%% se ptal: \"%%QUESTION%%\" a %%BOTNAME%% odpovídá: \"%%RESPONSE%%\"",

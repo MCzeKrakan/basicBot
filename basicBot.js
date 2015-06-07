@@ -2180,7 +2180,7 @@
             },
             
             joinCommand: {
-                command: 'soutěž',
+                command: 'soutez',
                 rank: 'user',
                 type: 'exact',
                 functionality: function (chat, cmd) {

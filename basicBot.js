@@ -211,7 +211,7 @@
             maximumCycletime: 10,
             voteSkip: false,
             voteSkipLimit: 7,
-            rouletteTime: 1,
+            rouletteTime: 5,
             timeGuard: true,
             historySkip: true,
             historySkipLimit: 50, // 1-50
@@ -352,16 +352,15 @@
                     var ind = Math.floor(Math.random() * basicBot.room.roulette.participants.length);
                     var winner = basicBot.room.roulette.participants[ind];
                     basicBot.room.roulette.participants = [];
-                    // random position
+                    // Random position
                     // var pos = Math.floor((Math.random() * API.getWaitList().length) + 1);
-                    // var pos = 1;
+                    var pos = 1;
                     var user = basicBot.userUtilities.lookupUser(winner);
                     var name = user.username;
-                    // API.sendChat(subChat(basicBot.chat.winnerpicked, {name: name, position: pos}));
-                    API.sendChat(subChat(basicBot.chat.winnerpicked, {name: name}));
-                    /*setTimeout(function (winner, pos) {
+                    API.sendChat(subChat(basicBot.chat.winnerpicked, {name: name, position: pos}));
+                    setTimeout(function (winner, pos) {
                         basicBot.userUtilities.moveUser(winner, pos, false);
-                    }, 1 * 1000, winner, pos);*/
+                    }, 1 * 1000, winner, pos);
                 }
             }
         },
@@ -2179,23 +2178,7 @@
                 }
             },
             
-            joinCommand: {
-                command: 'soutez',
-                rank: 'user',
-                type: 'exact',
-                functionality: function (chat, cmd) {
-                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
-                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
-                    else {
-                        if (basicBot.room.roulette.rouletteStatus && basicBot.room.roulette.participants.indexOf(chat.uid) < 0) {
-                            basicBot.room.roulette.participants.push(chat.uid);
-                            API.sendChat(subChat(basicBot.chat.roulettejoin, {name: chat.un}));
-                        }
-                    }
-                }
-            },
-
-            /*joinCommand: {
+	    joinCommand: {
                 command: 'join',
                 rank: 'user',
                 type: 'exact',
@@ -2209,7 +2192,7 @@
                         }
                     }
                 }
-            },*/
+            },
 
             jointimeCommand: {
                 command: 'jointime',
@@ -2295,8 +2278,8 @@
                 }
             },
 
-            /*leaveCommand: {
-                command: '',
+            leaveCommand: {
+                command: 'leave',
                 rank: 'user',
                 type: 'exact',
                 functionality: function (chat, cmd) {
@@ -2310,7 +2293,7 @@
                         }
                     }
                 }
-            },*/
+            },
 
             linkCommand: {
                 command: 'link',

@@ -1,6 +1,7 @@
 {
 
     "nodatafound": "Žádná data nenalezena.",
+    "currentlang": "\/me Aktuální jazyk: %%LANGUAGE%%",
     "retrievingdata": "Nahrávám uložená data.",
     "datarestored": "Uložená data nahrána.",
     "greyuser": "Pouze vyhazovači a výš mohou spustit bota.",

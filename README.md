@@ -3,7 +3,10 @@ basicBot
 
 A not so basic bot for plug.dj 
 
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Yemasthui/basicBot?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) [![facebook group](http://i.bnzi.uk/97dW.svg)](https://facebook.com/groups/basicBot) [![twitter](http://i.bnzi.uk/4KEn.svg)](https://twitter.com/bscBt)
+[GET THE GOOGLE CHROME EXTENSION HERE!!!](http://s.benzi.io/bscbtxtnsn)
+---------------------------------------------------------------------
+
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Yemasthui/basicBot?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) [![facebook group](http://i.benzi.io/97dW.svg)](https://facebook.com/groups/basicBot) [![twitter](http://i.benzi.io/4KEn.svg)](https://twitter.com/bscBt)
 
 Stay updated on **basicBot**'s development by following the project on Twitter [@bscBt](http://twitter.com/bscBt)
 
@@ -60,7 +63,14 @@ Please do not try to if you are not confident in your javascript capabilities.
 Official translations will be supported. Available ones can be found under [the language folder](https://github.com/Yemasthui/basicBot/blob/master/lang/langIndex.json). You can set a language in the room settings.
 You can use your own translation or wording by translating the values of in [the English pack](https://github.com/Yemasthui/basicBot/blob/master/lang/en.json) and uploading it to a public hosting service. Put the link into your custom room settings, under chatLink.
 
-__When translating the chat messages, please not that it is a json format, meaning it is structured as ```"key":"value"```, please only translate the "value" parts, and leave anything between %% (eg. %%NAME%%) as is, they are variables that get filled in by the bot.__
+__When translating the chat messages, please note that it is a json format, meaning it is structured as ```"key":"value"```, please only translate the "value" parts, and leave anything between %% (eg. %%NAME%%) as is, they are variables that get filled in by the bot.__
+
+
+###Command Autocomplete Plugin###
+
+[![Command Autocomplete](http://i.imgur.com/hBMuB5F.png)](https://github.com/ExtPlug/advanced-autocomplete)
+
+Check out [this](https://github.com/ExtPlug/advanced-autocomplete) helpful command autocomplete browser plugin by [goto-bus-stop](https://github.com/goto-bus-stop) made to work with basicBot's commands.
 
 
 Credits
@@ -77,6 +87,8 @@ I would like to thank the following people:
 |Portuguese|[Motel Bible](https://github.com/motelbible)|
 |French|[NDA](https://github.com/NDAthereal)|
 
+(I would also like to thank everyone who contributed in translating the bot via the [translation centre](http://translate.benzi.io/admin/collaborators))
+
 
 Copyright
 ---------
@@ -90,4 +102,9 @@ This software is not for profit, any extension, or unauthorised person providing
 Disclaimer
 ----------
 
-This bot is developed independently. Changes may be made without notice. There is no guarantee for the bot to be functioning perfectly. Plug.dj admins have the right to request changes. By using this chatbot you agree to not use it for violating plug.dj's Terms of Service. You also agree not to alter the bot's code, unless in the cases explicitly stated above, for personal use, or for the sole purpose of submitting a pull request with a bug fix or a feature update, at which point it will be looked at and decided by the authors of the project. Please refer to the original author/repository at all times, even on personal forks that are not private. Any requests for changes can be requested via email, through github or via plug.dj.
+This bot is developed independently. Changes may be made without notice. There is no guarantee for the bot to be functioning perfectly.
+Plug.dj admins have the right to request changes. 
+By using this chatbot you agree to not use it for violating plug.dj's Terms of Service. 
+You also agree not to alter the bot's code, unless in the cases explicitly stated above, for personal use, or for the sole purpose of submitting a pull request with a bug fix or a feature update, at which point it will be looked at and decided by the authors of the project.
+Please refer to the original author/repository at all times, even on personal forks that are not private.
+Any requests for changes can be requested via email, through github or via plug.dj.

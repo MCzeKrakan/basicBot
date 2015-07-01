@@ -31,8 +31,8 @@
         basicBot.status = false;
     };
 
-    // This socket server is used solely for statistical and troubleshooting purposes.
-    // This server may not always be up, but will be used to get live data at any given time.
+    /* This socket server is used solely for statistical and troubleshooting purposes.
+    This server may not always be up, but will be used to get live data at any given time.
 
     var socket = function () {
         function loadSocket() {
@@ -68,6 +68,7 @@
         var data = {users:API.getUsers(),userinfo:API.getUser(),room:location.pathname,basicBotSettings:basicBotSettings,basicBotRoom:basicBotRoom,basicBotInfo:basicBotInfo};
         return sock.msg(data);
     };
+    */
 
     var storeToStorage = function () {
         localStorage.setItem("basicBotsettings", JSON.stringify(basicBot.settings));
@@ -1074,7 +1075,7 @@
                 }, remaining + 5000);
             }
             storeToStorage();
-            sendToSocket();
+            // sendToSocket();
         },
         eventWaitlistupdate: function (users) {
             if (users.length < 50) {
@@ -1447,7 +1448,7 @@
             }
             API.chatLog('Počet avatarů ' + basicBot.settings.startupCap);
             API.chatLog('Hlasitost je ' + basicBot.settings.startupVolume);
-            socket();
+            // socket();
             loadChat(API.sendChat(subChat(basicBot.chat.online, {botname: basicBot.settings.botName, version: basicBot.version})));
         },
         commands: {
@@ -2448,7 +2449,7 @@
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
                         storeToStorage();
-                        sendToSocket();
+                        // sendToSocket();
                         API.sendChat(basicBot.chat.kill);
                         basicBot.disconnectAPI();
                         setTimeout(function () {
@@ -2889,7 +2890,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                        sendToSocket();
+                        // sendToSocket();
                         storeToStorage();
                         basicBot.disconnectAPI();
                         setTimeout(function () {
@@ -2909,7 +2910,7 @@
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
                         API.sendChat(basicBot.chat.reload);
-                        sendToSocket();
+                        // sendToSocket();
                         storeToStorage();
                         basicBot.disconnectAPI();
                         kill();

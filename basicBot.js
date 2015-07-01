@@ -240,11 +240,11 @@
     var basicBot = {
         version: "2.8.9",
         status: false,
-        name: "MazaBot",
+        name: "basicBot",
         loggedInID: null,
         scriptLink: "https://rawgit.com/MCzeKrakan/basicBot/master/basicBot.js",
         cmdLink: "http://git.io/pnQ4",
-        chatLink: "https://rawgit.com/MCzeKrakan/basicBot/master/lang/cz.json",
+        chatLink: "https://rawgit.com/MCzeKrakan/basicBot/master/lang/en.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,

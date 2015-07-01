@@ -3615,19 +3615,19 @@
                                 } else if (rawlang == "cs"){
                                     var language = "Český";
                                 } else if (rawlang == "fi"){
-                                    var language = "Finský"
+                                    var language = "Finský";
                                 } else if (rawlang == "fr"){
-                                    var language = "Francouzský"
+                                    var language = "Francouzský";
                                 } else if (rawlang == "pt"){
-                                    var language = "Portugalský"
+                                    var language = "Portugalský";
                                 } else if (rawlang == "zh"){
-                                    var language = "Čínský"
+                                    var language = "Čínský";
                                 } else if (rawlang == "sk"){
-                                    var language = "Slovenský"
+                                    var language = "Slovenský";
                                 } else if (rawlang == "nl"){
-                                    var language = "Holandský"
+                                    var language = "Holandský";
                                 } else if (rawlang == "ms"){
-                                    var language = "Malajský"
+                                    var language = "Malajský";
                                 }
                                 var rawrank = API.getUser(id).role;
                                 if (rawrank == "0"){
@@ -3637,15 +3637,15 @@
                                 } else if (rawrank == "2"){
                                     var rank = "Vyhazovač";
                                 } else if (rawrank == "3"){
-                                    var rank = "Manažer"
+                                    var rank = "Manažer";
                                 } else if (rawrank == "4"){
-                                    var rank = "Zastupce Hostitele"
+                                    var rank = "Zastupce Hostitele";
                                 } else if (rawrank == "5"){
-                                    var rank = "Hostitel"
+                                    var rank = "Hostitel";
                                 } else if (rawrank == "7"){
-                                    var rank = "Velvyslanec komunity"
+                                    var rank = "Velvyslanec komunity";
                                 } else if (rawrank == "10"){
-                                    var rank = "Admin"
+                                    var rank = "Admin";
                                 }
                                 var slug = API.getUser(id).slug;
                                 if (typeof slug !== 'undefined') {

@@ -281,13 +281,13 @@
             usercommandsEnabled: true,
             skipPosition: 3,
             skipReasons: [
-                ["theme", "This song does not fit the room theme. "],
-                ["op", "This song is on the OP list. "],
-                ["history", "This song is in the history. "],
-                ["mix", "You played a mix, which is against the rules. "],
-                ["sound", "The song you played had bad sound quality or no sound. "],
-                ["nsfw", "The song you contained was NSFW (image or sound). "],
-                ["un", "The song you played was not available for some users. "]
+                ["theme", "Song nevyhovuje aktuálnímu žánru této místnosti. "],
+                ["op", "Song je na seznamu příliš často hraných. "],
+                ["history", "Song je již v historii. "],
+                ["mix", "Hrát mixy je proti pravidlům. "],
+                ["sound", "Song má velmi špatnou kvalitu zvuku, nebo žádný zvuk. "],
+                ["nsfw", "Song obsahuje nevhodný obsah (obrazový nebo zvukový). "],
+                ["un", "Song nebyl dostupný pro všechny uživatele. "]
             ],
             afkpositionCheck: 5,
             afkRankCheck: "ambassador",
@@ -3668,8 +3668,8 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                        if (typeof basicBot.settings.youtubeLink === "string")
-                            API.sendChat(subChat(basicBot.chat.youtube, {name: chat.un, link: basicBot.settings.youtubeLink}));
+                        if (typeof basicBot.settings.czYoutubeLink === "string" && typeof basicBot.settings.enYoutubeLink === "string")
+                            API.sendChat(subChat(basicBot.chat.youtube, {name: chat.un, linkcz: basicBot.settings.czYoutubeLink, linken: basicBot.settings.enYoutubeLink}));
                     }
                 }
             }

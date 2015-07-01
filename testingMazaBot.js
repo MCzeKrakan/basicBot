@@ -3672,7 +3672,7 @@
                             API.sendChat(subChat(basicBot.chat.youtube, {name: chat.un, linkcz: basicBot.settings.czYoutubeLink, linken: basicBot.settings.enYoutubeLink}));
                     }
                 }
-            }
+            },
             
             streamCommand: {
                 command: 'stream',

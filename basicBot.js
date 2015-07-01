@@ -233,7 +233,7 @@
     };
 
     var botCreator = "Matthew (Yemasthui)";
-    var botMaintainer = "Benzi (Quoona)"
+    var botMaintainer = "Benzi (Quoona)";
     var mazaBotMaintainer = "Tomas (MCzeKrakan)";
     var botCreatorIDs = ["3851534", "4105209"];
 

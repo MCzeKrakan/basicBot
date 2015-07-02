@@ -239,7 +239,7 @@
     var basicBot = {
         version: "2.8.9",
         status: false,
-        name: "MazaBOT",
+        name: "basicBot",
         loggedInID: null,
         scriptLink: "https://rawgit.com/MCzeKrakan/basicBot/master/newBasicBot.js",
         cmdLink: "http://git.io/pnQ4",

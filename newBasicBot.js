@@ -239,7 +239,7 @@
     var basicBot = {
         version: "2.8.9",
         status: false,
-        name: "basicBot",
+        name: "MazaBOT",
         loggedInID: null,
         scriptLink: "https://rawgit.com/MCzeKrakan/basicBot/master/newBasicBot.js",
         cmdLink: "http://git.io/pnQ4",
@@ -289,7 +289,7 @@
                 ["nsfw", "Song obsahuje nevhodný obsah (obrazový nebo zvukový). "],
                 ["un", "Song nebyl dostupný pro všechny uživatele. "]
             ],
-            afkpositionCheck: 5,
+            afkpositionCheck: 10,
             afkRankCheck: "ambassador",
             motdEnabled: false,
             motdInterval: 10,
@@ -990,7 +990,7 @@
             }, 2000);
             var newMedia = obj.media;
             var timeLimitSkip = setTimeout(function () {
-                if (basicBot.settings.timeGuard && newMedia.duration > basicBot.settings.maximumSongLength + 15 && !basicBot.room.roomevent) {
+                if (basicBot.settings.timeGuard && newMedia.duration > (basicBot.settings.maximumSongLength + 15) && !basicBot.room.roomevent) {
                     var name = obj.dj.username;
                     API.sendChat(subChat(basicBot.chat.timelimit, {name: name, maxlength: basicBot.settings.maximumSongLength / 60}));
                     if (basicBot.settings.smartSkip){
@@ -1039,11 +1039,11 @@
                 var apihistory = API.getHistory();
                 var name = obj.dj.username;
                 var historySkip = setTimeout(function () {
-                    for (var i = 1; i <= basicBot.settings.historySkipLimit; i++) {
+                    for (var i = 0; i <= basicBot.settings.historySkipLimit; i++) {
                         if (apihistory[i].media.cid === obj.media.cid) {
                             basicBot.room.historyList[i].push(+new Date());
                             alreadyPlayed = true;
-                            API.sendChat(subChat(basicBot.chat.songplayed, {name: name, number: i++}));
+                            API.sendChat(subChat(basicBot.chat.songknown, {name: name, number: i++}));
                             if (basicBot.settings.smartSkip){
                                 return basicBot.roomUtilities.smartSkip();
                             }

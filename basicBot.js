@@ -1367,7 +1367,7 @@
 
             var detect = function(){
                 if(basicBot.room.name != window.location.pathname){
-                    console.log("Killing bot after room change.");
+                    console.log("Vypíná bota po změně místosti.");
                     storeToStorage();
                     basicBot.disconnectAPI();
                     setTimeout(function () {

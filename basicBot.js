@@ -2325,7 +2325,7 @@
                         var msg = chat.message;
                         if (msg.length <= cmd.length + 1) return API.sendChat(subChat(basicBot.chat.historyskiplimit, {name: chat.un, limit: basicBot.settings.historySkipLimit}));
                         var argument = msg.substring(cmd.length + 1);
-                        if (!basicBot.settings.voteSkip) basicBot.settings.historySkip = !basicBot.settings.historySkip;
+                        if (!basicBot.settings.historySkip) basicBot.settings.historySkip = !basicBot.settings.historySkip;
                         if (isNaN(argument) || (1 > argument > 50)) {
                             API.sendChat(subChat(basicBot.chat.historyskipinvalidlimit, {name: chat.un}));
                         }

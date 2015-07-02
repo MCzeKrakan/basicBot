@@ -243,7 +243,7 @@
         loggedInID: null,
         scriptLink: "https://rawgit.com/MCzeKrakan/basicBot/master/newBasicBot.js",
         cmdLink: "http://git.io/pnQ4",
-        chatLink: "https://rawgit.com/MCzeKrakan/basicBot/master/lang/en.json",
+        chatLink: "https://rawgit.com/MCzeKrakan/basicBot/master/lang/cz.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,

@@ -56,7 +56,6 @@
         "Don't bet on it.",
         "Forget about it."
     ],
-
     "nodatafound": "Žádná data nenalezena.",
     "currentlang": "\/me Aktuální jazyk: %%LANGUAGE%%",
     "langerror": "\/me Zvolený jazyk neexistuje. Seznam jazyků najdete zde %%LINK%%.",
@@ -91,9 +90,7 @@
     "caps": "\/me @%%NAME%% vypni si capslock prosím.",
     "askskip": "\/me @%%NAME%% nežádej o přeskočení.",
     "spam": "\/me @%%NAME%% nespamuj prosím.",
-    
     "curse": "\/me @%%NAME%% slušně prosím.",
-    
     "roomadvertising": "\/me @%%NAME%% neposílej odkazy na jiné místnosti prosím.",
     "adfly": "\/me @%%NAME%% prosím popřemýšlej nad změnou scriptu(autowootu). Doporučujeme RSC: https://radiant.dj/rcs",
     "validgiftags": "\/me [@%%NAME%%] http:\/\/i.giphy.com\/%%ID%%.gif [Tagy: %%TAGS%%]",
@@ -155,7 +152,6 @@
     "nousercookie": "\/em Nevidím %%NAME%% v místosti, tak cookie sním sám.",
     "selfcookie": "\/me @%%NAME%% tak trochu chamtivec ne, jíst cookie sám. Rozděl se taky s ostatními!",
     "cookie": "\/me @%%NAMETO%%, @%%NAMEFROM%% %%COOKIE%%",
-
     "cycleguardtime": "\/me [@%%NAME%%] Ochrana cyklu nastavena na %%TIME%% minut.",
     "dclookuprank": "\/me [@%%NAME%%] Pouze vyhazovači a výš mohou vyhledat dc pro ostatní.",
     "emojilist": "\/me Emotikony: %%LINK%%",
@@ -211,8 +207,6 @@
     "voteratio": "\/me [@%%NAME%%] @%%USERNAME%% ~ Woots: %%WOOT%%, Mehs: %%MEHS%%, Ratio (W\/M): %%RATIO%%.",
     "website": "\/me Navštivte náš web: %%LINK%%",
     "youtube": "\/me [%%NAME%%] Koukněte na Maziho videa: česká - %%LINKCZ%% a anglická - %%LINKEN%%",
-   
     "stream": "\/me [%%NAME%%] Sledujte Maziho stream: %%LINK%%",
-   
     "songstatistics": "\/me %%ARTIST%% - %%TITLE%%: %%WOOTS%%W\/%%GRABS%%G\/%%MEHS%%M.",
 }

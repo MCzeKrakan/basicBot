@@ -249,7 +249,7 @@
         retrieveFromStorage: retrieveFromStorage,
         settings: {
             botName: "MazaBot",
-            language: "english",
+            language: "czech",
             chatLink: "https://rawgit.com/MCzeKrakan/basicBot/master/lang/cz.json",
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 1, // 1-200

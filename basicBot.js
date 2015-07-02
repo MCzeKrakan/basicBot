@@ -240,17 +240,17 @@
         status: false,
         name: "basicBot",
         loggedInID: null,
-        scriptLink: "https://rawgit.com/Yemasthui/basicBot/master/basicBot.js",
+        scriptLink: "https://rawgit.com/MCzeKrakan/basicBot/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
-        chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
+        chatLink: "https://rawgit.com/MCzeKrakan/basicBot/master/lang/en.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: "basicBot",
+            botName: "MazaBot",
             language: "english",
-            chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
+            chatLink: "https://rawgit.com/MCzeKrakan/basicBot/master/lang/cz.json",
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 1, // 1-200
             startupVolume: 0, // 0-100

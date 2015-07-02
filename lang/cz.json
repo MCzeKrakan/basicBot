@@ -80,7 +80,7 @@
     "isopen": "/me Ruleta je roztočena. Napiště !join pro připojení!",
     "winnerpicked": "/me Vítězem rulety se stává @%%NAME%% a získává %%POSITION%% pozici.",
     
-    "ball": "/me %%NAME%% se ptal: \"%%QUESTION%%\" a %%BOTNAME%% odpovídá: \"%%RESPONSE%%\"",
+    "ball": "/me %%NAME%% se ptal: \"%%QUESTION%%\" a %%BOTNAME%% odpovídá: \"%%RESPONSE%%\",
 
     "notghosting": "[%%NAME1%%] %%NAME2%% není duch.",
     "ghosting": "[%%NAME1%%] %%NAME2%% je duch, nebo zde již není.",

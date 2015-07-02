@@ -128,13 +128,9 @@
     "timeguard": "Ochrana času",
     "chatfilter": "Chat filtr",
     "historyskip": "Přeskočení historie",
-    
-    "historynumber": "Limit historie",
     "historyskiplimit": "\/me [@%%NAME%%] Limit přeskočení historie je momentálně %%LIMIT%% písní.",
     "historyskipinvalidlimit": "\/me [@%%NAME%%] Neplatný limit historie, zadejte číslo od 1 do 50.",
     "historyskipsetlimit": "\/me [@%%NAME%%] Limit přeskočení historie nastaven na %%LIMIT%%.",
-    "historylimit": "Limit historie",
-    
     "lockdown": "Uzamknutí",
     "lockguard": "Ochrana uzamknutí",
     "usercommands": "Příkazy uživatelů",

@@ -301,7 +301,7 @@
             rulesLink: "http://goo.gl/tZQSrD",
             themeLink: null,
             fbLink: "https://facebook.com/MazArmyDJ",
-            youtubeLink: "https://youtube.com/MazariniCZ",
+            czYoutubeLink: "https://youtube.com/MazariniCZ",
             enYoutubeLink: "https://youtube.com/Mazarin1k",
             streamLink: "http://twitch.tv/mazarin1k",
             website: "http://mazarmy.com",
@@ -1766,16 +1766,19 @@
             blacklistCommand: {
                 command: ['blacklist', 'bl'],
                 rank: 'bouncer',
-                type: 'startsWith',
+                type: 'exact',
+                // type: 'startsWith',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                        var msg = chat.message;
-                        if (msg.length === cmd.length) return API.sendChat(subChat(basicBot.chat.nolistspecified, {name: chat.un}));
-                        var list = msg.substr(cmd.length + 1);
-                        if (typeof basicBot.room.blacklists[list] === 'undefined') return API.sendChat(subChat(basicBot.chat.invalidlistspecified, {name: chat.un}));
-                        else {
+                    	// (For multiple playlists)
+                        // var msg = chat.message;
+                        // if (msg.length === cmd.length) return API.sendChat(subChat(basicBot.chat.nolistspecified, {name: chat.un}));
+                        // var list = msg.substr(cmd.length + 1);
+                        // if (typeof basicBot.room.blacklists[list] === 'undefined') return API.sendChat(subChat(basicBot.chat.invalidlistspecified, {name: chat.un}));
+                        // else {
+                            var list = "BAN";
                             var media = API.getMedia();
                             var timeLeft = API.getTimeRemaining();
                             var timeElapsed = API.getTimeElapsed();
@@ -1798,7 +1801,7 @@
                                 basicBot.room.newBlacklistedSongFunction(track);
                             }
                         }
-                    }
+                    // }
                 }
             },
 
@@ -2305,11 +2308,35 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                        var link = "(Updated link coming soon)";
+                        var link = "(Link bude brzy přidán)";
                         API.sendChat(subChat(basicBot.chat.starterhelp, {link: link}));
                     }
                 }
             },
+            
+            historyskiplimitCommand: {
+                command: 'historyskiplimit',
+                rank: 'bouncer',
+                type: 'startsWith',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        var msg = chat.message;
+                        if (msg.length <= cmd.length + 1) return API.sendChat(subChat(basicBot.chat.historyskiplimit, {name: chat.un, limit: basicBot.settings.historySkipLimit}));
+                        var argument = msg.substring(cmd.length + 1);
+                        if (!basicBot.settings.historySkip) basicBot.settings.historySkip = !basicBot.settings.historySkip;
+                        if (isNaN(argument) || (1 > argument > 50)) {
+                            API.sendChat(subChat(basicBot.chat.historyskipinvalidlimit, {name: chat.un}));
+                        }
+                        else {
+                            basicBot.settings.historySkipLimit = argument;
+                            API.sendChat(subChat(basicBot.chat.historyskipsetlimit, {name: chat.un, limit: basicBot.settings.historySkipLimit}));
+                        }
+                    }
+                }
+            },
+
 
             historyskipCommand: {
                 command: 'historyskip',
@@ -2444,11 +2471,11 @@
                         if (msg.length <= cmd.length + 1) return API.sendChat(subChat(basicBot.chat.currentlang, {language: basicBot.settings.language}));
                         var argument = msg.substring(cmd.length + 1);
 
-                        $.get("https://rawgit.com/Yemasthui/basicBot/master/lang/langIndex.json", function (json) {
+                        $.get("https://rawgit.com/MCzeKrakan/basicBot/master/lang/langIndex.json", function (json) {
                             var langIndex = json;
                             var link = langIndex[argument.toLowerCase()];
                             if (typeof link === "undefined") {
-                                API.sendChat(subChat(basicBot.chat.langerror, {link: "http://git.io/vJ9nI"}));
+                                API.sendChat(subChat(basicBot.chat.langerror, {link: "http://git.io/vtFji"}));
                             }
                             else {
                                 basicBot.settings.language = argument;
@@ -3090,7 +3117,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                        API.sendChat('/me This bot was created by ' + botCreator + ', but is now maintained by ' + botMaintainer + ".");
+                    	API.sendChat('/me Bota vytvořil ' + botCreator + ', ale jeho současným správcem je ' + botMaintainer + '. Správcem MazaBota je ' + mazaBotMaintainer + ".");
                     }
                 }
             },
@@ -3146,12 +3173,12 @@
                         msg += basicBot.chat.historyskip + ': ';
                         if (basicBot.settings.historySkip) msg += 'ON';
                         else msg += 'OFF';
-                        msg += '. ';
+                        msg += ' (' + basicBot.settings.historySkipLimit + ') . ';
 
                         msg += basicBot.chat.voteskip + ': ';
                         if (basicBot.settings.voteSkip) msg += 'ON';
                         else msg += 'OFF';
-                        msg += '. ';
+                        msg += ' (' + basicBot.settings.voteSkipLimit + ') . ';
 
                         msg += basicBot.chat.cmddeletion + ': ';
                         if (basicBot.settings.cmdDeletion) msg += 'ON';
@@ -3582,41 +3609,41 @@
                                 var joined = rawjoined.substr(0, 10);
                                 var rawlang = API.getUser(id).language;
                                 if (rawlang == "en"){
-                                    var language = "English";
+                                    var language = "Anglický";
                                 } else if (rawlang == "bg"){
-                                    var language = "Bulgarian";
+                                    var language = "Bulharský";
                                 } else if (rawlang == "cs"){
-                                    var language = "Czech";
+                                    var language = "Český";
                                 } else if (rawlang == "fi"){
-                                    var language = "Finnish"
+                                    var language = "Finský";
                                 } else if (rawlang == "fr"){
-                                    var language = "French"
+                                    var language = "Francouzský";
                                 } else if (rawlang == "pt"){
-                                    var language = "Portuguese"
+                                    var language = "Portugalský";
                                 } else if (rawlang == "zh"){
-                                    var language = "Chinese"
+                                    var language = "Čínský";
                                 } else if (rawlang == "sk"){
-                                    var language = "Slovak"
+                                    var language = "Slovenský";
                                 } else if (rawlang == "nl"){
-                                    var language = "Dutch"
+                                    var language = "Holandský";
                                 } else if (rawlang == "ms"){
-                                    var language = "Malay"
+                                    var language = "Malajský";
                                 }
                                 var rawrank = API.getUser(id).role;
                                 if (rawrank == "0"){
-                                    var rank = "User";
+                                    var rank = "Uživatel";
                                 } else if (rawrank == "1"){
-                                    var rank = "Resident DJ";
+                                    var rank = "Residentní DJ";
                                 } else if (rawrank == "2"){
-                                    var rank = "Bouncer";
+                                    var rank = "Vyhazovač";
                                 } else if (rawrank == "3"){
-                                    var rank = "Manager"
+                                    var rank = "Manažer";
                                 } else if (rawrank == "4"){
-                                    var rank = "Co-Host"
+                                    var rank = "Zastupce Hostitele";
                                 } else if (rawrank == "5"){
-                                    var rank = "Host"
+                                    var rank = "Hostitel";
                                 } else if (rawrank == "7"){
-                                    var rank = "Brand Ambassador"
+                                    var rank = "Velvyslanec komunity";
                                 } else if (rawrank == "10"){
                                     var rank = "Admin"
                                 }
@@ -3633,7 +3660,21 @@
                     }
                 }
             },
-
+            
+            streamCommand: {
+                command: 'stream',
+                rank: 'user',
+                type: 'exact',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        if (typeof basicBot.settings.streamLink === "string")
+                            API.sendChat(subChat(basicBot.chat.stream, {name: chat.un, link: basicBot.settings.streamLink}));
+                    }
+                }
+            },
+            
             youtubeCommand: {
                 command: 'youtube',
                 rank: 'user',
@@ -3642,8 +3683,8 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                        if (typeof basicBot.settings.youtubeLink === "string")
-                            API.sendChat(subChat(basicBot.chat.youtube, {name: chat.un, link: basicBot.settings.youtubeLink}));
+                        if (typeof basicBot.settings.czYoutubeLink === "string" && typeof basicBot.settings.enYoutubeLink === "string")
+                            API.sendChat(subChat(basicBot.chat.youtube, {name: chat.un, linkcz: basicBot.settings.czYoutubeLink, linken: basicBot.settings.enYoutubeLink}));
                     }
                 }
             }

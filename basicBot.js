@@ -83,9 +83,9 @@
 
     var subChat = function (chat, obj) {
         if (typeof chat === "undefined") {
-            API.chatLog("There is a chat text missing.");
-            console.log("There is a chat text missing.");
-            return "[Error] No text message found.";
+            API.chatLog("Chybí text chatu.");
+            console.log("Chybí text chatu.");
+            return "[Chyba] Textová zpráva nebyla nalezena.";
 
             // TODO: Get missing chat messages from source.
         }
@@ -232,7 +232,8 @@
     };
 
     var botCreator = "Matthew (Yemasthui)";
-    var botMaintainer = "Benzi (Quoona)"
+    var botMaintainer = "Benzi (Quoona)";
+    var mazaBotMaintainer = "Tomas (MCzeKrakan)";
     var botCreatorIDs = ["3851534", "4105209"];
 
     var basicBot = {
@@ -241,14 +242,14 @@
         name: "basicBot",
         loggedInID: null,
         scriptLink: "https://rawgit.com/MCzeKrakan/basicBot/master/basicBot.js",
-        cmdLink: "http://git.io/245Ppg",
+        cmdLink: "http://git.io/pnQ4",
         chatLink: "https://rawgit.com/MCzeKrakan/basicBot/master/lang/cz.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: "MazaBot",
+            botName: "MazaBOT",
             language: "czech",
             chatLink: "https://rawgit.com/MCzeKrakan/basicBot/master/lang/cz.json",
             roomLock: false, // Requires an extension to re-load the script
@@ -259,55 +260,57 @@
             smartSkip: true,
             cmdDeletion: true,
             maximumAfk: 120,
-            afkRemoval: true,
+            afkRemoval: false,
             maximumDc: 60,
             bouncerPlus: true,
             blacklistEnabled: true,
             lockdownEnabled: false,
             lockGuard: false,
             maximumLocktime: 10,
-            cycleGuard: true,
+            cycleGuard: false,
             maximumCycletime: 10,
+            rouletteTime: 5,
             voteSkip: false,
-            voteSkipLimit: 10,
-            historySkip: false,
+            voteSkipLimit: 7,
+            historySkip: true,
+            historySkipLimit: 50, // 1-50
             timeGuard: true,
-            maximumSongLength: 10,
-            autodisable: true,
+            maximumSongLength: 420,
+            autodisable: false,
             commandCooldown: 30,
             usercommandsEnabled: true,
             skipPosition: 3,
             skipReasons: [
-                ["theme", "This song does not fit the room theme. "],
-                ["op", "This song is on the OP list. "],
-                ["history", "This song is in the history. "],
-                ["mix", "You played a mix, which is against the rules. "],
-                ["sound", "The song you played had bad sound quality or no sound. "],
-                ["nsfw", "The song you contained was NSFW (image or sound). "],
-                ["unavailable", "The song you played was not available for some users. "]
+                ["theme", "Song nevyhovuje aktuálnímu žánru této místnosti. "],
+                ["op", "Song je na seznamu příliš často hraných. "],
+                ["history", "Song je již v historii. "],
+                ["mix", "Hrát mixy je proti pravidlům. "],
+                ["sound", "Song má velmi špatnou kvalitu zvuku, nebo žádný zvuk. "],
+                ["nsfw", "Song obsahuje nevhodný obsah (obrazový nebo zvukový). "],
+                ["un", "Song nebyl dostupný pro všechny uživatele. "]
             ],
-            afkpositionCheck: 15,
+            afkpositionCheck: 5,
             afkRankCheck: "ambassador",
             motdEnabled: false,
-            motdInterval: 5,
+            motdInterval: 10,
             motd: "Temporary Message of the Day",
             filterChat: true,
             etaRestriction: false,
-            welcome: true,
+            welcome: false,
             opLink: null,
-            rulesLink: null,
+            rulesLink: "http://goo.gl/tZQSrD",
             themeLink: null,
-            fbLink: null,
-            youtubeLink: null,
-            website: null,
+            fbLink: "https://facebook.com/MazArmyDJ",
+            youtubeLink: "https://youtube.com/MazariniCZ",
+            enYoutubeLink: "https://youtube.com/Mazarin1k",
+            streamLink: "http://twitch.tv/mazarin1k",
+            website: "http://mazarmy.com",
             intervalMessages: [],
             messageInterval: 5,
-            songstats: true,
+            songstats: false,
             commandLiteral: "!",
             blacklists: {
-                NSFW: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/NSFWlist.json",
-                OP: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/OPlist.json",
-                BANNED: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/BANNEDlist.json"
+            	BAN: "https://rawgit.com/MCzeKrakan/basicBot/master/blacklists/BAN.json"
             }
         },
         room: {
@@ -366,7 +369,7 @@
                     basicBot.room.roulette.rouletteStatus = true;
                     basicBot.room.roulette.countdown = setTimeout(function () {
                         basicBot.room.roulette.endRoulette();
-                    }, 60 * 1000);
+                    }, basicBot.settings.rouletteTime * 60 * 1000);
                     API.sendChat(basicBot.chat.isopen);
                 },
                 endRoulette: function () {
@@ -374,7 +377,9 @@
                     var ind = Math.floor(Math.random() * basicBot.room.roulette.participants.length);
                     var winner = basicBot.room.roulette.participants[ind];
                     basicBot.room.roulette.participants = [];
-                    var pos = Math.floor((Math.random() * API.getWaitList().length) + 1);
+                    // Random position
+                    // var pos = Math.floor((Math.random() * API.getWaitList().length) + 1);
+                    var pos = 1;
                     var user = basicBot.userUtilities.lookupUser(winner);
                     var name = user.username;
                     API.sendChat(subChat(basicBot.chat.winnerpicked, {name: name, position: pos}));
@@ -985,9 +990,9 @@
             }, 2000);
             var newMedia = obj.media;
             var timeLimitSkip = setTimeout(function () {
-                if (basicBot.settings.timeGuard && newMedia.duration > basicBot.settings.maximumSongLength * 60 && !basicBot.room.roomevent) {
+                if (basicBot.settings.timeGuard && newMedia.duration > basicBot.settings.maximumSongLength + 15 && !basicBot.room.roomevent) {
                     var name = obj.dj.username;
-                    API.sendChat(subChat(basicBot.chat.timelimit, {name: name, maxlength: basicBot.settings.maximumSongLength}));
+                    API.sendChat(subChat(basicBot.chat.timelimit, {name: name, maxlength: basicBot.settings.maximumSongLength / 60}));
                     if (basicBot.settings.smartSkip){
                         return basicBot.roomUtilities.smartSkip();
                     }
@@ -1034,7 +1039,7 @@
                 var apihistory = API.getHistory();
                 var name = obj.dj.username;
                 var historySkip = setTimeout(function () {
-                    for (var i = 0; i < apihistory.length; i++) {
+                    for (var i = 0; i < basicBot.settings.historySkipLimit; i++) {
                         if (apihistory[i].media.cid === obj.media.cid) {
                             basicBot.room.historyList[i].push(+new Date());
                             alreadyPlayed = true;
@@ -1121,7 +1126,7 @@
                 ch = msg.charAt(i);
                 if (ch >= 'A' && ch <= 'Z') capitals++;
             }
-            if (capitals >= 40) {
+            if (capitals >= 25) {
                 API.sendChat(subChat(basicBot.chat.caps, {name: chat.un}));
                 return true;
             }
@@ -1133,6 +1138,12 @@
             for (var j = 0; j < basicBot.chatUtilities.spam.length; j++) {
                 if (msg === basicBot.chatUtilities.spam[j]) {
                     API.sendChat(subChat(basicBot.chat.spam, {name: chat.un}));
+                    return true;
+                }
+            }
+            for (var k = 0; k < basicBot.chatUtilities.curses.length; k++) {
+                if (msg === basicBot.chatUtilities.curses[k]) {
+                    API.sendChat(subChat(basicBot.chat.curse, {name: chat.un}));
                     return true;
                 }
             }
@@ -1277,12 +1288,15 @@
             },
             spam: [
                 'hueh', 'hu3', 'brbr', 'heu', 'brbr', 'kkkk', 'spoder', 'mafia', 'zuera', 'zueira',
-                'zueria', 'aehoo', 'aheu', 'alguem', 'algum', 'brazil', 'zoeira', 'fuckadmins', 'affff', 'vaisefoder', 'huenaarea',
-                'hitler', 'ashua', 'ahsu', 'ashau', 'lulz', 'huehue', 'hue', 'huehuehue', 'merda', 'pqp', 'puta', 'mulher', 'pula', 'retarda', 'caralho', 'filha', 'ppk',
+                'zueria', 'aehoo', 'aheu', 'alguem', 'algum', 'brazil', 'zoeira', 'affff', 'vaisefoder', 'huenaarea',
+                'ashua', 'ahsu', 'ashau', 'lulz', 'huehue', 'hue', 'huehuehue', 'merda', 'pqp', 'mulher', 'pula', 'retarda', 'caralho', 'filha', 'ppk', 
                 'gringo', 'fuder', 'foder', 'hua', 'ahue', 'modafuka', 'modafoka', 'mudafuka', 'mudafoka', 'ooooooooooooooo', 'foda'
             ],
             curses: [
-                'nigger', 'faggot', 'nigga', 'niqqa', 'motherfucker', 'modafocka'
+                'kurva', 'kurvy', 'kurvo', 'do prdele', 'hubu', 'chcípněte', 'zkurvenej', 'zmrd', 'zmrde', 'zmrdi', 
+                'píča', 'píčo', 'píči', 'sráč', 'sráči', 'kunda', 'kundy', 'kundo', 'krypl', 'kryple', 'mrdat', 'mrdej', 
+                'čůrák', 'čůráci', 'čůráku', 'kretén', 'kreténi', 'kreténe', 'motherfucker', 
+                'fuckadmins', 'puta', 'fuckyou', 'cock', 'fuck'
             ]
         },
         connectAPI: function () {
@@ -1422,17 +1436,17 @@
                 if (emojibuttonoff.length > 0) {
                     emojibuttonoff[0].click();
                 }
-                API.chatLog(':smile: Emojis enabled.');
+                API.chatLog(':smile: Emotikony povoleny.');
             }
             else {
                 var emojibuttonon = $(".icon-emoji-on");
                 if (emojibuttonon.length > 0) {
                     emojibuttonon[0].click();
                 }
-                API.chatLog('Emojis disabled.');
+                API.chatLog('Emotikony zakázány.');
             }
-            API.chatLog('Avatars capped at ' + basicBot.settings.startupCap);
-            API.chatLog('Volume set to ' + basicBot.settings.startupVolume);
+            API.chatLog('Počet avatarů ' + basicBot.settings.startupCap);
+            API.chatLog('Hlasitost je ' + basicBot.settings.startupVolume);
             socket();
             loadChat(API.sendChat(subChat(basicBot.chat.online, {botname: basicBot.settings.botName, version: basicBot.version})));
         },

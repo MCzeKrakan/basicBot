@@ -68,10 +68,7 @@
     "online": "\/me %%BOTNAME%% v%%VERSION%% spuštěn!",
     "welcome": "\/me Vítej %%NAME%% :) ",
     "welcomeback": "\/me Vítej zpět %%NAME%%",
-    
-    "songknownnahrazenonasledujicim": "\/me Tato píseň je již v historii.",
-    "songplayed": "\/me @%%NAME%% Tato píseň je již v historii (%%NUMBER%%\/50).",
-    
+    "songknown": "\/me @%%NAME%% Tato píseň je již v historii (%%NUMBER%%\/50).",
     "notavailable": "\/me @%%NAME%%, píseň nebyla dostupná.",
     "timelimit": "\/me @%%NAME%% je zakázáno hrát songy delší než %%MAXLENGTH%% minut.",
     "permissionownsong": "\/me :up: @%%NAME%% má povoleno hrát vlastní tvorbu!",

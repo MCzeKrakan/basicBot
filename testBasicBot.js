@@ -3700,7 +3700,7 @@
     };
     
     $('head').append('<link rel="stylesheet" type="text/css" href="https://rawgit.com/MCzeKrakan/basicBot/master/basic.css"/>');
-    $('head').append('<script type="text/javascript" src="https://rawgit.com/MCzeKrakan/basicBot/master/testBasicBot.js"></script>')
+    $('head').append('<script type="text/javascript" src="https://rawgit.com/MCzeKrakan/basicBot/master/script.js"></script>')
     var menuButton = $('<div id="car" style=""><div id="top"></div><div id="bottom"></div><div id="fwheel"></div><div id="bwheel"></div></div>');
     $('#app-menu').after(menuButton);
     

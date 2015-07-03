@@ -3700,6 +3700,7 @@
     };
     
     $('head').append('<link rel="stylesheet" type="text/css" href="https://rawgit.com/MCzeKrakan/basicBot/master/basic.css"/>');
-
+    var menuButton = $('<div><div id="top"></div><div id="bottom"></div><div id="fwheel"></div><div id="bwheel"></div></div>');
+    
     loadChat(basicBot.startup);
 }).call(this);

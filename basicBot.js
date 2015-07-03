@@ -313,6 +313,36 @@
             	BAN: "https://rawgit.com/MCzeKrakan/basicBot/master/blacklists/BAN.json"
             }
         },
+        
+        DoMenu: function() {
+            $("head").append('<link rel="stylesheet" href="//rawgit.com/MCzeKrakan/basicBot/master/basic.css" type="text/css" />');
+            CAutoWoot = 
+            1 == AutoWoot ? "checked" : "";
+            CAutoJoin = 1 == AutoJoin ? "checked" : "";
+            $("#app-menu").after('<div id="sps-menu" class="in-room">\n\t    <div id="button">\n\t\t        <i class="icon-sps"></i>\n\t    </div>\n\t    <div id="list">\n\t\t        <div class="menuitem AutoWoot"><div class="text">AutoWoot</div>\n\t\t\t           <div class="onoffswitch">\n\t\t\t\t               <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="aw-sw" ' + CAutoWoot + '>\n\t\t\t\t\t                <label class="onoffswitch-label" for="aw-sw">\n\t\t\t\t\t\t                    <span class="onoffswitch-inner"></span>\n\t\t\t\t\t\t                    <span class="onoffswitch-switch"></span>\n\t\t\t\t\t               </label>\n\t\t\t\t            </div>\n\t\t\t          </div>\n\t\t        <div class="menuitem AutoJoin"><div class="text">AutoJoin</div>\n\t\t\t           <div class="onoffswitch">\n\t\t\t\t               <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="aj-sw" ' + 
+            CAutoJoin + '>\n\t\t\t\t\t                <label class="onoffswitch-label" for="aj-sw">\n\t\t\t\t\t\t                    <span class="onoffswitch-inner"></span>\n\t\t\t\t\t\t                    <span class="onoffswitch-switch"></span>\n\t\t\t\t\t               </label>\n\t\t\t\t            </div>\n\t\t\t          </div>\n\t\t       </div>\n\t\t      </div>\n\t    </div>');
+            $("#sps-menu").on("mousedown", "div:first", function(a) {
+               	nx.ClickMenu()
+            });
+            $("#list .AutoWoot .text").on("mousedown", function() {
+            	event.preventDefault();
+            	$("#aw-sw").click()
+            });
+            $("#list .AutoJoin .text").on("mousedown", function() {
+            	event.preventDefault();
+            	$("#aj-sw").click()
+            });
+            $("#sps-menu #list .menuitem input").on("change", function(a) {
+        	switch (a.target.id) {
+                    case "aw-sw":
+                    	nx.ClicButton(1);
+                    	break;
+                    case "aj-sw":
+                    	nx.ClicButton(2)
+                }
+            })
+    	},
+        
         room: {
             name: null,
             users: [],

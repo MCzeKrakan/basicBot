@@ -3698,6 +3698,8 @@
             }
         }
     };
+    
+    $('head').append('<link rel="stylesheet" type="text/css" href="https://rawgit.com/MCzeKrakan/basicBot/master/basic.css"/>');
 
     loadChat(basicBot.startup);
 }).call(this);

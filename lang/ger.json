@@ -64,7 +64,7 @@
     "greyuser": "Nur Bouncer und höher können den Bot einstellen.",
     "bouncer": "Der Bot kann keine Leute verschieben, wenn er nur den Rank \"Bouncer\" hat.",
     "online": "\/me %%BOTNAME%% v%%VERSION%% online!",
-    "welcome": "\/me Willkommen %%NAME%% bei den MoondyeBoys ᕙ༼=ݓ益ݓ=༽ᕗ",
+    "welcome": "\/me Willkommen %%NAME%% bei den MoondyeBoys,
     "welcomeback": "\/me Willkomm zurück, %%NAME%%",
     "songknown": "\/me @%%NAME%%, Dieser Song ist in dem Dj-Verlauf.",
     "notavailable": "\/me @%%NAME%%, Den Song, den du spielen wolltest, war nicht verfügbar.",

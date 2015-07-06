@@ -181,7 +181,7 @@
     "unmuted": "\/me [@%%NAME%%] @%%USERNAME%% ist nun nichtmehr stummgeschaltet.",
     "muterank": "\/me [@%%NAME%%] Du kannst keine Personen muted die einen höheren Rang haben als Du!",
     "oplist": "\/me Diese Lieder darfst du nicht spielen: %%LINK%%",
-    "pong": "\/me Trau dich doch! ~~~~~~~[]=¤ԅ໒( ☯ ᗜ ☯ )७ᕗ!",
+    "pong": "\/me Trau dich doch!,
     "reload": "\/me Bin gleich wieder da!.",
     "removenotinwl": "\/me [@%%NAME%%] Der User @%%USERNAME%% ist zurzeit nicht in der Warteliste!",
     "roomrules": "\/me Hier findest du die Regeln dieses Raums: %%LINK%%",

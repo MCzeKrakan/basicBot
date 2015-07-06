@@ -187,7 +187,7 @@
     "roomrules": "\/me Hier findest du die Regeln dieses Raums: %%LINK%%",
     "sessionstats": "\/me [@%%NAME%%] Woots insgesamt: %%WOOTS%%, Mehs insgesamt: %%MEHS%%, Grabs insgeasmt: %%GRABS%%.",
     "forceskip": "\/me [%%NAME%% hat den Song direkt übersprungen]",
-    "madeby": "\/me %%NAME%% Dieser Bot wurde von @TheSimplex und @Ritzenspalt gemacht.",
+    "madeby": "\/me Dieser Bot wurde von @TheSimplex und @Ritzenspalt gemacht.",
     "activefor": "Ich bin aktiv seit: %%TIME%%.",
     "swapinvalid": "\/me [@%%NAME%%] User wurde nicht gefunden.",
     "swapwlonly": "\/me [@%%NAME%%] Du kannst nur User vertauschen die in der Warteliste sind!",

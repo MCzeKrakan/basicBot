@@ -243,7 +243,7 @@
         loggedInID: null,
         scriptLink: "https://rawgit.com/MCzeKrakan/basicBot/master/basicBot.js",
         cmdLink: "http://git.io/pnQ4",
-        chatLink: "https://rawgit.com/MCzeKrakan/basicBot/master/lang/ger.json",
+        chatLink: "https://rawgit.com/MCzeKrakan/basicBot/master/lang/en.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
@@ -251,7 +251,7 @@
         settings: {
             botName: "MazaBOT",
             language: "german",
-            chatLink: "https://rawgit.com/MCzeKrakan/basicBot/master/lang/cz.json",
+            chatLink: "https://rawgit.com/MCzeKrakan/basicBot/master/lang/ger.json",
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 1, // 1-200
             startupVolume: 0, // 0-100

@@ -167,7 +167,7 @@
     "usedlockskip": "\/me [%%NAME%% hat lockskip benutzt]",
     "usedskip": "\/me [%%NAME%% übersprang den Song]",
     "skippos": "\/me [@%%NAME%%] DJs werden nun zu Postition %%POSITION%% verschoben wenn sie übersprungen wurden.",
-    "lockguardtime": "\/me [@%%NAME%%] Der \"lockguard\"-Timer wurde auf %%TIME%% Minute(n) gestellt.",
+    "lockguardtime": "\/me [@%%NAME%%] Der "lockguard"-Timer wurde auf %%TIME%% Minute(n) gestellt.",
     "maxlengthtime": "\/me [@%%NAME%%] Die maximale Song-länge beträgt %%TIME%% Minuten.",
     "motdset": "\/me MotD wurde auf %%MSG%% gesetzt.",
     "motdintervalset": "\/me MotD Interval wurde auf %%INTERVAL%%. gesetzt",

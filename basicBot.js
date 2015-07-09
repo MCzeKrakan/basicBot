@@ -280,7 +280,7 @@
             autodisable: false,
             commandCooldown: 30,
             usercommandsEnabled: true,
-            skipPosition: 3,
+            skipPosition: 2,
             skipReasons: [
                 ["theme", "Song nevyhovuje aktuálnímu žánru této místnosti. "],
                 ["op", "Song je na seznamu příliš často hraných. "],

@@ -73,8 +73,8 @@ Vyhazovač
 |!reload | | restartuje Bota |
 |!restricteta | | ON/OFF omezení příkazu eta pro šedé uživatele na jedenkrát za hodinu |
 |!sessionstats | | zobrazí vaše statistiky od posledního připojení |
-|!lockskip | (důvod) | přeskočí píseň a posune dj zpět na první místo
-Důvody: <ul><li>theme - Song nevyhovuje aktuálnímu žánru této místnosti</li><li>op - Song je na seznamu příliš často hraných</li><li>history - Song je již v historii</li><li>mix - Hrát mixy je proti pravidlům</li><li>sound - Song má velmi špatnou kvalitu zvuku, nebo žádný zvuk</li><li>nsfw - Song obsahuje nevhodný obsah (obrazový nebo zvukový)</li><li>un - Song nebyl dostupný pro všechny uživatele</li></ul> |
+-------
+|!lockskip | (důvod) | přeskočí píseň a posune dj zpět na první místo Důvody: <ul><li>theme - Song nevyhovuje aktuálnímu žánru této místnosti</li><li>op - Song je na seznamu příliš často hraných</li><li>history - Song je již v historii</li><li>mix - Hrát mixy je proti pravidlům</li><li>sound - Song má velmi špatnou kvalitu zvuku, nebo žádný zvuk</li><li>nsfw - Song obsahuje nevhodný obsah (obrazový nebo zvukový)</li><li>un - Song nebyl dostupný pro všechny uživatele</li></ul> |
 |!skip | (důvod) | přeskočí současného DJ, chytrý systém sám zamkne frontu (DJ je posunutý na pozici určenou ve !skippos) |
 |!skippos | X | nastaví pozici pro přeskočeného DJ při použití skip a lockskip |
 |!status | | zobrazí momentální nastavení Bota |

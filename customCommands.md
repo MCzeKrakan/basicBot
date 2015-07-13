@@ -102,7 +102,6 @@ Uživatel
 |:------:|:---------:|:--------------------------------------:|
 |!8ball | (otázka) | zeptejte se bota na otázku, odpoví vám ruznými způsoby ano, nebo ne. |
 |!autowoot | | odkaz na RCS, doporučený script/doplněk nejen pro autowoot |
-|!source | | autoři scriptu |
 |!ba | | vysvětlení Brand Ambassador hodnosti |
 |!commands | | odkaz na tento seznam příazů |
 |!cookie | (@user) | pošle náhodnou sušenku uživateli |
@@ -118,6 +117,7 @@ Uživatel
 |!link | | když je uživatel DJ, zobrazí odkaz na na současnou píseň |
 |!ping | | pong! |
 |!rules | | odkaz na pravidla (pokud je nastaven) |
+|!source | | autoři scriptu |
 |!theme | | odkaz na temá, zaměření místnosti (pokud je nastaven) |
 |!website | | odkaz na stránky (pokud je nastaven) |
 |!youtube | | odkaz na youtube kanál (pokud je nastaven) |

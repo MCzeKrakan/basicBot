@@ -12,6 +12,7 @@ Manažer
 |:------:|:---------:|:--------------------------------------:|
 |!afklimit | X | nastaví max afk limit |
 |!botname | (jméno) | nastaví nové jméno bota |
+|!bouncer+ | | ON/OFF vyhazovač+ |
 |!clearchat | | smaže chat |
 |!cycle | | ON/OFF DJ cyklus |
 |!cycletimer | X | nastaví max čas, po který bude DJ cyklus zapnutý |
@@ -32,7 +33,6 @@ Vyhazovač+
 |!add | @user | přidá uživatele do fronty |
 |!afkremoval | | ON/OFF anti AFK ochrana pro fronty |
 |!autoskip | | automaticky přeskakuje songy po dohrání (když je buglý cyklus) |
-|!bouncer+ | | ON/OFF vyhazovač+ |
 |!cmddel | | ON/OFF mazání příkazů |
 |~~!deletechat~~ | ~~@user~~ | ~~odstraní veškeré zrávy kokrétního uživatele~~ (**NEFUNKČNÍ, ČEKÁ NA OPRAVU**) |
 |!historyskip | | ON/OFF přeskočení písniček v hostorii |

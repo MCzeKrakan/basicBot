@@ -158,7 +158,7 @@
                 basicBot.room.afkList = room.afkList;
                 basicBot.room.historyList = room.historyList;
                 basicBot.room.mutedUsers = room.mutedUsers;
-                basicBot.room.autoskip = room.autoskip;
+                //basicBot.room.autoskip = room.autoskip;
                 basicBot.room.roomstats = room.roomstats;
                 basicBot.room.messages = room.messages;
                 basicBot.room.queue = room.queue;
@@ -258,6 +258,7 @@
             startupVolume: 0, // 0-100
             startupEmoji: false, // true or false
             autowoot: true,
+            autoskip: false,
             smartSkip: true,
             cmdDeletion: true,
             maximumAfk: 120,
@@ -325,7 +326,7 @@
             usercommand: true,
             allcommand: true,
             afkInterval: null,
-            autoskip: false,
+            //autoskip: false,
             autoskipTimer: null,
             autodisableInterval: null,
             autodisableFunc: function () {
@@ -1064,7 +1065,7 @@
                 user.ownSong = false;
             }
             clearTimeout(basicBot.room.autoskipTimer);
-            if (basicBot.room.autoskip) {
+            if (basicBot.settings.autoskip) {
                 var remaining = obj.media.duration * 1000;
                 var startcid = API.getMedia().cid;
                 basicBot.room.autoskipTimer = setTimeout(function() {
@@ -1689,13 +1690,13 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                        if (basicBot.room.autoskip) {
-                            basicBot.room.autoskip = !basicBot.room.autoskip;
+                        if (basicBot.settings.autoskip) {
+                            basicBot.settings.autoskip = !basicBot.settings.autoskip;
                             clearTimeout(basicBot.room.autoskipTimer);
                             return API.sendChat(subChat(basicBot.chat.toggleoff, {name: chat.un, 'function': basicBot.chat.autoskip}));
                         }
                         else {
-                            basicBot.room.autoskip = !basicBot.room.autoskip;
+                            basicBot.settings.autoskip = !basicBot.settings.autoskip;
                             return API.sendChat(subChat(basicBot.chat.toggleon, {name: chat.un, 'function': basicBot.chat.autoskip}));
                         }
                     }
@@ -3188,7 +3189,7 @@
                         msg2 += ' | ';
 
                         msg2 += basicBot.chat.autoskip + ': ';
-                        if (basicBot.room.autoskip) msg2 += 'ON';
+                        if (basicBot.settings.autoskip) msg2 += 'ON';
                         else msg2 += 'OFF';
                         msg2 += ' | ';
 

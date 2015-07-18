@@ -37,7 +37,7 @@
     var socket = function () {
         function loadSocket() {
             SockJS.prototype.msg = function(a){this.send(JSON.stringify(a))};
-            sock = new SockJS('https://socket-bnzi.c9.io/basicbot');
+            sock = new SockJS('https://benzi.io:4964/socket');
             sock.onopen = function() {
                 console.log('Connected to socket!');
                 sendToSocket();
@@ -233,12 +233,12 @@
     };
 
     var botCreator = "Matthew (Yemasthui)";
-    var botMaintainer = "Benzi (Quoona)";
+    var botMaintainer = "Benzi";
     var mazaBotMaintainer = "Tomas (MCzeKrakan)";
     var botCreatorIDs = ["3851534", "4105209"];
 
     var basicBot = {
-        version: "2.8.9",
+        version: "2.8.10",
         status: false,
         name: "basicBot",
         loggedInID: null,

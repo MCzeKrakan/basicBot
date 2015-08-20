@@ -34,7 +34,7 @@ Vyhazovač+
 |!afkremoval | | ON/OFF anti AFK ochrana pro fronty |
 |!autoskip | | automaticky přeskakuje songy po dohrání (když je buglý cyklus) |
 |!cmddel | | ON/OFF mazání příkazů |
-|~~!deletechat~~ | ~~@user~~ | ~~odstraní veškeré zrávy kokrétního uživatele~~ (**NEFUNKČNÍ, ČEKÁ NA OPRAVU**) |
+|!deletechat | @user | odstraní veškeré zrávy kokrétního uživatele |
 |!historyskip | | ON/OFF přeskočení písniček v hostorii |
 |!lock | | uzamkne frontu |
 |!lockdown | | uzamčení místnosti: pouze zaměstnanci mohou chatovat |

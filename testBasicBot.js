@@ -3744,7 +3744,7 @@
     $('head').append('<script type="text/javascript" src="https://rawgit.com/MCzeKrakan/basicBot/master/script.js"></script>');
     $('head').append('<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>');
     var menuButton = $('<div id="car" style=""><div id="top"></div><div id="bottom"></div><div id="fwheel"></div><div id="bwheel"></div></div>');
-    $('#app-menu').after(menuButton);
+    $('#friends-button').after(menuButton);
     
             
     loadChat(basicBot.startup);

@@ -62,11 +62,11 @@
     width: 50px;
 }
 #car.selected i {
-    background: url(https://cdn.radiant.dj/rcs/icons/rcs_selected.png) !important;
+    background: url(http://oi62.tinypic.com/nmx4x0.jpg) !important;
 }
 
 #car:hover i {
-    background: url(https://cdn.radiant.dj/rcs/icons/rcs_selected.png) !important;
+    background: url(http://oi59.tinypic.com/2db318p.jpg) !important;
 }
 #car i {
 position: relative;

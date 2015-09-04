@@ -3743,7 +3743,7 @@
     $('head').append('<link rel="stylesheet" type="text/css" href="https://rawgit.com/MCzeKrakan/basicBot/master/basic.css"/>');
     $('head').append('<script type="text/javascript" src="https://rawgit.com/MCzeKrakan/basicBot/master/script.js"></script>');
     $('head').append('<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>');
-    var menuButton = $('<div id="car" class="header-panel-button" style=""><i class="icon" style="top: 11px; width: 59px; height: 35px; background: url(http://oi62.tinypic.com/nmx4x0.jpg);"></i></div>');
+    var menuButton = $('<div id="car" class="header-panel-button" style=""><i class="icon" style="top: 13px; width: 50px; height: 30px; background: url(http://i62.tinypic.com/11rx7v6.jpg);"></i></div>');
     // var menuButton = $('<div id="car" class="header-panel-button" style=""><div id="top"></div><div id="bottom"></div><div id="fwheel"></div><div id="bwheel"></div></div>');
     $('#friends-button').after(menuButton);
     

@@ -1,3 +1,3 @@
 $(document).ready(function() {
-    $('#car').draggable();
+    //$('#car').draggable();
 });

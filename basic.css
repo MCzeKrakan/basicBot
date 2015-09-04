@@ -42,12 +42,6 @@
 	left: 285px;
 	width: 58;
 }
-.header-panel-button {
-    top: 0;
-    border-right: #0A0A0A 1px solid;
-    text-align: center;
-    white-space: nowrap
-}
 #chat-button {
     left: 0;
     width: 50px;
@@ -64,6 +58,6 @@
 }
 
 #friends-button {
-    left: 236px;
+    left: 238px;
     width: 50px;
 }

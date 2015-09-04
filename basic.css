@@ -61,3 +61,16 @@
     left: 238px;
     width: 50px;
 }
+#car.selected i {
+    background: url(https://cdn.radiant.dj/rcs/icons/rcs_selected.png) !important;
+}
+
+#car:hover i {
+    background: url(https://cdn.radiant.dj/rcs/icons/rcs_selected.png) !important;
+}
+#car i {
+position: relative;
+top: 13px;
+display: inline-block;
+margin: 0 auto;
+}

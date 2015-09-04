@@ -48,3 +48,22 @@
     text-align: center;
     white-space: nowrap
 }
+#chat-button {
+    left: 0;
+    width: 50px;
+}
+
+#users-button {
+    left: 50px;
+    width: 85px;
+}
+
+#waitlist-button {
+    left: 135px;
+    width: 100px;
+}
+
+#friends-button {
+    left: 236px;
+    width: 50px;
+}

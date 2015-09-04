@@ -40,7 +40,7 @@
 }
 #car {
 	left: 285px;
-	width: 58;
+	width: 58px;
 }
 #chat-button {
     left: 0;
@@ -58,7 +58,7 @@
 }
 
 #friends-button {
-    left: 238px;
+    left: 236px;
     width: 50px;
 }
 #car.selected i {

@@ -1,5 +1,5 @@
 /**
- *Copyright 2014 Yemasthui
+ *Copyright 2015 bscBot
  *Modifications (including forks) of the code to fit personal needs are allowed only for personal use and should refer back to the original source.
  *This software is not for profit, any extension, or unauthorised person providing this software is not authorised to be in a position of any monetary gain from this use of this software. Any and all money gained under the use of the software (which includes donations) must be passed on to the original author.
  */
@@ -37,7 +37,7 @@
     var socket = function () {
         function loadSocket() {
             SockJS.prototype.msg = function(a){this.send(JSON.stringify(a))};
-            sock = new SockJS('https://socket-bnzi.c9.io/basicbot');
+            sock = new SockJS('https://benzi.io:4964/socket');
             sock.onopen = function() {
                 console.log('Connected to socket!');
                 sendToSocket();
@@ -57,6 +57,7 @@
             $.getScript('https://cdn.jsdelivr.net/sockjs/0.3.4/sockjs.min.js', loadSocket);
         } else loadSocket();
     }
+
     var sendToSocket = function () {
         var basicBotSettings = basicBot.settings;
         var basicBotRoom = basicBot.room;
@@ -210,7 +211,7 @@
       return this.substring(0, str.length) === str;
     };
 
-    var linkFixer = function (msg) {
+    function linkFixer(msg) {
         var parts = msg.splitBetween('<a href="', '<\/a>');
         for (var i = 1; i < parts.length; i = i + 2) {
             var link = parts[i].split('"')[0];
@@ -223,7 +224,7 @@
         return m;
     };
 
-    var decodeEntities = function (s) {
+    function decodeEntities(s) {
         var str, temp = document.createElement('p');
         temp.innerHTML = s;
         str = temp.textContent || temp.innerText;
@@ -231,13 +232,13 @@
         return str;
     };
 
-    var botCreator = "Matthew (Yemasthui)";
-    var botMaintainer = "Benzi (Quoona)";
-    var mazaBotMaintainer = "Tomas (MCzeKrakan)";
+    var botCreator = "The Basic Team";
+    var botMaintainer = "Benzi";
+    var mazaBotMaintainer = "MCzeKrakan";
     var botCreatorIDs = ["3851534", "4105209"];
 
     var basicBot = {
-        version: "2.8.9",
+        version: "2.8.14",
         status: false,
         name: "basicBot",
         loggedInID: null,
@@ -252,6 +253,7 @@
             botName: "MazaBOT",
             language: "czech",
             chatLink: "https://rawgit.com/MCzeKrakan/basicBot/master/lang/cz.json",
+            scriptLink: "https://rawgit.com/MCzeKrakan/basicBot/master/basicBot.js",
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 1, // 1-200
             startupVolume: 0, // 0-100
@@ -259,7 +261,7 @@
             autowoot: true,
             autoskip: false,
             smartSkip: true,
-            cmdDeletion: true,
+            cmdDeletion: false,
             maximumAfk: 120,
             afkRemoval: false,
             maximumDc: 60,
@@ -317,6 +319,7 @@
         
         room: {
             name: null,
+            chatMessages: [],
             users: [],
             afkList: [],
             mutedUsers: [],
@@ -835,6 +838,9 @@
             chat.message = linkFixer(chat.message);
             chat.message = decodeEntities(chat.message);
             chat.message = chat.message.trim();
+            
+            basicBot.room.chatMessages.push([chat.cid, chat.message, chat.sub, chat.timestamp, chat.type, chat.uid, chat.un]);
+            
             for (var i = 0; i < basicBot.room.users.length; i++) {
                 if (basicBot.room.users[i].id === chat.uid) {
                     basicBot.userUtilities.setLastActivity(basicBot.room.users[i]);
@@ -1505,6 +1511,7 @@
                                 if(this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                                 if( !basicBot.commands.executable(this.rank, chat) ) return void (0);
                                 else{
+
                                 }
                         }
                 },
@@ -1759,6 +1766,9 @@
                         var name = msg.substr(cmd.length + 2);
                         var user = basicBot.userUtilities.lookupUserName(name);
                         if (typeof user === 'boolean') return API.sendChat(subChat(basicBot.chat.invaliduserspecified, {name: chat.un}));
+                        var permFrom = basicBot.userUtilities.getPermission(chat.uid);
+                        var permUser = basicBot.userUtilities.getPermission(user.id);
+                        if (permUser >= permFrom) return void(0);
                         API.moderateBanUser(user.id, 1, API.BAN.DAY);
                     }
                 }
@@ -2037,7 +2047,11 @@
                 }
             },
 
-            /*deletechatCommand: {
+            /*
+            
+            // This does not work anymore.
+            
+            deletechatCommand: {
                 command: 'deletechat',
                 rank: 'mod',
                 type: 'startsWith',
@@ -2076,8 +2090,34 @@
                         API.sendChat(subChat(basicBot.chat.deletechat, {name: chat.un, username: name}));
                     }
                 }
-            },*/
-
+            },
+            
+            */
+            
+            deletechatCommand: {
+                command: 'deletechat',
+                rank: 'mod',
+                type: 'startsWith',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        var msg = chat.message;
+                        if (msg.length === cmd.length) return API.sendChat(subChat(basicBot.chat.nouserspecified, {name: chat.un}));
+                        var name = msg.substring(cmd.length + 2);
+                        var user = basicBot.userUtilities.lookupUserName(name);
+                        if (typeof user === 'boolean') return API.sendChat(subChat(basicBot.chat.invaliduserspecified, {name: chat.un}));
+                        for (var i = 1; i < basicBot.room.chatMessages.length; i++) {
+                          if (basicBot.room.chatMessages[i].indexOf(user.id) > -1){
+                            API.moderateDeleteChat(basicBot.room.chatMessages[i][0]);
+                            basicBot.room.chatMessages[i].splice(0);
+                          }
+                        }
+                        API.sendChat(subChat(basicBot.chat.deletechat, {name: chat.un, username: name}));
+                    }
+                }
+            },
+            
             emojiCommand: {
                 command: 'emoji',
                 rank: 'user',
@@ -2522,7 +2562,7 @@
                         if (dj === chat.uid) isDj = true;
                         if (perm >= 1 || isDj) {
                             if (media.format === 1) {
-                                var linkToSong = "http://youtu.be/" + media.cid;
+                                var linkToSong = "https://youtu.be/" + media.cid;
                                 API.sendChat(subChat(basicBot.chat.songlink, {name: from, link: linkToSong}));
                             }
                             if (media.format === 2) {
@@ -2916,7 +2956,7 @@
                         basicBot.disconnectAPI();
                         kill();
                         setTimeout(function () {
-                            $.getScript(basicBot.scriptLink);
+                            $.getScript(basicBot.settings.scriptLink);
                         }, 2000);
                     }
                 }
@@ -3205,9 +3245,9 @@
 
                         /*
                         // least efficient way to go about this, but it works :)
-                        if (msg.length > 256){
-                            firstpart = msg.substr(0, 256);
-                            secondpart = msg.substr(256);
+                        if (msg.length > 250){
+                            firstpart = msg.substr(0, 250);
+                            secondpart = msg.substr(250);
                             API.sendChat(firstpart);
                             setTimeout(function () {
                                 API.sendChat(secondpart);
@@ -3220,8 +3260,8 @@
                         
 			/*
                         // This is a more efficient solution
-                        if (msg.length > 241){
-                            var split = msg.match(/.{1,241}/g);
+                        if (msg.length > 250){
+                            var split = msg.match(/.{1,250}/g);
                             for (var i = 0; i < split.length; i++) {
                                 var func = function(index) {
                                     setTimeout(function() {
@@ -3698,6 +3738,7 @@
             }
         }
     };
+
     
     $('head').append('<link rel="stylesheet" type="text/css" href="https://rawgit.com/MCzeKrakan/basicBot/master/basic.css"/>');
     $('head').append('<script type="text/javascript" src="https://rawgit.com/MCzeKrakan/basicBot/master/script.js"></script>');

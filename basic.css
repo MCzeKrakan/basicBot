@@ -74,8 +74,3 @@ top: 13px;
 display: inline-block;
 margin: 0 auto;
 }
-.header-panel-button.selected {
-    border-right: none;
-    background-color: #0A0A0A;
-    cursor: default
-}

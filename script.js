@@ -1,11 +1,7 @@
 $(document).ready(function() {
     $('#car').click(function() {
-        if ($(this).hasClass("selected")) {
-            $(this).removeClass("selected");
-        }
-        else {
-            $(this).addClass("selected");
-        }
+        $(this).hasClass("selected") || $(".header-panel-button").removeClass("selected"),
+        $(this).addClass("selected");
     });
     //$('#car').draggable();
 });

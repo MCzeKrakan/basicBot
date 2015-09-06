@@ -1,1 +1,73 @@
+#top {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    background-color: #cc0000;
+    left: 25px;
+    z-index: 100000;
+}
+#bottom {
+	position: relative;
+	height:25px;
+	width: 100px;
+	background-color: #cc0000;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	top: -25px;
+	z-index: 100000;
+}
+#fwheel {
+	position: relative;
+	height:20px;
+	width:20px;
+	border-radius: 100%;
+	background-color: black;
+	top: -35px;
+	left: 5px;
+	z-index: 100000;
+}
+#bwheel {
+	position: relative;
+	height:20px;
+	width:20px;
+	border-radius: 100%;
+	background-color: black;
+	top: -55px;
+	left: 75px;
+	z-index: 100000;
+}
+#car {
+	left: 287px;
+	width: 58px;
+}
+#chat-button {
+    left: 0;
+    width: 50px;
+}
 
+#users-button {
+    left: 50px;
+    width: 85px;
+}
+#waitlist-button {
+    left: 135px;
+    width: 100px;
+}
+#friends-button {
+    left: 236px;
+    width: 50px;
+}
+#car.selected i {
+    background: url(http://i59.tinypic.com/eryd1l.jpg) !important;
+}
+
+#car:hover i {
+    background: url(http://i59.tinypic.com/eryd1l.jpg) !important;
+}
+#car i {
+position: relative;
+top: 13px;
+display: inline-block;
+margin: 0 auto;
+}

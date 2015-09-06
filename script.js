@@ -3,5 +3,5 @@ $(document).ready(function() {
         //$(this).hasClass("selected") || $(".header-panel-button").removeClass("selected")
         //$(this).addClass("selected");
     //});
-    $('#car').draggable();
+    //$('#car').draggable();
 });

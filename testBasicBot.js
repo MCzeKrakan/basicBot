@@ -3742,7 +3742,7 @@
     //$('head').append('<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>');
     var menuButton = $('<div id="car" class="header-panel-button" style=""><i class="icon" style="top: 16px; width: 42px; height: 25px; background: url(http://oi57.tinypic.com/2e2kyfq.jpg;"></i></div>');
     //var menuButton = $('<div id="car" class="header-panel-button" style=""><div id="top"></div><div id="bottom"></div><div id="fwheel"></div><div id="bwheel"></div></div>');
-    //$('#friends-button').after(menuButton);
+    $('#friends-button').after(menuButton);
 
     loadChat(basicBot.startup);
 }).call(this);

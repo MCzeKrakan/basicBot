@@ -3737,7 +3737,7 @@
         }
     };
     
-    //$('head').append('<link rel="stylesheet" type="text/css" href="https://rawgit.com/MCzeKrakan/basicBot/master/basic.css"/>');
+    $('head').append('<link rel="stylesheet" type="text/css" href="https://rawgit.com/MCzeKrakan/basicBot/master/basic.css"/>');
     //$('head').append('<script type="text/javascript" src="https://rawgit.com/MCzeKrakan/basicBot/master/script.js"></script>');
     //$('head').append('<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>');
     //var menuButton = $('<div id="car" class="header-panel-button" style=""><i class="icon" style="top: 16px; width: 42px; height: 25px; background: url(http://oi57.tinypic.com/2e2kyfq.jpg;"></i></div>');

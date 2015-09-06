@@ -3,8 +3,7 @@ $(document).ready(function() {
         if ($(this).hasClass("selected") === false) {
             $('.header-panel-button').removeClass("selected");
             $(this).addClass("selected");
-            $('#app-right').style.display= 'none';
-            $('.bsc-menu').style.display= 'block';
+            $('.bsc-menu').show;
         }
     });
     //$('#car').draggable();

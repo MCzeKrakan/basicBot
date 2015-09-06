@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('car').click(function() {
+    $('#car').click(function() {
         if ($(this).hasClass("selected")) {
             $(this).removeClass("selected");
         }

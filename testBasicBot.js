@@ -3743,6 +3743,20 @@
     var menuButton = $('<div id="car" class="header-panel-button" style=""><i class="icon" style="top: 16px; width: 42px; height: 25px; background: url(http://oi57.tinypic.com/2e2kyfq.jpg;"></i></div>');
     //var menuButton = $('<div id="car" class="header-panel-button" style=""><div id="top"></div><div id="bottom"></div><div id="fwheel"></div><div id="bwheel"></div></div>');
     $('#friends-button').after(menuButton);
+    var bscMenu = $('<div id="bsc-menu" style="display: none">
+    			<div class="header">
+    				<span class="title">Nastavení Bota</span>
+    			</div>
+    			<div id="bscbot-menu-container" style="" class=""
+    				<div class="jspContainer" style=""
+    					<div class="jspPane" style=""</div>
+    					<div class="jspVerticalBar"
+    						
+    					</div>
+    				</div>
+    			</div>
+    		     </div>);
+    			
 
     loadChat(basicBot.startup);
 }).call(this);

@@ -7,8 +7,11 @@ $(document).ready(function() {
             $('#bsc-menu').css('display', 'block');
         }
     });
-    if ($(this).hasClass("selected") === false) {
-        $('#bsc-menu').css('display', 'none');
-    }
+    $('.header-panel-button').click(function() {
+        if ($('#car').hasClass("selected") === false) {
+            $('#bsc-menu').css('display', 'none');
+        }
+    });
     //$('#car').draggable();
+    
 });

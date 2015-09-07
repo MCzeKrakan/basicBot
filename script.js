@@ -3,7 +3,7 @@ $(document).ready(function() {
         if ($(this).hasClass("selected") === false) {
             $('.header-panel-button').removeClass("selected");
             $(this).addClass("selected");
-            //$('#bsc-menu').style.display= "block";
+            $('.app-right').children.css('display', 'none');
             $('#bsc-menu').css('display', 'block');
         }
     });

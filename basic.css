@@ -117,19 +117,19 @@ margin: 0 auto;
     width: 110px;
     right: 0
 }
-.friends .list-header .divider.left {
-    width: 235px;
-    left: 0;
-}
-.friends .list-header .divider.right {
-    width: 285px;
-    right: 0;
-}
-.app-right #bsc-menu .header .divider {
+.app-right .friends .list-header .divider.left {
     position: absolute;
     top: 0;
     left: 0;
-    width: 58px;
+    width: 235px;
     height: 1px;
     background: #1c1f25
+}
+.app-right .friends .list-header .divider.right {
+    width: 58px;
+    right: 0;
+}
+.header .divider {
+   left: 0;
+   width: 285px;
 }

@@ -3,7 +3,7 @@ $(document).ready(function() {
         if ($(this).hasClass("selected") === false) {
             $('.header-panel-button').removeClass("selected");
             $(this).addClass("selected");
-            $('#bsc-menu').show;
+            $('#bsc-menu').style.display= "block";
         }
     });
     //$('#car').draggable();

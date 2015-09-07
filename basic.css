@@ -93,3 +93,43 @@ margin: 0 auto;
     margin-left:17px;
     font-size:18px
 }
+#chat-header .divider {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 265px;
+    height: 1px;
+    background: #1c1f25
+}
+#user-lists .header .divider.left {
+    left: 0;
+    width: 50px
+}
+#user-lists .header .divider.right {
+    right: 0;
+    width: 210px;
+}
+#waitlist .header .divider.left {
+    width: 135px;
+    left: 0
+}
+#waitlist .header .divider.right {
+    width: 110px;
+    right: 0
+}
+.friends .list-header .divider.left {
+    width: 235px;
+    left: 0;
+}
+.friends .list-header .divider.right {
+    width: 285px;
+    right: 0;
+}
+.app-right #bsc-menu .header .divider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 58px;
+    height: 1px;
+    background: #1c1f25
+}

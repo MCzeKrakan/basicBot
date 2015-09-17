@@ -117,6 +117,7 @@ Uživatel
 |!link | | když je uživatel DJ, zobrazí odkaz na na současnou píseň |
 |!ping | | pong! |
 |!rules | | odkaz na pravidla (pokud je nastaven) |
+|!thor | | uživatel bude posunut na 1. místo ve frontě, je-li hoden pozvednout Thorovo kladivo. |
 |!source | | autoři scriptu |
 |!theme | | odkaz na temá, zaměření místnosti (pokud je nastaven) |
 |!website | | odkaz na stránky (pokud je nastaven) |

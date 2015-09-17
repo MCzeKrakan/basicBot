@@ -207,5 +207,9 @@
     "website": "\/me Navštivte náš web: %%LINK%%",
     "youtube": "\/me [%%NAME%%] Koukněte na Maziho videa: česká - %%LINKCZ%% a anglická - %%LINKEN%%",
     "stream": "\/me [%%NAME%%] Sledujte Maziho stream: %%LINK%%",
-    "songstatistics": "\/me %%ARTIST%% - %%TITLE%%: %%WOOTS%%W\/%%GRABS%%G\/%%MEHS%%M."
+    "songstatistics": "\/me %%ARTIST%% - %%TITLE%%: %%WOOTS%%W\/%%GRABS%%G\/%%MEHS%%M.",
+    "thorNotClose": "\/me @%%NAME%%, nemůžeš se momentálně přiblížit ke kladivu!",
+    "thorcd": "\/me @%%NAME%% můžeš zkusit zvednout kladivo za %%TIME%% minut.",
+    "thorWorthy": "\/me @%%NAME%% získal jsi Thorovo kladivo :hammer:, gratuluji!",
+    "thorNotWorthy": "\/me @%%NAME%% nejsi hoden Thorova kladiva."
 }

@@ -237,7 +237,7 @@
     var botCreatorIDs = ["3851534", "4105209"];
 
     var basicBot = {
-        version: "2.8.15",
+        version: "2.8.16 GlobalElite",
         status: false,
         name: "basicBot",
         loggedInID: null,
@@ -1016,7 +1016,7 @@
             var naSkip = setTimeout(function () {
                 if (format == 1){
                     $.getJSON('https://www.googleapis.com/youtube/v3/videos?id=' + cid + '&key=AIzaSyDcfWu9cGaDnTjPKhg_dy9mUh6H7i4ePZ0&part=snippet,status&callback=?', function (track){
-                        if (typeof(track.items[0]) === 'undefined' || track.items.status.uploadStatus() === 'rejected'){
+                        if (typeof(track.items[0]) === 'undefined' || track.items[0].status.uploadStatus === "rejected"){
                             var name = obj.dj.username;
                             API.sendChat(subChat(basicBot.chat.notavailable, {name: name}));
                             if (basicBot.settings.smartSkip){

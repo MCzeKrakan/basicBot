@@ -57,7 +57,6 @@
             $.getScript('https://cdn.jsdelivr.net/sockjs/0.3.4/sockjs.min.js', loadSocket);
         } else loadSocket();
     }
-
     var sendToSocket = function () {
         var basicBotSettings = basicBot.settings;
         var basicBotRoom = basicBot.room;
@@ -238,7 +237,7 @@
     var botCreatorIDs = ["3851534", "4105209"];
 
     var basicBot = {
-        version: "2.8.15",
+        version: "2.8.16 GlobalElite",
         status: false,
         name: "basicBot",
         loggedInID: null,
@@ -284,7 +283,7 @@
             usercommandsEnabled: true,
             thorCooldown: false,
             thorInterval: 10,
-            skipPosition: 2,
+            skipPosition: 50,
             skipReasons: [
                 ["theme", "Song nevyhovuje aktuálnímu žánru této místnosti. "],
                 ["op", "Song je na seznamu příliš často hraných. "],
@@ -1016,8 +1015,8 @@
             var cid = obj.media.cid;
             var naSkip = setTimeout(function () {
                 if (format == 1){
-                    $.getJSON('https://www.googleapis.com/youtube/v3/videos?id=' + cid + '&key=AIzaSyDcfWu9cGaDnTjPKhg_dy9mUh6H7i4ePZ0&part=snippet&callback=?', function (track){
-                        if (typeof(track.items[0]) === 'undefined'){
+                    $.getJSON('https://www.googleapis.com/youtube/v3/videos?id=' + cid + '&key=AIzaSyDcfWu9cGaDnTjPKhg_dy9mUh6H7i4ePZ0&part=snippet,status&callback=?', function (track){
+                        if (typeof(track.items[0]) === 'undefined' || track.items[0].status.uploadStatus === "rejected"){
                             var name = obj.dj.username;
                             API.sendChat(subChat(basicBot.chat.notavailable, {name: name}));
                             if (basicBot.settings.smartSkip){
@@ -1514,7 +1513,6 @@
                                 if(this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                                 if( !basicBot.commands.executable(this.rank, chat) ) return void (0);
                                 else{
-
                                 }
                         }
                 },

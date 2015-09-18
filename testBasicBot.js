@@ -283,7 +283,7 @@
             usercommandsEnabled: true,
             thorCooldown: false,
             thorInterval: 10,
-            skipPosition: 2,
+            skipPosition: 50,
             skipReasons: [
                 ["theme", "Song nevyhovuje aktuálnímu žánru této místnosti. "],
                 ["op", "Song je na seznamu příliš často hraných. "],
@@ -1015,8 +1015,8 @@
             var cid = obj.media.cid;
             var naSkip = setTimeout(function () {
                 if (format == 1){
-                    $.getJSON('https://www.googleapis.com/youtube/v3/videos?id=' + cid + '&key=AIzaSyDcfWu9cGaDnTjPKhg_dy9mUh6H7i4ePZ0&part=snippet&callback=?', function (track){
-                        if (typeof(track.items[0]) === 'undefined'){
+                    $.getJSON('https://www.googleapis.com/youtube/v3/videos?id=' + cid + '&key=AIzaSyDcfWu9cGaDnTjPKhg_dy9mUh6H7i4ePZ0&part=snippet,status&callback=?', function (track){
+                        if (typeof(track.items[0]) === 'undefined' || track.items.status.uploadStatus() === 'rejected'){
                             var name = obj.dj.username;
                             API.sendChat(subChat(basicBot.chat.notavailable, {name: name}));
                             if (basicBot.settings.smartSkip){

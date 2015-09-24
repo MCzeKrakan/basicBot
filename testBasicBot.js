@@ -283,7 +283,7 @@
             usercommandsEnabled: true,
             thorCooldown: false,
             thorInterval: 10,
-            skipPosition: 50,
+            skipPosition: 49,
             skipReasons: [
                 ["theme", "Song nevyhovuje aktuálnímu žánru této místnosti. "],
                 ["op", "Song je na seznamu příliš často hraných. "],

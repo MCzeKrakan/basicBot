@@ -82,7 +82,7 @@ Vyhazovač
 |!togglemotd | | ON/OFF zpráva dne |
 |!togglevoteskip | | ON/OFF peskočení pro počet Meh |
 |!unban | @user | odbanovat uživatele |
-|!unmute | | zrušit umlčení uživatele |
+|!unmute | @user/all | zrušit umlčení uživatele |
 |!voteratio | @user | zobrazi statistiku hlasování pro uživatele |
 |!whois | @user | vypíše detailní informace o uživateli |
 

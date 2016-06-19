@@ -308,7 +308,7 @@
             czYoutubeLink: "https://youtube.com/MazariniCZ",
             enYoutubeLink: "https://youtube.com/Mazarin1k",
             streamLink: "http://twitch.tv/mazarin1k",
-            website: ,
+            website: "",
             intervalMessages: [],
             messageInterval: 5,
             songstats: false,

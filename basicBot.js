@@ -237,7 +237,7 @@
     var botCreatorIDs = ["3851534", "4105209"];
 
     var basicBot = {
-        version: "2.8.17 GlobalElite",
+        version: "2.8.17 Imaginary friend",
         status: false,
         name: "basicBot",
         loggedInID: null,

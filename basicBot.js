@@ -277,7 +277,7 @@
             historySkip: true,
             historySkipLimit: 50, // 1-50
             timeGuard: true,
-            maximumSongLength: 420,
+            maximumSongLength: 480,
             autodisable: false,
             commandCooldown: 30,
             usercommandsEnabled: true,

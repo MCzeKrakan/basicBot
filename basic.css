@@ -102,8 +102,12 @@ margin: 0 auto;
     font-size:18px
 }
 #chat-header .divider {
+    position: absolute;
+    top: 0;
     left: 50px;
     width: 295px;
+    height: 1px;
+    background: #1c1f25;
 }
 #user-lists .header .divider.left {
     width: 50px
@@ -117,18 +121,11 @@ margin: 0 auto;
 #waitlist .header .divider.right {
     width: 110px;
 }
-
-.app-right .friends .list-header .divider.left {
-    position: absolute;
-    top: 0;
-    left: 0;
+.app-right .friends .list-header .divider .left {
     width: 235px;
-    height: 1px;
-    background: #1c1f25
 }
-.app-right .friends .list-header .divider.right {
+.app-right .friends .list-header .divider .right {
     width: 58px;
-    right: 0;
 }
 /*
 .header .divider {

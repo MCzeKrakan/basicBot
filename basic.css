@@ -121,6 +121,14 @@ margin: 0 auto;
 #waitlist .header .divider.right {
     width: 110px;
 }
+
+.app-right .friends .list-header .divider {
+    position: absolute;
+    top: 0;
+    height: 1px;
+    background: #1c1f25;
+}
+
 .app-right .friends .list-header .divider .left {
     width: 235px;
 }

@@ -38,6 +38,12 @@
 	left: 75px;
 	z-index: 100000;
 }
+
+#chat-header .divider {left: 50px; width: 295px}
+#user-lists .header .divider.left {width: 50px}
+#user-lists .header .divider.right {width: 210px}
+#waitlist .header .divider.left {width: 135px}
+#waitlist .header .divider.right {width: 110px}
 */
 #car {
 	left: 287px;
@@ -96,29 +102,22 @@ margin: 0 auto;
     font-size:18px
 }
 #chat-header .divider {
-    position: absolute;
-    top: 0;
     left: 50px;
-    width: 265px;
-    height: 1px;
-    background: #1c1f25
+    width: 295px;
 }
 #user-lists .header .divider.left {
-    left: 0;
     width: 50px
 }
 #user-lists .header .divider.right {
-    right: 0;
     width: 210px;
 }
 #waitlist .header .divider.left {
     width: 135px;
-    left: 0
 }
 #waitlist .header .divider.right {
     width: 110px;
-    right: 0
 }
+
 .app-right .friends .list-header .divider.left {
     position: absolute;
     top: 0;
@@ -131,7 +130,9 @@ margin: 0 auto;
     width: 58px;
     right: 0;
 }
+/*
 .header .divider {
    left: 0;
    width: 285px;
 }
+*/

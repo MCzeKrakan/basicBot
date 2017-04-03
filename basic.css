@@ -140,6 +140,16 @@ margin: 0 auto;
     background: #1c1f25;
 }
 
+#bsc-menu .header .divider {
+    position: absolute;
+    top: 0;
+    width: 58px;
+    left: 0;
+    height: 1px;
+    background: #1c1f25;
+}
+
+
 /*
 .header .divider {
    left: 0;

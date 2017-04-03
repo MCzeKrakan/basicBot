@@ -137,20 +137,19 @@ margin: 0 auto;
     position: absolute;
     top: 0;
     width: 185px;
+    right: 0;
     height: 1px;
     background: #1c1f25;
 }
 
-.app-right .friends .list-header .divider.left {
-    width: 185px;
-    left: 0
-}
-
-.app-right .friends .list-header .divider.right {
+.app-right .friends .list-header .dividerr {
+    position: absolute;
+    top: 0;
     width: 58px;
-    right: 0
+    left: 0;
+    height: 1px;
+    background: #1c1f25;
 }
-
 
 /*
 .header .divider {

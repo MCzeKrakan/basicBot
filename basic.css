@@ -125,13 +125,11 @@ margin: 0 auto;
 .app-right .friends .list-header .divider {
     position: absolute;
     top: 0;
+    width: 235px;
     height: 1px;
     background: #1c1f25;
 }
 
-.app-right .friends .list-header .divider .left {
-    width: 235px;
-}
 .app-right .friends .list-header .divider .right {
     width: 58px;
 }

@@ -122,17 +122,36 @@ margin: 0 auto;
     width: 110px;
 }
 
+#waitlist .header .divider.left {
+    width: 185px;
+    left: 0
+}
+
+#waitlist .header .divider.right {
+    width: 60px;
+    right: 0
+}
+
+
 .app-right .friends .list-header .divider {
     position: absolute;
     top: 0;
-    width: 235px;
+    width: 185px;
     height: 1px;
     background: #1c1f25;
 }
 
-.app-right .friends .list-header .divider .right {
-    width: 58px;
+.app-right .friends .list-header .divider.left {
+    width: 185px;
+    left: 0
 }
+
+.app-right .friends .list-header .divider.right {
+    width: 58px;
+    right: 0
+}
+
+
 /*
 .header .divider {
    left: 0;

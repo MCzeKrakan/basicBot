@@ -3817,8 +3817,10 @@
     $('#friends-button').after(bscMenuButton);
     var bscMenu = $('<div id="bsc-menu" style="display: none"><div class="header"><span class="title">Nastavení Bota</span></div></div>');
     $('.friends').after(bscMenu);
-	var frHeaderRight = $('<div class="dividerr"></div>');
+    var frHeaderRight = $('<div class="dividerr"></div>');
     $('.friends .list-header .divider').after(frHeaderRight);
+    var bdcMHeader = $('<div class="divider"></div>');
+    $('#bsc-menu .header').after(bdcMHeader);
 	/*
 	var frHeaderRight = $('<div class="divider right"></div>');
     $('.list-header .divider').after(frHeaderRight);

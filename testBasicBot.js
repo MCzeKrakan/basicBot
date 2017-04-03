@@ -3817,10 +3817,16 @@
     $('#friends-button').after(bscMenuButton);
     var bscMenu = $('<div id="bsc-menu" style="display: none"><div class="header"><span class="title">Nastavení Bota</span></div></div>');
     $('.friends').after(bscMenu);
-    var frHeaderRight = $('<div class="divider right"></div>');
+	var frHeaderRight = $('<div class="dividerr"></div>');
+    $('.friends .list-header .divider').after(frHeaderRight);
+	/*
+	var frHeaderRight = $('<div class="divider right"></div>');
     $('.list-header .divider').after(frHeaderRight);
     var frHeaderLeft = $('<div class="divider left"></div>');
     $('.list-header .divider').after(frHeaderLeft);
+	var bdcMHeader = $('<div class="divider"></div>');
+    $('.list-header .divider').after(bdcMHeader);
+	*/
     
     			/*<div id="bscbot-menu-container" style="" class=""
     				<div class="jspContainer" style=""

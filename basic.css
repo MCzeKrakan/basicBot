@@ -136,8 +136,8 @@ margin: 0 auto;
 .app-right .friends .list-header .divider {
     position: absolute;
     top: 0;
-    width: 185px;
-    right: 0;
+    width: 235px;
+    left: 0;
     height: 1px;
     background: #1c1f25;
 }
@@ -146,7 +146,7 @@ margin: 0 auto;
     position: absolute;
     top: 0;
     width: 58px;
-    left: 0;
+    right: 0;
     height: 1px;
     background: #1c1f25;
 }

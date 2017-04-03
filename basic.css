@@ -122,17 +122,6 @@ margin: 0 auto;
     width: 110px;
 }
 
-#waitlist .header .divider.left {
-    width: 185px;
-    left: 0
-}
-
-#waitlist .header .divider.right {
-    width: 60px;
-    right: 0
-}
-
-
 .app-right .friends .list-header .divider {
     position: absolute;
     top: 0;

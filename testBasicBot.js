@@ -3820,7 +3820,7 @@
     var frHeaderRight = $('<div class="dividerr"></div>');
     $('.friends .list-header .divider').after(frHeaderRight);
     var bdcMHeader = $('<div class="divider"></div>');
-    $('#bsc-menu .header').after(bdcMHeader);
+    $('#bsc-menu .header').append(bdcMHeader);
 	/*
 	var frHeaderRight = $('<div class="divider right"></div>');
     $('.list-header .divider').after(frHeaderRight);
